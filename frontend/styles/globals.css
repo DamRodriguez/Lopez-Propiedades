@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import "./themes/default/theme.css";
+
+body {
+  font-family: var(--font-work-sans);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-medium-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-black);
+  border-radius: 3px;
+}
+
+@media (max-width: 900px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+}
