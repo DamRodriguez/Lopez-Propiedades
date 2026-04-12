@@ -3,6 +3,7 @@ import ProgressBarProvider from "@/components/layout/ProgressBarProvider";
 import clsx from "clsx";
 import { Lato } from 'next/font/google';
 import "@/styles/globals.css";
+import Header from "@/components/layout/header/Header";
 
 const lato = Lato({
   subsets: ['latin'],
@@ -53,10 +54,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={clsx("antialiased min-h-svh flex flex-col font-lato", lato.variable)}>
+      <body className={clsx("antialiased min-h-svh flex flex-col font-lato bg-soft-white", lato.variable)}>
         <ProgressBarProvider>
-          <div className="min-w-[20rem] max-w-[120rem] mx-auto w-full font-open-sans theme-transition">
-            {/* <Header /> */}
+          <div className="min-w-[20rem] max-w-[120rem] mx-auto w-full font-open-sans">
+            <Header />
             {children}
           </div>
         </ProgressBarProvider>
