@@ -10,7 +10,7 @@ const NavDesk = () => {
 
   return (
     <nav className="hidden xl:flex">
-      <ul className="text-lg font-medium">
+      <ul className="text-base font-medium">
         <li>
           <MotionStagger className="flex gap-[4rem]" direction="up" duration={0.3}>
             {routeItems.map((item, index) => {

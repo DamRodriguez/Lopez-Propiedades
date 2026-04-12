@@ -14,6 +14,7 @@ type LinkButtonProps = {
   small?: boolean;
   cursorNormal?: boolean;
   external?: boolean;
+  big?: boolean;
 };
 
 const LinkButton = ({
@@ -26,6 +27,7 @@ const LinkButton = ({
     full: props.full,
     small: props.small,
     cursorNormal: cursorNormal,
+    big: props.big,
   }), props.className);
   return (
     <Link

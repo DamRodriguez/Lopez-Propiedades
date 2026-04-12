@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import ProgressBarProvider from "@/components/layout/ProgressBarProvider";
 import clsx from "clsx";
-import { Lato } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import "@/styles/globals.css";
 import Header from "@/components/layout/header/Header";
 
-const lato = Lato({
+const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '700'],
-  variable: '--font-sans'
+  variable: '--font-inter'
 });
 
 export const metadata: Metadata = {
@@ -54,9 +54,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={clsx("antialiased min-h-svh flex flex-col font-lato bg-soft-white", lato.variable)}>
+      <body className={clsx("antialiased min-h-svh flex flex-col bg-soft-white", inter.variable)}>
         <ProgressBarProvider>
-          <div className="min-w-[20rem] max-w-[120rem] mx-auto w-full font-open-sans">
+          <div className="min-w-[20rem] max-w-[120rem] mx-auto w-full font-inter">
             <Header />
             {children}
           </div>

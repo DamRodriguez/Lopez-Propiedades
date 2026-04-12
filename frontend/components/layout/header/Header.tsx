@@ -16,8 +16,8 @@ const Header = () => {
   useCloseMobileNavOnDesktop({ setIsMobileNavVisible });
 
   return (
-    <header className="sticky top-0 z-9999">
-      <div className="sticky z-9999 min-h-[4.5rem] xl:min-h-[5.5rem] bg-soft-white flex items-center justify-between px-[2rem] xl:px-[6rem] shadow-s4">
+    <header className="fixed top-0 z-9999 w-full">
+      <div className="fixed z-9999 w-full min-h-[4.5rem] xl:min-h-[5.5rem] bg-soft-white/80 backdrop-blur-[0.5rem] flex items-center justify-between px-[2rem] xl:px-[6rem] shadow-s4">
         <LeftItem
           onClick={() => { if (isMobileNavVisible) { setIsMobileNavVisible(false); } }}
         />
@@ -44,7 +44,8 @@ const Header = () => {
         onClose={() => { setIsMobileNavVisible(false); }}
         position="right"
         closeButton={null}
-        className={clsx("pb-[7rem] bg-soft-white xl:hidden top-[4.5rem]", {
+        hideOverlay
+        className={clsx("pb-[7rem] bg-soft-white/80 backdrop-blur-[0.5rem] xl:hidden top-[4.5rem]", {
         })}>
         <NavMobile onClose={() => { setIsMobileNavVisible(false); }} />
       </Drawer>

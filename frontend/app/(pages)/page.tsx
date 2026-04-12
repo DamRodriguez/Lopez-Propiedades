@@ -1,38 +1,10 @@
+import Hero from "@/components/pages/home/Hero";
 import Image from "next/image"
 
 const HomePage = () => {
   return (
     <div>
-      {/* <!-- Hero Section --> */}
-      <div className="relative h-dvh flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            fill
-            src="https://picsum.photos/200"
-            alt="Luxury modern villa"
-            className="w-full h-full object-cover"
-          />
-          {/* <!-- Darker overlay for sophistication and contrast --> */}
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
-        <div className="relative z-10 w-full max-w-7xl px-6 md:px-12 text-white">
-          <div className="max-w-3xl">
-            {/* <!-- Label with improved contrast --> */}
-            <span className="label-md tracking-widest text-secondary-fixed-dim font-extrabold mb-4 block drop-shadow-md"
-            >EXCLUSIVIDAD &amp; PRESTIGIO</span>
-            <h1 className="text-5xl md:text-7xl font-extrabold font-headline leading-tight mb-8 drop-shadow-lg">
-              Encuentra el hogar de tus sueños
-            </h1>
-            <div className="mb-12">
-              <button
-                className="bg-primary px-10 py-5 rounded-xl font-bold flex items-center justify-center gap-3 shadow-xl"
-              >
-                CONTACTAR POR WHATSAPP
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Hero />
       {/* <!-- Featured Properties - Bento Grid> */}
       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-12">
@@ -82,7 +54,8 @@ const HomePage = () => {
             <div className="flex gap-4 group cursor-pointer">
               <div className="w-1/3 aspect-square rounded-lg overflow-hidden bg-surface-container">
                 <Image
-                  fill
+                  width={200}
+                  height={200}
                   src="https://picsum.photos/200"
                   alt="Luxury apartment"
                   data-alt="elegant high-rise luxury apartment interior with floor-to-ceiling windows and designer furniture overlooking a city skyline at sunset"
@@ -101,7 +74,8 @@ const HomePage = () => {
             <div className="flex gap-4 group cursor-pointer">
               <div className="w-1/3 aspect-square rounded-lg overflow-hidden bg-surface-container">
                 <Image
-                  fill
+                  width={200}
+                  height={200}
                   src="https://picsum.photos/200"
                   alt="Modern office space"
                   data-alt="spacious professional modern office space with wooden accents and glass partitions in a downtown commercial district"
@@ -119,7 +93,8 @@ const HomePage = () => {
             <div className="flex gap-4 group cursor-pointer">
               <div className="w-1/3 aspect-square rounded-lg overflow-hidden bg-surface-container">
                 <Image
-                  fill
+                  width={200}
+                  height={200}
                   src="https://picsum.photos/200"
                   alt="Family house"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

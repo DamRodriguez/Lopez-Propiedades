@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants"
 
 export const buttonClass = tv({
-  base: "text-base xl:text-lg rounded-sm flex items-center justify-center flex gap-[0.7rem] min-h-[2.5rem] xl:min-h-[3rem] px-[0.8rem] xl:px-[1rem]",
+  base: "text-base xl:text-lg rounded-sm flex items-center justify-center flex gap-[0.7rem]",
 
   variants: {
     intent: {
@@ -20,13 +20,18 @@ export const buttonClass = tv({
     },
 
     full: {
-      false: null,
+      false: "w-fit",
       true: "w-full",
     },
 
     small: {
       false: null,
       true: "",
+    },
+
+    big: {
+      false: "px-[0.8rem] xl:px-[1rem] min-h-[2.5rem] xl:min-h-[3rem]",
+      true: "px-[1.5rem] xl:px-[2rem] min-h-[4rem] xl:min-h-[4.5rem]"
     },
 
     cursorNormal: {
