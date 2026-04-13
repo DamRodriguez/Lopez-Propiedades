@@ -1,3 +1,4 @@
+import ChooseUsSection from "@/components/pages/home/ChooseUsSection";
 import FeaturedProperties from "@/components/pages/home/FeaturedProperties";
 import Hero from "@/components/pages/home/Hero";
 import Image from "next/image"
@@ -9,50 +10,8 @@ const HomePage = () => {
 
       <FeaturedProperties />
 
-      {/* <!-- Info Section: Por qué elegirnos --> */}
-      <section className="bg-surface-container-low py-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <h2 className="text-4xl font-extrabold font-headline text-primary mb-16">Por qué elegirnos</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-            {/* <!-- Reason 1 --> */}
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-xl bg-white shadow-sm flex items-center justify-center text-primary mb-6">
-                <span className="material-symbols-outlined text-4xl">verified</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-primary">Confianza</h3>
-              <p className="text-on-surface-variant text-sm leading-relaxed">Más de 20 años construyendo relaciones
-                basadas en la honestidad y la transparencia total.</p>
-            </div>
-            {/* <!-- Reason 2 --> */}
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-xl bg-white shadow-sm flex items-center justify-center text-primary mb-6">
-                <span className="material-symbols-outlined text-4xl">workspace_premium</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-primary">Experiencia</h3>
-              <p className="text-on-surface-variant text-sm leading-relaxed">Expertos en el mercado inmobiliario de
-                alta gama con un historial comprobado de éxito.</p>
-            </div>
-            {/* <!-- Reason 3 --> */}
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-xl bg-white shadow-sm flex items-center justify-center text-primary mb-6">
-                <span className="material-symbols-outlined text-4xl">person_pin_circle</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-primary">Atención Personal</h3>
-              <p className="text-on-surface-variant text-sm leading-relaxed">Cada cliente es único. Diseñamos
-                estrategias a medida para cumplir tus objetivos específicos.</p>
-            </div>
-            {/* <!-- Reason 4 --> */}
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-xl bg-white shadow-sm flex items-center justify-center text-primary mb-6">
-                <span className="material-symbols-outlined text-4xl">ads_click</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-primary">Marketing Digital</h3>
-              <p className="text-on-surface-variant text-sm leading-relaxed">Exposición máxima con fotografía
-                profesional y posicionamiento en los principales portales.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ChooseUsSection />
+
       {/* <!-- Call to Action --> */}
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-6">

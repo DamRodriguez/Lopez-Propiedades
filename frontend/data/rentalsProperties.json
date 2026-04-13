@@ -88,7 +88,10 @@
       "bathrooms": 2,
       "squareMeters": 210
     },
-    "image": "https://picsum.photos/seed/a5/800/600"
+    "image": "https://picsum.photos/seed/a5/800/600",
+     "isHomeFeatured": {
+      "side": true
+    }
   },
   {
     "id": 206,

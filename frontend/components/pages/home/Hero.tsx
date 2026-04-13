@@ -18,7 +18,6 @@ const Hero = () => {
   const scaleImage = useTransform(scrollYProgress, [0, 1], [1.1, 1.25]);
 
   const yText = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
-  const opacityText = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
     <div
@@ -45,7 +44,7 @@ const Hero = () => {
 
       <SpaceX className="relative z-10 w-full text-white">
         <motion.div
-          style={{ y: yText, opacity: opacityText }}
+          style={{ y: yText }}
           className="max-w-[45rem] flex flex-col gap-[2rem] xl:gap-[3rem]"
         >
           <div className="flex flex-col gap-[1rem]">
