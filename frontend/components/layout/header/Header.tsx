@@ -9,29 +9,27 @@ import useCloseMobileNavOnDesktop from "@/hooks/useCloseMobileNavOnDesktop";
 import LinkButton from "@/components/ui/buttons/LinkButton";
 import { WhatsAppIcon } from "@/components/icons/social";
 import RightSection from "@/components/layout/header/RightSection";
-import MotionFade from "@/components/motion/MotionFade";
+import config from "@/config/config";
 
 const Header = () => {
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
   useCloseMobileNavOnDesktop({ setIsMobileNavVisible });
 
   return (
-    <header className="fixed top-0 z-9999 w-full">
-      <div className="fixed z-9999 w-full min-h-[4.5rem] xl:min-h-[5.5rem] bg-soft-white/80 backdrop-blur-[0.5rem] flex items-center justify-between px-[2rem] xl:px-[6rem] shadow-s5">
+    <header>
+      <div className="z-9999 fixed w-full min-w-[20rem] max-w-[120rem] min-h-[4.5rem] xl:min-h-[5.5rem] bg-soft-white/80 backdrop-blur-[0.5rem] flex items-center justify-between px-[2rem] xl:px-[6rem] shadow-s5">
         <LeftItem
           onClick={() => { if (isMobileNavVisible) { setIsMobileNavVisible(false); } }}
         />
         <NavDesk />
-        <div className="flex items-center gap-[2rem] ">
-          <MotionFade>
-            <LinkButton
-              href=""
-              external
-            >
-              <WhatsAppIcon className="fill-soft-white" />
-              <p>WhatsApp</p>
-            </LinkButton>
-          </MotionFade>
+        <div className="flex items-center gap-[1rem]">
+          <LinkButton
+            href={config.urls.whatsApp}
+            external
+          >
+            <WhatsAppIcon />
+            <p>WhatsApp</p>
+          </LinkButton>
           <RightSection
             isMobileNavVisible={isMobileNavVisible}
             setIsMobileNavVisible={setIsMobileNavVisible}

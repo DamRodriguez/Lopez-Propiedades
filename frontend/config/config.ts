@@ -11,6 +11,11 @@ const config = {
   urls: {
     whatsApp: ""
   },
+  info: {
+    address: "Av. Libertador 12500, Martínez, BA",
+    phone: "+54 9 11 4793-0000",
+    email: "info@lopezpropiedades.com.ar"
+  }
 };
 
 export default config;

@@ -23,7 +23,7 @@ const AppraiseProperty = () => {
             <p className="text-base xl:text-lg text-soft-white/90 max-w-xl leading-relaxed">
               Realizamos tasaciones profesionales en el día para que conozcas el
               <span className="font-semibold text-soft-white">
-                valor real
+                {" "}valor real{" "}
               </span>
               de tu inversión en el mercado actual.
             </p>

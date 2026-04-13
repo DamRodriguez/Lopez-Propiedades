@@ -1,0 +1,142 @@
+"use client";
+import { routes } from "@/constants/routes";
+import Link from "next/link";
+import { CallIcon, CodeIcon, EmailIcon, LocationIcon } from "../icons/footer";
+import config from "@/config/config";
+
+const Footer = () => {
+  const companyItems = [
+    {
+      text: "Inicio",
+      href: routes.home,
+      onClick: () => window.scrollTo({ top: 0, behavior: "smooth" })
+    },
+    {
+      text: "Servicios",
+      href: routes.services
+    },
+    {
+      text: "Sobre Nosotros",
+      href: routes.aboutUs
+    }
+  ]
+
+  const stateItems = [
+    {
+      text: "Ventas",
+      href: routes.propertyType("ventas")
+    },
+    {
+      text: "Alquileres",
+      href: routes.propertyType("alquileres")
+    },
+  ]
+
+  const contactItems = [
+    {
+      text: config.info.address,
+      icon: <LocationIcon />
+    },
+    {
+      text: config.info.phone,
+      icon: <CallIcon />
+    },
+    {
+      text: config.info.email,
+      icon: <EmailIcon />
+    }
+  ]
+
+  return (
+    <footer className="bg-gradient-to-b from-primary to-black w-full shadow-s7">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-12 px-6 md:px-12 w-full max-w-7xl mx-auto">
+        <div className="flex items-center">
+          <span className="text-lg font-semibold text-soft-white">
+            Lopez Propiedades
+          </span>
+        </div>
+        <div className="grid grid-cols-2 gap-8">
+          <div>
+            <p className="font-bold text-soft-white mb-4 text-xs tracking-widest uppercase">
+              Empresa
+            </p>
+            <ul className="flex flex-col gap-2 text-sm text-soft-white">
+              {companyItems.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    href={item.href}
+                    onClick={item.onClick ? item.onClick : () => { }}
+                    className="hover:underline custom-transition-all"
+                  >
+                    {item.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex flex-col gap-4">
+            <p className="font-bold text-soft-white text-xs tracking-widest uppercase">
+              Inmuebles
+            </p>
+            <ul className="flex flex-col gap-2 text-sm text-soft-white">
+              {stateItems.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    href={item.href}
+                    className="hover:underline custom-transition-all"
+                  >
+                    {item.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="flex flex-col gap-4">
+          <p className="font-bold text-soft-white text-xs tracking-widest uppercase">
+            Contacto
+          </p>
+          <div className="flex flex-col gap-3">
+            {contactItems.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-2 text-sm text-soft-white"
+              >
+                <div>
+                  {item.icon}
+                </div>
+                <p>
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="border-t border-soft-gray/30 bg-white py-6">
+        <div className="container mx-auto flex flex-col items-center justify-evenly gap-4 px-4 md:flex-row text-xs xl:text-sm text-soft-white">
+          <p className="text-center">
+            © {new Date().getFullYear()} <span className="font-semibold">Lopez Propiedades</span>. <br className="flex xl:hidden" />Todos los derechos reservados.
+          </p>
+          <div className="flex items-center gap-2">
+            <CodeIcon />
+            <p className="font-medium">
+              Desarrollado por{" "}
+              <Link
+                href="https://damrod.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline font-semibold custom-transition-all"
+              >
+                damrod
+              </Link>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </footer >
+  );
+};
+
+export default Footer;

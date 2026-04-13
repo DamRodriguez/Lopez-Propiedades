@@ -1,11 +1,11 @@
 import { tv } from "tailwind-variants"
 
 export const buttonClass = tv({
-  base: "text-base xl:text-lg rounded-sm flex items-center justify-center flex gap-[0.7rem]",
+  base: "text-sm xl:text-lg rounded-sm flex items-center justify-center flex gap-[0.5rem] xl:gap-[0.7rem]",
 
   variants: {
     intent: {
-      primary: "bg-primary text-soft-white",
+      primary: "bg-primary text-soft-white [&_svg]:fill-soft-white",
       secondary: "bg-secondary-light text-black",
     },
 
@@ -30,8 +30,8 @@ export const buttonClass = tv({
     },
 
     big: {
-      false: "px-[0.8rem] xl:px-[1rem] min-h-[2.5rem] xl:min-h-[3rem]",
-      true: "px-[1.5rem] xl:px-[2rem] min-h-[4rem] xl:min-h-[4.5rem]"
+      false: "px-[0.6rem] xl:px-[1rem] min-h-[2.2rem] xl:min-h-[3rem] [&_svg]:w-[1rem] [&_svg]:h-[1rem] xl:[&_svg]:w-[1.5rem] xl:[&_svg]:h-[1.5rem]",
+      true: "px-[1.5rem] xl:px-[2rem] min-h-[4rem] xl:min-h-[4.5rem] [&_svg]:w-[1.5rem] [&_svg]:h-[1.5rem] xl:[&_svg]:w-[2rem] xl:[&_svg]:h-[2rem]"
     },
 
     cursorNormal: {

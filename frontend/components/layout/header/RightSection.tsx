@@ -1,5 +1,4 @@
 import { CloseIcon, HamburgerIcon } from "@/components/icons/header";
-import MotionFade from "@/components/motion/MotionFade";
 
 type RightSectionProps = {
   isMobileNavVisible: boolean;
@@ -8,7 +7,7 @@ type RightSectionProps = {
 
 const RightSection = (props: RightSectionProps) => {
   return (
-    <MotionFade className="flex xl:hidden">
+    <div className="flex xl:hidden">
       {props.isMobileNavVisible ? (
         <button
           onClick={() => { props.setIsMobileNavVisible(false); }}
@@ -26,7 +25,7 @@ const RightSection = (props: RightSectionProps) => {
           <HamburgerIcon className="fill-black" />
         </button>
       )}
-    </MotionFade>
+    </div>
   );
 };
 

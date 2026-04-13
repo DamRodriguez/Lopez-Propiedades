@@ -11,6 +11,7 @@ type PropertyCardProps = {
   containerClassName?: string;
   infoContainerClassName?: string;
   showType?: boolean;
+  hideSeparator?: boolean;
 }
 
 const PropertyCard = (props: PropertyCardProps) => {
@@ -50,7 +51,11 @@ const PropertyCard = (props: PropertyCardProps) => {
             {data.location.neighborhood},{" "}{data.location.city}
           </p>
         </div>
-        <div className="h-[0.05rem] w-full bg-soft-gray/30 my-2" />
+        <div>
+          {!props.hideSeparator && (
+            <div className="h-[0.05rem] w-full bg-soft-gray/30 my-2" />
+          )}
+        </div>
         <div className="flex items-center gap-6 text-xs xl:text-sm font-semibold text-dark-gray">
           <div className="flex items-center gap-1">
             <RulerIcon />

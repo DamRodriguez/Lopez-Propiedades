@@ -39,6 +39,7 @@ const FeaturedProperties = () => {
           <PropertyCard
             data={mainProperty}
             showType
+            hideSeparator
             containerClassName="md:col-span-8 h-[30rem] xl:h-full"
           />
         )}

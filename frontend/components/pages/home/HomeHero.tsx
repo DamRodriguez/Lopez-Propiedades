@@ -6,7 +6,7 @@ import SpaceX from "@/components/layout/SpaceX";
 import LinkButton from "@/components/ui/buttons/LinkButton";
 import Image from "next/image";
 
-const Hero = () => {
+const HomeHero = () => {
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -35,7 +35,7 @@ const Hero = () => {
         <Image
           fill
           src="/images/home/hero.png"
-          alt="Imagen de seccion hero de casa"
+          alt="Imagen de seccion HomeHero de casa"
           className="w-full h-full object-cover"
           priority
         />
@@ -48,7 +48,7 @@ const Hero = () => {
           className="max-w-[45rem] flex flex-col gap-[2rem] xl:gap-[3rem]"
         >
           <div className="flex flex-col gap-[1rem]">
-            <span className="text-base text-secondary text-shadow-md font-extrabold uppercase">
+            <span className="text-base text-secondary-light text-shadow-md font-extrabold uppercase">
               Exclusividad & Prestigio
             </span>
             <h1 className="text-5xl xl:text-7xl text-soft-white font-extrabold text-shadow-md leading-[3.5rem] xl:leading-[5rem]">
@@ -61,7 +61,7 @@ const Hero = () => {
             external
             big
           >
-            <WhatsAppIcon className="fill-soft-white w-[1.5rem] h-[1.5rem] xl:w-[2rem] xl:h-[2rem]" />
+            <WhatsAppIcon />
             <p className="font-semibold">CONTACTAR POR WHATSAPP</p>
           </LinkButton>
         </motion.div>
@@ -70,4 +70,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HomeHero;
