@@ -31,7 +31,7 @@ const ChooseUsSection = () => {
       <Title title="Por qué elegirnos" />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12">
         {items.map((item, index) => (
-          <div className="flex flex-col items-center">
+          <div key={index} className="flex flex-col items-center">
             <div className="w-16 h-16 rounded-xl bg-soft-white shadow-sm flex items-center justify-center text-black mb-6">
               {item.icon}
             </div>
