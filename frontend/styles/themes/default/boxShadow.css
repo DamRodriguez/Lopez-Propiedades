@@ -9,5 +9,7 @@
 
     --shadow-s5: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
 
+    --shadow-s6: 0 0px 15px 0px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+
     --shadow-s-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }

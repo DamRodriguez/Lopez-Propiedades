@@ -1,10 +1,10 @@
-import { Property } from "@/types/property";
+import { PropertyType } from "@/types/property";
 
 export const routes = {
   home: "/",
   services: "/servicios",
   contact: "/contacto",
   aboutUs: "/sobre-nosotros",
-  propertyType: (type: Property) => `/${type}`,
-  propertyDetail: (type: Property, id: number) => `/${type}/${id}`,
+  propertyType: (type: PropertyType) => `/${type}`,
+  propertyDetail: (type: PropertyType, id: number) => `/${type}/${id}`,
 };

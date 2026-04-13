@@ -1,0 +1,110 @@
+[
+  {
+    "id": 101,
+    "type": "ventas",
+    "name": "Mansión Contemporánea Nordelta",
+    "price": 2450000,
+    "currency": "USD",
+    "location": {
+      "neighborhood": "Nordelta",
+      "city": "Buenos Aires"
+    },
+    "characteristics": {
+      "bedrooms": 5,
+      "bathrooms": 6,
+      "squareMeters": 850
+    },
+    "image": "https://picsum.photos/seed/v1/800/600"
+  },
+  {
+    "id": 102,
+    "type": "ventas",
+    "name": "Chalet Estilo Inglés",
+    "price": 320000,
+    "currency": "USD",
+    "location": {
+      "neighborhood": "Ramos Mejía",
+      "city": "Buenos Aires"
+    },
+    "characteristics": {
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "squareMeters": 280
+    },
+    "image": "https://picsum.photos/seed/v2/800/600",
+    "isHomeFeatured": {
+      "side": true
+    }
+  },
+  {
+    "id": 103,
+    "type": "ventas",
+    "name": "Penthouse Vista al Río",
+    "price": 890000,
+    "currency": "USD",
+    "location": {
+      "neighborhood": "Puerto Madero",
+      "city": "Buenos Aires"
+    },
+    "characteristics": {
+      "bedrooms": 3,
+      "bathrooms": 4,
+      "squareMeters": 210
+    },
+    "image": "https://picsum.photos/seed/v3/800/600",
+    "isHomeFeatured": {
+      "side": true
+    }
+  },
+  {
+    "id": 104,
+    "type": "ventas",
+    "name": "Casa Quinta con Arboleda",
+    "price": 155000,
+    "currency": "USD",
+    "location": {
+      "neighborhood": "Ituzaingó",
+      "city": "Buenos Aires"
+    },
+    "characteristics": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "squareMeters": 1200
+    },
+    "image": "https://picsum.photos/seed/v4/800/600"
+  },
+  {
+    "id": 105,
+    "type": "ventas",
+    "name": "Residencia de Lujo Carrasco",
+    "price": 1100000,
+    "currency": "USD",
+    "location": {
+      "neighborhood": "Carrasco",
+      "city": "Montevideo"
+    },
+    "characteristics": {
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "squareMeters": 520
+    },
+    "image": "https://picsum.photos/seed/v5/800/600"
+  },
+  {
+    "id": 106,
+    "type": "ventas",
+    "name": "Loft Industrial Palermo",
+    "price": 275000,
+    "currency": "USD",
+    "location": {
+      "neighborhood": "Palermo Soho",
+      "city": "Buenos Aires"
+    },
+    "characteristics": {
+      "bedrooms": 1,
+      "bathrooms": 2,
+      "squareMeters": 95
+    },
+    "image": "https://picsum.photos/seed/v6/800/600"
+  }
+]

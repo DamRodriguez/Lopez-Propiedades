@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 z-9999 w-full">
-      <div className="fixed z-9999 w-full min-h-[4.5rem] xl:min-h-[5.5rem] bg-soft-white/80 backdrop-blur-[0.5rem] flex items-center justify-between px-[2rem] xl:px-[6rem] shadow-s4">
+      <div className="fixed z-9999 w-full min-h-[4.5rem] xl:min-h-[5.5rem] bg-soft-white/80 backdrop-blur-[0.5rem] flex items-center justify-between px-[2rem] xl:px-[6rem] shadow-s5">
         <LeftItem
           onClick={() => { if (isMobileNavVisible) { setIsMobileNavVisible(false); } }}
         />

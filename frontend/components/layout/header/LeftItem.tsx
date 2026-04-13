@@ -11,14 +11,17 @@ const LeftItem = (props: LeftItemProps) => {
     <MotionFade>
       <Link
         href={routes.home}
-        onClick={props.onClick}
-        className="text-black text-lg xl:text-xl font-fira-code flex items-center gap-[0.2rem] xl:gap-[0.5rem]"
+        onClick={(e) => {
+          props.onClick();
+          if (window.location.pathname === routes.home) {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+        }}
+        className="text-black text-lg xl:text-xl font-sans flex items-center gap-[0.2rem] xl:gap-[0.5rem]"
       >
-        <div>
-          <p className="font-semibold theme-transition-all">
-            Lopez Propiedades
-          </p>
-        </div>
+        <span className="font-semibold theme-transition-all">
+          Lopez Propiedades
+        </span>
       </Link>
     </MotionFade>
   );

@@ -14,16 +14,7 @@ const NavDesk = () => {
         <li>
           <MotionStagger className="flex gap-[4rem]" direction="up" duration={0.3}>
             {routeItems.map((item, index) => {
-              const normalizedLabel = item.label
-                .toLowerCase()
-                .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "")
-                .replace(/\s+/g, "-");
-
-              const isActive =
-                item.href === "/"
-                  ? pathname === "/"
-                  : pathname.includes(normalizedLabel) || pathname === item.href;
+              const isActive = pathname === item.href;
 
               return (
                 <div
