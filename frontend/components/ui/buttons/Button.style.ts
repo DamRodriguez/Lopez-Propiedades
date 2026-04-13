@@ -6,7 +6,7 @@ export const buttonClass = tv({
   variants: {
     intent: {
       primary: "bg-primary text-soft-white",
-      secondary: "",
+      secondary: "bg-secondary-light text-black",
     },
 
     disabled: {

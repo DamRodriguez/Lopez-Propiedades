@@ -27,7 +27,7 @@ const ChooseUsSection = () => {
   ]
 
   return (
-    <SpaceX className="text-center flex flex-col gap-10 xl:gap-16 bg-soft-gray/10 py-[5rem] xl:py-[8rem]">
+    <SpaceX className="text-center flex flex-col gap-10 xl:gap-16 bg-gradient-to-b from-soft-gray/10 to-soft-gray/25 py-[5rem] xl:py-[8rem] ">
       <Title title="Por qué elegirnos" />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12">
         {items.map((item, index) => (
