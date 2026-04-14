@@ -13,6 +13,7 @@ type PropertyCardProps = {
   imageContainerClassName?: string;
   showType?: boolean;
   hideSeparator?: boolean;
+  bgHover?: boolean;
 }
 
 const PropertyCard = (props: PropertyCardProps) => {
@@ -21,7 +22,9 @@ const PropertyCard = (props: PropertyCardProps) => {
   return (
     <Link
       href={routes.propertyDetail(data.type, data.id)}
-      className={clsx("flex flex-col gap-4 group cursor-pointer rounded-xs", props.containerClassName)}>
+      className={clsx("flex flex-col gap-4 group cursor-pointer rounded-xs", props.containerClassName, {
+        "hover:bg-secondary-light/15 custom-transition-all": props.bgHover
+      })}>
       <div className={clsx("relative rounded-xs overflow-hidden w-full h-full shadow-s6", props.imageContainerClassName)}>
         <Image
           fill
@@ -39,7 +42,7 @@ const PropertyCard = (props: PropertyCardProps) => {
       </div>
       <div className={clsx("flex flex-col gap-2", props.infoContainerClassName)}>
         <div className="flex flex-wrap items-center justify-between gap-4 w-full">
-          <p className="text-lg xl:text-xl font-bold text-black truncate">
+          <p className="text-lg xl:text-xl font-bold text-dark-gray truncate">
             {data.name}
           </p>
           <span className="shrink-0 whitespace-nowrap text-lg xl:text-xl font-extrabold text-black">
@@ -48,13 +51,13 @@ const PropertyCard = (props: PropertyCardProps) => {
         </div>
         <div className="flex items-center gap-1">
           <LocationIcon />
-          <p className="text-sm xl:text-base">
+          <p className="text-sm xl:text-base text-dark-gray">
             {data.location.neighborhood},{" "}{data.location.city}
           </p>
         </div>
         <div>
           {!props.hideSeparator && (
-            <div className="h-[0.05rem] w-full bg-soft-gray/30 my-2" />
+            <div className="h-[0.05rem] w-full bg-soft-gray/20 my-2" />
           )}
         </div>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-xs xl:text-sm font-semibold text-dark-gray">
@@ -73,7 +76,8 @@ const PropertyCard = (props: PropertyCardProps) => {
           <div className="flex items-center gap-1">
             <BathroomIcon />
             <p>
-              {data.characteristics.bathrooms} Baños
+              {data.characteristics.bathrooms}{" "}
+              {data.characteristics.bathrooms > 1 ? "Baños" : "Baño"}
             </p>
           </div>
         </div>

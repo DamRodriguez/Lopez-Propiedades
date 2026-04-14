@@ -156,7 +156,7 @@ export default function PropertyFilters(props: PropertyFiltersProps) {
 
   return (
     <>
-      <div className="lg:hidden">
+      <div className="lg:hidden sticky top-21 z-20">
         <Button
           onClick={() => setIsOpen(true)}
           variant="secondary"
@@ -185,7 +185,7 @@ export default function PropertyFilters(props: PropertyFiltersProps) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+              className="absolute inset-0 bg-black/50 backdrop-blur-[0.5rem]"
             />
 
             <motion.div

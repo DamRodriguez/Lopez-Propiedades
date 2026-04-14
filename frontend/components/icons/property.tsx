@@ -1,12 +1,12 @@
 export const RulerIcon = ({ className }: { className?: string }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} width="20" height="20" viewBox="0 0 472 384"><path fill="#000000" d="M427 64q17 0 29.5 12.5T469 107v170q0 18-12.5 30.5T427 320H43q-18 0-30.5-12.5T0 277V107q0-18 12.5-30.5T43 64h384zm0 213V107h-43v85h-43v-85h-42v85h-43v-85h-43v85h-42v-85h-43v85H85v-85H43v170h384z" /></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} width="20" height="20" viewBox="0 0 32 32"><path fill="#000000" d="M29 10H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h26a1 1 0 0 0 1-1V11a1 1 0 0 0-1-1Zm-1 10H4v-8h4v4h2v-4h5v4h2v-4h5v4h2v-4h4Z" /></svg>
   );
 };
 
 export const BedroomIcon = ({ className }: { className?: string }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} width="20" height="20" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} width="25" height="25" viewBox="0 0 24 24">
       <path
         fill="currentColor"
         d="M6.5 15.5h11v.75q0 .325.213.537t.537.213q.325 0 .537-.213T19 16.25v-3.1q0-.525-.2-.988t-.55-.812V9q0-.825-.588-1.412T16.25 7H13q-.275 0-.525.075T12 7.3q-.225-.15-.475-.225T11 7H7.75q-.825 0-1.413.588T5.75 9v2.35q-.35.35-.55.813t-.2.987v3.1q0 .325.213.537T5.75 17q.325 0 .537-.213t.213-.537v-.75Zm0-1.5v-1q0-.425.288-.713T7.5 12h9q.425 0 .713.288T17.5 13v1h-11Zm.75-3.5v-2h4v2h-4Zm5.5 0v-2h4v2h-4Z"
