@@ -4,12 +4,15 @@ import MotionSlide from "@/components/motion/MotionSlide";
 import { routeItems } from "@/constants/routeItems";
 import SocialButtons from "@/components/other/SocialButtons";
 import MotionStagger from "@/components/motion/MotionStagger";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
 type NavMobileProps = {
   onClose: () => void;
 };
 
 const NavMobile = ({ onClose }: NavMobileProps) => {
+  const { handleSmoothScroll } = useSmoothScroll();
+
   return (
     <div className="pt-[3rem] px-[2rem] flex flex-col h-full">
       <nav>
@@ -23,7 +26,10 @@ const NavMobile = ({ onClose }: NavMobileProps) => {
               <li key={href} className="w-full group">
                 <Link
                   href={href}
-                  onClick={onClose}
+                  onClick={(e) => {
+                    onClose();
+                    handleSmoothScroll(e, href);
+                  }}
                   className="cursor-pointer text-black">
                   {label}
                 </Link>

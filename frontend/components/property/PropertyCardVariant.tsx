@@ -15,7 +15,7 @@ const PropertyCardVariant = (props: PropertyCardVariantProps) => {
     <Link
       href={routes.propertyDetail(data.type, data.id)}
       className="flex gap-4 group cursor-pointer">
-      <div className="w-1/3 aspect-square rounded-lg overflow-hidden shadow-s6">
+      <div className="w-1/3 aspect-square rounded-xs overflow-hidden shadow-s6">
         <Image
           width={200}
           height={200}
@@ -35,7 +35,7 @@ const PropertyCardVariant = (props: PropertyCardVariantProps) => {
           {data.location.neighborhood},{" "}{data.location.city}
         </p>
         <p className="text-lg font-extrabold text-black">
-          {formatMoney(data.price)}{" "}{data.currency}
+          {formatMoney(data.price)}{" "} USD
           {data.type === "alquileres" && (
             <span
               className="text-xs">

@@ -5,7 +5,6 @@ import config from "@/config/config";
 const SocialButtons = () => {
   const socialItems = [
     { href: config.urls.whatsApp, icon: <WhatsAppIcon /> },
-    { href: config.urls.whatsApp, icon: <WhatsAppIcon /> },
   ];
   return (
     <div className="flex flex-col items-end gap-[1.5rem] [&_svg]:fill-soft-white">

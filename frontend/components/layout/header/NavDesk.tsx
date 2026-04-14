@@ -1,11 +1,11 @@
 "use client";
-import { usePathname } from "next/navigation";
 import { routeItems } from "@/constants/routeItems";
 import clsx from "clsx";
 import Link from "next/link";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
 const NavDesk = () => {
-  const pathname = usePathname();
+  const { pathname, handleSmoothScroll } = useSmoothScroll();
 
   return (
     <nav className="hidden xl:flex">
@@ -21,12 +21,13 @@ const NavDesk = () => {
                   "flex items-center justify-center flex-col group relative custom-transition-all",
                   {
                     "text-black": isActive,
-                    "text-dark-gray/80 hover:text-black": !isActive,
+                    "text-dark-gray/90 hover:text-black": !isActive,
                   }
                 )}
               >
                 <Link
                   href={item.href}
+                  onClick={(e) => handleSmoothScroll(e, item.href)}
                   className="cursor-pointer relative"
                 >
                   {item.label}

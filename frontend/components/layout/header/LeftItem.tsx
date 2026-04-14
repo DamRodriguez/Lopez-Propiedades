@@ -9,7 +9,7 @@ const LeftItem = (props: LeftItemProps) => {
   return (
     <Link
       href={routes.home}
-      onClick={(e) => {
+      onClick={() => {
         props.onClick();
         if (window.location.pathname === routes.home) {
           window.scrollTo({ top: 0, behavior: "smooth" });

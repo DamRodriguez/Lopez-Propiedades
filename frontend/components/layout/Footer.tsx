@@ -3,13 +3,15 @@ import { routes } from "@/constants/routes";
 import Link from "next/link";
 import { CallIcon, CodeIcon, EmailIcon, LocationIcon } from "../icons/footer";
 import config from "@/config/config";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
 const Footer = () => {
+  const { handleSmoothScroll } = useSmoothScroll();
+
   const companyItems = [
     {
       text: "Inicio",
       href: routes.home,
-      onClick: () => window.scrollTo({ top: 0, behavior: "smooth" })
     },
     {
       text: "Servicios",
@@ -65,7 +67,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     href={item.href}
-                    onClick={item.onClick ? item.onClick : () => { }}
+                    onClick={(e) => handleSmoothScroll(e, item.href)}
                     className="hover:underline custom-transition-all"
                   >
                     {item.text}
@@ -83,6 +85,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     href={item.href}
+                    onClick={(e) => handleSmoothScroll(e, item.href)}
                     className="hover:underline custom-transition-all"
                   >
                     {item.text}

@@ -14,13 +14,13 @@ export const CallIcon = ({ className }: { className?: string }) => {
 
 export const EmailIcon = ({ className }: { className?: string }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} width={iconSize} height={iconSize} viewBox="0 0 16 16"><path fill="#fff" fill-rule="evenodd" d="M14.95 3.684L8.637 8.912a1 1 0 0 1-1.276 0l-6.31-5.228A.999.999 0 0 0 1 4v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a.999.999 0 0 0-.05-.316M2 2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m-.21 1l5.576 4.603a1 1 0 0 0 1.27.003L14.268 3z" /></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} width={iconSize} height={iconSize} viewBox="0 0 16 16"><path fill="#fff" fillRule="evenodd" d="M14.95 3.684L8.637 8.912a1 1 0 0 1-1.276 0l-6.31-5.228A.999.999 0 0 0 1 4v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a.999.999 0 0 0-.05-.316M2 2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m-.21 1l5.576 4.603a1 1 0 0 0 1.27.003L14.268 3z" /></svg>
   );
 };
 
 export const CodeIcon = ({ className }: { className?: string }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} width={iconSize} height={iconSize} viewBox="0 0 17 16"><path fill="#fff" fill-rule="evenodd" d="M11.74 11.993a.714.714 0 0 0 .493-.195l3.479-3.316a.644.644 0 0 0 0-.939l-3.479-3.318a.72.72 0 0 0-.984 0a.643.643 0 0 0 0 .938l2.987 2.85l-2.987 2.848a.643.643 0 0 0 0 .938a.713.713 0 0 0 .491.194zm-7.439-.11a.727.727 0 0 1-.497-.19L.287 8.425a.62.62 0 0 1 0-.923l3.517-3.268a.74.74 0 0 1 .995 0a.624.624 0 0 1 0 .924l-3.02 2.805l3.02 2.804a.626.626 0 0 1 0 .926a.736.736 0 0 1-.498.19zm2.384 3.006a.672.672 0 0 0 .503-.51L9.934 1.885a.636.636 0 0 0-.488-.768a.661.661 0 0 0-.77.514L5.93 14.125a.636.636 0 0 0 .755.764z" /></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} width={iconSize} height={iconSize} viewBox="0 0 17 16"><path fill="#fff" fillRule="evenodd" d="M11.74 11.993a.714.714 0 0 0 .493-.195l3.479-3.316a.644.644 0 0 0 0-.939l-3.479-3.318a.72.72 0 0 0-.984 0a.643.643 0 0 0 0 .938l2.987 2.85l-2.987 2.848a.643.643 0 0 0 0 .938a.713.713 0 0 0 .491.194zm-7.439-.11a.727.727 0 0 1-.497-.19L.287 8.425a.62.62 0 0 1 0-.923l3.517-3.268a.74.74 0 0 1 .995 0a.624.624 0 0 1 0 .924l-3.02 2.805l3.02 2.804a.626.626 0 0 1 0 .926a.736.736 0 0 1-.498.19zm2.384 3.006a.672.672 0 0 0 .503-.51L9.934 1.885a.636.636 0 0 0-.488-.768a.661.661 0 0 0-.77.514L5.93 14.125a.636.636 0 0 0 .755.764z" /></svg>
   );
 };
 

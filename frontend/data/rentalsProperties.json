@@ -4,11 +4,11 @@
     "type": "alquileres",
     "name": "Departamento 3 Ambientes Luminoso",
     "price": 550000,
-    "currency": "ARS",
     "location": {
       "neighborhood": "Ramos Mejía",
       "city": "Buenos Aires"
     },
+    "category": "casa",
     "characteristics": {
       "bedrooms": 2,
       "bathrooms": 1,
@@ -21,11 +21,11 @@
     "type": "alquileres",
     "name": "Monoambiente de Diseño",
     "price": 320000,
-    "currency": "ARS",
     "location": {
       "neighborhood": "Ciudadela",
       "city": "Buenos Aires"
     },
+    "category": "casa",
     "characteristics": {
       "bedrooms": 0,
       "bathrooms": 1,
@@ -38,11 +38,11 @@
     "type": "alquileres",
     "name": "Duplex con Terraza Propia",
     "price": 780000,
-    "currency": "ARS",
     "location": {
       "neighborhood": "Haedo",
       "city": "Buenos Aires"
     },
+    "category": "apartamento",
     "characteristics": {
       "bedrooms": 2,
       "bathrooms": 2,
@@ -58,11 +58,11 @@
     "type": "alquileres",
     "name": "Oficina Comercial Premium",
     "price": 1200,
-    "currency": "USD",
     "location": {
       "neighborhood": "Canning",
       "city": "Buenos Aires"
     },
+    "category": "ph",
     "characteristics": {
       "bedrooms": 1,
       "bathrooms": 2,
@@ -78,11 +78,11 @@
     "type": "alquileres",
     "name": "Casa Familiar con Jardín",
     "price": 1200000,
-    "currency": "ARS",
     "location": {
       "neighborhood": "Castelar",
       "city": "Buenos Aires"
     },
+    "category": "casa",
     "characteristics": {
       "bedrooms": 3,
       "bathrooms": 2,
@@ -98,11 +98,11 @@
     "type": "alquileres",
     "name": "Piso Exclusivo Belgrano",
     "price": 2500,
-    "currency": "USD",
     "location": {
       "neighborhood": "Belgrano R",
       "city": "Buenos Aires"
     },
+    "category": "ph",
     "characteristics": {
       "bedrooms": 4,
       "bathrooms": 3,

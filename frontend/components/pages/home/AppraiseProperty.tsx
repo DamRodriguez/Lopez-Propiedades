@@ -5,7 +5,7 @@ import LinkButton from "@/components/ui/buttons/LinkButton";
 const AppraiseProperty = () => {
   return (
     <SpaceX className="mx-auto">
-      <div className="relative rounded-3xl p-8 xl:p-14 overflow-hidden shadow-s6 group min-h-[20rem] flex items-center">
+      <div className="relative rounded-xs p-8 xl:p-14 overflow-hidden shadow-s6 group min-h-[20rem] flex items-center">
         <Image
           src="/images/home/appraise.png"
           alt="Tasación de propiedades"
@@ -17,9 +17,9 @@ const AppraiseProperty = () => {
 
         <div className="z-10 flex flex-col xl:flex-row items-center justify-between gap-10 w-full">
           <div className="text-soft-white w-full xl:w-3/5 space-y-4 text-center xl:text-start">
-            <h2 className="text-3xl xl:text-4xl font-bold tracking-tight">
+            <h3 className="text-3xl xl:text-4xl font-bold tracking-tight">
               ¿Quieres tasar tu propiedad?
-            </h2>
+            </h3>
             <p className="text-base xl:text-lg text-soft-white/90 max-w-xl leading-relaxed">
               Realizamos tasaciones profesionales en el día para que conozcas el
               <span className="font-semibold text-soft-white">

@@ -4,11 +4,11 @@
     "type": "ventas",
     "name": "Mansión Contemporánea Nordelta",
     "price": 2450000,
-    "currency": "USD",
     "location": {
       "neighborhood": "Nordelta",
       "city": "Buenos Aires"
     },
+    "category": "casa",
     "characteristics": {
       "bedrooms": 5,
       "bathrooms": 6,
@@ -21,11 +21,11 @@
     "type": "ventas",
     "name": "Chalet Estilo Inglés",
     "price": 320000,
-    "currency": "USD",
     "location": {
       "neighborhood": "Ramos Mejía",
       "city": "Buenos Aires"
     },
+    "category": "apartamento",
     "characteristics": {
       "bedrooms": 4,
       "bathrooms": 3,
@@ -41,11 +41,11 @@
     "type": "ventas",
     "name": "Penthouse Vista al Río",
     "price": 890000,
-    "currency": "USD",
     "location": {
       "neighborhood": "Puerto Madero",
       "city": "Buenos Aires"
     },
+    "category": "terreno",
     "characteristics": {
       "bedrooms": 3,
       "bathrooms": 4,
@@ -61,11 +61,11 @@
     "type": "ventas",
     "name": "Casa Quinta con Arboleda",
     "price": 155000,
-    "currency": "USD",
     "location": {
       "neighborhood": "Ituzaingó",
       "city": "Buenos Aires"
     },
+    "category": "casa",
     "characteristics": {
       "bedrooms": 3,
       "bathrooms": 2,
@@ -78,11 +78,11 @@
     "type": "ventas",
     "name": "Residencia de Lujo Carrasco",
     "price": 1100000,
-    "currency": "USD",
     "location": {
       "neighborhood": "Carrasco",
       "city": "Montevideo"
     },
+    "category": "terreno",
     "characteristics": {
       "bedrooms": 4,
       "bathrooms": 3,
@@ -95,11 +95,11 @@
     "type": "ventas",
     "name": "Loft Industrial Palermo",
     "price": 275000,
-    "currency": "USD",
     "location": {
       "neighborhood": "Palermo Soho",
       "city": "Buenos Aires"
     },
+    "category": "ph",
     "characteristics": {
       "bedrooms": 1,
       "bathrooms": 2,

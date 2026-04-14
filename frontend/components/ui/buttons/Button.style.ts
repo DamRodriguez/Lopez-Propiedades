@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants"
 
 export const buttonClass = tv({
-  base: "text-sm xl:text-lg rounded-sm flex items-center justify-center flex gap-[0.5rem] xl:gap-[0.7rem]",
+  base: "text-sm xl:text-lg rounded-xs flex items-center justify-center flex gap-[0.5rem] xl:gap-[0.7rem] shadow-s3",
 
   variants: {
     intent: {

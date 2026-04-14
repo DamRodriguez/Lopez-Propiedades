@@ -10,6 +10,7 @@ type PropertyCardProps = {
   data: PropertyData;
   containerClassName?: string;
   infoContainerClassName?: string;
+  imageContainerClassName?: string;
   showType?: boolean;
   hideSeparator?: boolean;
 }
@@ -20,13 +21,13 @@ const PropertyCard = (props: PropertyCardProps) => {
   return (
     <Link
       href={routes.propertyDetail(data.type, data.id)}
-      className={clsx("flex flex-col gap-4 group cursor-pointer rounded-xl", props.containerClassName)}>
-      <div className="relative rounded-xl overflow-hidden w-full h-full shadow-s6">
+      className={clsx("flex flex-col gap-4 group cursor-pointer rounded-xs", props.containerClassName)}>
+      <div className={clsx("relative rounded-xs overflow-hidden w-full h-full shadow-s6", props.imageContainerClassName)}>
         <Image
           fill
           src={data.image}
           alt={`Imagen de ${data.name}`}
-          className="w-full h-full object-cover custom-transition-all group-hover:scale-110"
+          className="w-full h-full object-cover custom-transition-all group-hover:scale-110 bg-soft-gray/10"
         />
         {props.showType && (
           <div className="absolute m-4">
@@ -37,12 +38,12 @@ const PropertyCard = (props: PropertyCardProps) => {
         )}
       </div>
       <div className={clsx("flex flex-col gap-2", props.infoContainerClassName)}>
-        <div className="flex items-center justify-between gap-4 w-full">
-          <p className="text-lg xl:text-2xl font-bold text-black truncate">
+        <div className="flex flex-wrap items-center justify-between gap-4 w-full">
+          <p className="text-lg xl:text-xl font-bold text-black truncate">
             {data.name}
           </p>
-          <span className="shrink-0 whitespace-nowrap text-lg xl:text-2xl font-extrabold text-black">
-            {formatMoney(data.price)}{" "}{data.currency}
+          <span className="shrink-0 whitespace-nowrap text-lg xl:text-xl font-extrabold text-black">
+            {formatMoney(data.price)}{" "} USD
           </span>
         </div>
         <div className="flex items-center gap-1">
@@ -56,7 +57,7 @@ const PropertyCard = (props: PropertyCardProps) => {
             <div className="h-[0.05rem] w-full bg-soft-gray/30 my-2" />
           )}
         </div>
-        <div className="flex items-center gap-6 text-xs xl:text-sm font-semibold text-dark-gray">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-xs xl:text-sm font-semibold text-dark-gray">
           <div className="flex items-center gap-1">
             <RulerIcon />
             <p>
