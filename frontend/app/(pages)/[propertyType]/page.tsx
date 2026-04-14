@@ -8,6 +8,13 @@ interface PageProps {
   params: Promise<{ propertyType: PropertyType }>;
 }
 
+export async function generateStaticParams() {
+  const types: PropertyType[] = ["ventas", "alquileres"];
+  return types.map((type) => ({
+    propertyType: type,
+  }));
+}
+
 export default async function PropertyTypePage({ params }: PageProps) {
   const { propertyType } = await params;
 
