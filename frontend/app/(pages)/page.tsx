@@ -1,7 +1,7 @@
 import AppraiseProperty from "@/components/pages/home/AppraiseProperty";
 import ChooseUsSection from "@/components/pages/home/ChooseUsSection";
 import FeaturedProperties from "@/components/pages/home/FeaturedProperties";
-import HomeHero from "@/components/pages/home/HomeHero";
+import HomeHero from "@/components/pages/home/hero/HomeHero";
 
 const HomePage = () => {
   return (

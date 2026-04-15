@@ -7,6 +7,7 @@ import Link from "next/link";
 type LinkButtonProps = {
   children: ReactNode;
   href: string;
+  query?: Record<string, string | number | boolean | undefined>;
   className?: string;
   variant?: ButtonVariants;
   outline?: boolean;
@@ -19,8 +20,15 @@ type LinkButtonProps = {
 
 const LinkButton = ({
   cursorNormal = false,
+  query,
   ...props
 }: LinkButtonProps) => {
+  const cleanQuery = query
+    ? Object.fromEntries(
+      Object.entries(query).filter(([_, value]) => value !== undefined && value !== null && value !== "")
+    )
+    : undefined;
+
   const className = clsx(buttonClass({
     intent: props.variant,
     outline: props.outline,
@@ -29,12 +37,16 @@ const LinkButton = ({
     cursorNormal: cursorNormal,
     big: props.big,
   }), props.className);
+
   return (
     <Link
-      href={props.href}
-      target={props.external ? "_blank" : ""}
-      className={clsx("", className)}
-      rel="noopener noreferrer"
+      href={{
+        pathname: props.href,
+        query: Object.keys(cleanQuery || {}).length > 0 ? cleanQuery : undefined,
+      }}
+      target={props.external ? "_blank" : undefined}
+      className={className}
+      rel={props.external ? "noopener noreferrer" : undefined}
     >
       {props.children}
     </Link>

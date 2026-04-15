@@ -47,8 +47,10 @@ const InnerFilterFields = ({
         options={props.locationOptions}
         value={props.locationFilter}
         onChange={props.setLocationFilter}
-        placeholder="Seleccionar ubicación"
         renderOption={(option) => <span className="text-sm">{option.name}</span>}
+        inputClassName="!bg-light-gray"
+        optionsContainerClassName="bg-light-gray"
+        optionClassName="hover:bg-primary hover:text-soft-white"
       />
     </div>
 

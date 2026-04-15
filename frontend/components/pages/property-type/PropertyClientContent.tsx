@@ -1,14 +1,17 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { PropertyCategories, PropertyData } from "@/types/property";
 import PropertyGrid from "@/components/pages/property-type/PropertyGrid";
 import PropertyFilters, { LocationOption } from "@/components/pages/property-type/PropertyFilters";
+import { useSearchParams } from "next/navigation";
 
 interface PropertyClientContentProps {
   initialProperties: PropertyData[];
 }
 
 export default function PropertyClientContent({ initialProperties }: PropertyClientContentProps) {
+  const searchParams = useSearchParams();
+  const locationParamFilter = searchParams.get("locationFilter");
   const initialPriceFilter = 3000000;
   const [priceFilter, setPriceFilter] = useState<number>(initialPriceFilter);
   const [bedroomsFilter, setBedroomsFilter] = useState<number>(0);
@@ -23,7 +26,28 @@ export default function PropertyClientContent({ initialProperties }: PropertyCli
     return [{ id: "all", name: "Todas las ubicaciones" }, ...options];
   }, [initialProperties]);
 
-  const [locationFilter, setLocationFilter] = useState<LocationOption>(locationOptions[0]);
+  const [locationFilter, setLocationFilter] = useState<LocationOption>(() => {
+    if (locationParamFilter) {
+      const match = locationOptions.find(
+        (opt) => opt.name.toLowerCase() === locationParamFilter.toLowerCase()
+      );
+      if (match) return match;
+    }
+    return locationOptions[0];
+  });
+
+  useEffect(() => {
+    if (locationParamFilter) {
+      const match = locationOptions.find(
+        (opt) => opt.name.toLowerCase() === locationParamFilter.toLowerCase()
+      );
+      if (match) {
+        setLocationFilter(match);
+        return;
+      }
+    }
+    setLocationFilter(locationOptions[0]);
+  }, [locationParamFilter, locationOptions]);
 
   const filteredProperties = useMemo(() => {
     return initialProperties.filter((property) => {

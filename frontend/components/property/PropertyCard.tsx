@@ -23,7 +23,7 @@ const PropertyCard = (props: PropertyCardProps) => {
     <Link
       href={routes.propertyDetail(data.type, data.id)}
       className={clsx("flex flex-col gap-4 group cursor-pointer rounded-xs", props.containerClassName, {
-        "hover:bg-secondary-light/15 custom-transition-all": props.bgHover
+        "": props.bgHover
       })}>
       <div className={clsx("relative rounded-xs overflow-hidden w-full h-full shadow-s6", props.imageContainerClassName)}>
         <Image

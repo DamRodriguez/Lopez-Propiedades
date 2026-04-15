@@ -18,9 +18,14 @@ export type InputComboboxProps<T extends BaseOption> = {
   onChange?: (option: T) => void;
   renderOption: (option: T) => React.ReactNode;
   disabled?: boolean;
-  className?: string;
+  containerClassName?: string;
   error?: boolean;
   placeholder?: string;
+  inputClassName?: string;
+  optionsContainerClassName?: string;
+  optionClassName?: string;
+  placeholderClassName?: string;
+  placeholderLeftIcon?: React.ReactNode;
 };
 
 export const InputCombobox = <T extends BaseOption>({
@@ -30,9 +35,14 @@ export const InputCombobox = <T extends BaseOption>({
   onChange,
   renderOption,
   disabled,
-  className,
+  containerClassName,
   error,
   placeholder,
+  inputClassName,
+  optionsContainerClassName,
+  optionClassName,
+  placeholderClassName,
+  placeholderLeftIcon
 }: InputComboboxProps<T>) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState<T | undefined>(value);
@@ -62,7 +72,7 @@ export const InputCombobox = <T extends BaseOption>({
   };
 
   return (
-    <div ref={wrapperRef} className={clsx("relative w-full", className)}>
+    <div ref={wrapperRef} className={clsx("relative w-full", containerClassName)}>
       <button
         type="button"
         disabled={disabled}
@@ -73,7 +83,8 @@ export const InputCombobox = <T extends BaseOption>({
             hasValue: selected?.id !== undefined,
             disabled: disabled,
           }),
-          "flex items-center justify-between cursor-pointer w-full border-none !bg-light-gray shadow-s2 rounded-xs"
+          inputClassName,
+          "flex items-center justify-between cursor-pointer w-full border-none shadow-s2 rounded-xs"
         )}
       >
         <div className="flex-1 text-left overflow-hidden">
@@ -81,14 +92,17 @@ export const InputCombobox = <T extends BaseOption>({
             renderOption(selected)
           ) : (
             placeholder && (
-              <span className="text-soft-gray text-xs sm:text-sm truncate">
-                {placeholder}
-              </span>
+              <div className="flex items-center gap-2">
+                {placeholderLeftIcon}
+                <span className={clsx("text-soft-gray text-xs sm:text-sm truncate", placeholderClassName)}>
+                  {placeholder}
+                </span>
+              </div>
             )
           )}
         </div>
 
-        <div className="ml-2 flex-shrink-0">
+        <div className="ml-4 flex-shrink-0">
           {isOpen ? (
             <UpArrowIcon className={getArrowIconClassName()} />
           ) : (
@@ -99,15 +113,15 @@ export const InputCombobox = <T extends BaseOption>({
 
       <AnimatePresence>
         {isOpen && (
-          <div className="absolute z-50 mt-1 w-full border-none bg-light-gray shadow-s2 rounded-xs overflow-hidden">
+          <div className="absolute z-50 mt-1 w-full border-none shadow-s2 rounded-xs overflow-hidden">
             <MotionHeight duration={0.3}>
-              <div className="max-h-[10.5rem] sm:max-h-[13rem] scrollbarCustom overflow-y-auto">
+              <div className={clsx("max-h-[10.5rem] sm:max-h-[13rem] scrollbarCustom overflow-y-auto", optionsContainerClassName)}>
                 {filteredOptions.length > 0 ? (
                   filteredOptions.map((option) => (
                     <div
                       key={option.id}
                       onClick={() => handleSelect(option)}
-                      className="py-[0.5rem] px-[1rem] hover:bg-primary cursor-pointer custom-transition-all hover:text-soft-white"
+                      className={clsx("py-[0.5rem] px-[1rem] cursor-pointer custom-transition-all", optionClassName)}
                     >
                       {renderOption(option)}
                     </div>

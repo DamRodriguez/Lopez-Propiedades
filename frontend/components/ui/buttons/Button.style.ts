@@ -1,12 +1,12 @@
 import { tv } from "tailwind-variants"
 
 export const buttonClass = tv({
-  base: "text-sm xl:text-lg rounded-xs flex items-center justify-center flex gap-[0.5rem] xl:gap-[0.7rem] shadow-s3",
+  base: "text-sm xl:text-lg rounded-xs flex items-center justify-center flex gap-[0.5rem] xl:gap-[0.7rem] shadow-s2 custom-transition-all",
 
   variants: {
     intent: {
-      primary: "bg-primary text-soft-white [&_svg]:fill-soft-white",
-      secondary: "bg-secondary-light text-black",
+      primary: "bg-primary text-soft-white [&_svg]:fill-soft-white hover:bg-primary-light",
+      secondary: "bg-secondary-light text-black hover:bg-secondary",
     },
 
     disabled: {
@@ -35,7 +35,7 @@ export const buttonClass = tv({
     },
 
     cursorNormal: {
-      false: "custom-transition-all hover:scale-105 cursor-pointer",
+      false: "cursor-pointer",
       true: "cursor-default",
     },
   },

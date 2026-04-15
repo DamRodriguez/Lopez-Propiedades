@@ -1,11 +1,9 @@
 "use client";
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { WhatsAppIcon } from "@/components/icons/social";
+import { motion, useScroll, useTransform } from "framer-motion";
 import SpaceX from "@/components/layout/SpaceX";
-import LinkButton from "@/components/ui/buttons/LinkButton";
 import Image from "next/image";
-import config from "@/config/config";
+import SearchBar from "./SearchBar";
 
 const HomeHero = () => {
   const containerRef = useRef(null);
@@ -15,15 +13,8 @@ const HomeHero = () => {
     offset: ["start start", "end start"],
   });
 
-  const smoothScroll = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
-
-  const yImage = useTransform(smoothScroll, [0, 1], ["0%", "15%"]);
-  const scaleImage = useTransform(smoothScroll, [0, 1], [1.1, 1.25]);
-  const yText = useTransform(smoothScroll, [0, 1], ["0%", "-15%"]);
+  const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
 
   return (
     <div
@@ -33,8 +24,6 @@ const HomeHero = () => {
       <motion.div
         style={{
           y: yImage,
-          scale: scaleImage,
-          transformOrigin: "center center",
           willChange: "transform",
         }}
         className="absolute inset-0 z-0"
@@ -58,7 +47,7 @@ const HomeHero = () => {
           }}
           className="max-w-[45rem] flex flex-col gap-[2rem] xl:gap-[3rem]"
         >
-          <div className="flex flex-col gap-[1rem]">
+          <div className="flex flex-col gap-[0.5rem] xl:gap-[1rem]">
             <span className="text-base text-secondary-light text-shadow-sm font-extrabold uppercase">
               Exclusividad & Prestigio
             </span>
@@ -66,18 +55,10 @@ const HomeHero = () => {
               Encuentra el hogar de tus sueños
             </h1>
           </div>
-
-          <LinkButton
-            href={config.urls.whatsApp}
-            external
-            big
-          >
-            <WhatsAppIcon />
-            <span className="font-semibold text-white">CONTACTAR POR WHATSAPP</span>
-          </LinkButton>
+          <SearchBar />
         </motion.div>
       </SpaceX>
-    </div>
+    </div >
   );
 };
 

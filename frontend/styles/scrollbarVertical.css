@@ -7,7 +7,7 @@
 }
 
 .scrollbarCustom::-webkit-scrollbar-thumb {
-  background-color: var(--color-dark-gray);
+  background-color: var(--color-black);
   border-radius: 1rem;
   cursor: pointer;
 }
