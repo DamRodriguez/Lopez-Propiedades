@@ -12,7 +12,7 @@ const HomeHero = () => {
             fill
             src="/images/home/hero.png"
             alt="Encuentra el hogar de tus sueños - Lopez Propiedades"
-            className="object-cover"
+            className="object-cover fixed top-0 inset-0"
             priority
             sizes="100vw"
           />
