@@ -38,7 +38,7 @@ export default function PropertyGrid({ properties }: PropertyGridProps) {
           </p>
           <p className="text-black text-center max-w-md text-sm xl:text-base">
             No encontramos coincidencias para tu búsqueda actual.
-            Intente ampliar los filtros para ver más opciones.
+            Intente modificar los filtros para ver más opciones.
           </p>
         </div>
       )}

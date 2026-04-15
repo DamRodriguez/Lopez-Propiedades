@@ -1,13 +1,13 @@
 "use client";
 import SpaceX from "@/components/layout/SpaceX";
 import Image from "next/image";
-import SearchBar from "./SearchBar";
+import SearchBar from "@/components/pages/home/hero/SearchBar";
 
 const HomeHero = () => {
   return (
-    <section className="relative h-screen min-h-[600px] w-full overflow-visible">
-      <div className="absolute inset-0 [clip-path:inset(0_0_0_0)]">
-        <div className="fixed inset-0 z-0 h-full w-full">
+    <section className="relative h-[100svh] min-h-[600px] w-full overflow-visible">
+      <div className="absolute inset-0 [clip-path:inset(0_0_0_0)] pointer-events-none">
+        <div className="fixed inset-0 z-0 h-full w-full transform-gpu will-change-transform">
           <Image
             fill
             src="/images/home/hero.png"
