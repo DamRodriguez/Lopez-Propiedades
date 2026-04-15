@@ -195,7 +195,7 @@ export default function PropertyFilters(props: PropertyFiltersProps) {
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="absolute bottom-0 left-0 right-0 bg-soft-white rounded-t-xs p-[1rem] max-h-[80vh] overflow-y-auto"
+              className="absolute bottom-0 left-0 right-0 bg-soft-white rounded-t-xs p-[1rem] max-h-[85vh] overflow-y-auto"
             >
               <InnerFilterFields props={props} onClose={() => setIsOpen(false)} />
             </motion.div>
