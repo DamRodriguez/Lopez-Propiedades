@@ -18,7 +18,7 @@ export const BedroomIcon = ({ className }: { className?: string }) => {
 
 export const BathroomIcon = ({ className }: { className?: string }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} width="20" height="20" viewBox="0 0 24 24" fill="#000000"><g fill="none" stroke="#000000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"><path d="M21 13v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-2.4a.6.6 0 0 1 .6-.6H21Zm-5 7l1 2m-9-2l-1 2m14-9V7a4 4 0 0 0-4-4h-5" /><path d="M15.4 8H8.6c-.331 0-.596-.268-.56-.598C8.186 6.075 8.863 3 12 3s3.814 3.075 3.96 4.402c.036.33-.229.598-.56.598Z" /></g></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} width="15" height="15" viewBox="0 0 24 24" fill="#000000"><g fill="none" stroke="#000000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M21 13v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-2.4a.6.6 0 0 1 .6-.6H21Zm-5 7l1 2m-9-2l-1 2m14-9V7a4 4 0 0 0-4-4h-5" /><path d="M15.4 8H8.6c-.331 0-.596-.268-.56-.598C8.186 6.075 8.863 3 12 3s3.814 3.075 3.96 4.402c.036.33-.229.598-.56.598Z" /></g></svg>
   );
 };
 

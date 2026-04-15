@@ -28,7 +28,7 @@ const PropertyCardVariant = (props: PropertyCardVariantProps) => {
         <span className="text-[10px] font-bold text-secondary uppercase mb-1">
           {data.type === "ventas" ? "venta" : "alquiler"}
         </span>
-        <h4 className="font-bold text-dark-gray mb-1">
+        <h4 className="font-bold text-black mb-1">
           {data.name}
         </h4>
         <p className="text-xs text-on-surface-variant mb-2 text-dark-gray">
