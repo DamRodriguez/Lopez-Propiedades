@@ -195,7 +195,7 @@ export default function PropertyFilters(props: PropertyFiltersProps) {
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="absolute bottom-0 left-0 right-0 bg-soft-white rounded-t-xs p-8 max-h-[90vh] overflow-y-auto"
+              className="absolute bottom-0 left-0 right-0 bg-soft-white rounded-t-xs p-8 max-h-[75vh] overflow-y-auto"
             >
               <div className="flex justify-between items-center mb-6">
                 <p className="text-primary font-bold text-lg flex items-center gap-2">

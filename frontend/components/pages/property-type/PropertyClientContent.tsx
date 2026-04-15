@@ -4,6 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { PropertyCategories, PropertyData } from "@/types/property";
 import PropertyGrid from "@/components/pages/property-type/PropertyGrid";
 import PropertyFilters, { LocationOption } from "@/components/pages/property-type/PropertyFilters";
+import Spinner from "@/components/spinner/Spinner";
 
 interface PropertyClientContentProps {
   initialProperties: PropertyData[];
@@ -93,7 +94,12 @@ function PropertyContentInner({ initialProperties }: { initialProperties: Proper
 
 export default function PropertyClientContent(props: PropertyClientContentProps) {
   return (
-    <Suspense fallback={<div className="min-h-screen">Cargando catálogo...</div>}>
+    <Suspense
+      fallback={
+        <div className="min-h-dvh flex items-start justify-center">
+          <Spinner size={40} color="#000" />
+        </div>
+      }>
       <PropertyContentInner {...props} />
     </Suspense>
   );
