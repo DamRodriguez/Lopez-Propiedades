@@ -13,7 +13,7 @@ interface LocationOption extends BaseOption {
 
 const SearchBar = () => {
   const [typeSwitcherFilter, setTypeSwitcherFilter] = useState<SwitcherType>("venta");
-  const properties = typeSwitcherFilter === "venta" ? salesProperties : rentalsProperties;
+  const properties = [...salesProperties, ...rentalsProperties];
   const formattedType = typeSwitcherFilter === "venta" ? "ventas" : "alquileres";
 
   const locationOptions = useMemo(() => {
@@ -29,7 +29,7 @@ const SearchBar = () => {
 
   return (
     <div className="p-2 rounded-xs shadow-s2 inline-block w-full max-w-3xl bg-soft-gray/30 border border-soft-gray/20 backdrop-blur-[0.5rem]">
-      <div className="flex flex-col md:flex-row items-center gap-4">
+      <div className="flex flex-col md:flex-row items-center gap-2 xl:gap-4">
         <div className="flex-1 w-full relative">
           <InputCombobox<LocationOption>
             options={locationOptions}
@@ -49,7 +49,7 @@ const SearchBar = () => {
         <LinkButton
           href={routes.propertyType(formattedType)}
           query={{
-            locationFilter: locationFilter?.name
+            location: locationFilter?.name
           }}
           className="!px-8 tracking-wide h-[3rem] w-full md:w-auto"
         >

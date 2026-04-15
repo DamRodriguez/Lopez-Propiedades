@@ -12,7 +12,7 @@ interface PropertyClientContentProps {
 
 function PropertyContentInner({ initialProperties }: { initialProperties: PropertyData[] }) {
   const searchParams = useSearchParams();
-  const locationParamFilter = searchParams.get("locationFilter");
+  const locationParamFilter = searchParams.get("location");
 
   const initialPriceFilter = 3000000;
   const [priceFilter, setPriceFilter] = useState<number>(initialPriceFilter);
@@ -30,22 +30,27 @@ function PropertyContentInner({ initialProperties }: { initialProperties: Proper
 
   const [locationFilter, setLocationFilter] = useState<LocationOption>(locationOptions[0]);
 
+  const isInvalidLocation = locationFilter.id === "not-found";
+
   useEffect(() => {
     if (locationParamFilter) {
       const match = locationOptions.find(
         (opt) => opt.name.toLowerCase() === locationParamFilter.toLowerCase()
       );
+
       if (match) {
         setLocationFilter(match);
-        return;
+      } else {
+        setLocationFilter({ id: "not-found", name: locationParamFilter });
       }
-    }
-    if (locationFilter.id !== "all" && !locationParamFilter) {
+    } else {
       setLocationFilter(locationOptions[0]);
     }
   }, [locationParamFilter, locationOptions]);
 
   const filteredProperties = useMemo(() => {
+    if (isInvalidLocation) return [];
+
     return initialProperties.filter((property) => {
       const matchLocation =
         locationFilter.id === "all" ||
@@ -58,7 +63,7 @@ function PropertyContentInner({ initialProperties }: { initialProperties: Proper
 
       return matchLocation && matchPrice && matchBedrooms && matchCategory;
     });
-  }, [initialProperties, locationFilter, priceFilter, bedroomsFilter, categoryFilter]);
+  }, [initialProperties, locationFilter, priceFilter, bedroomsFilter, categoryFilter, isInvalidLocation]);
 
   const handleCategoryChange = (category: PropertyCategories) => {
     setCategoryFilter((prev) =>
@@ -87,7 +92,20 @@ function PropertyContentInner({ initialProperties }: { initialProperties: Proper
         handleCategoryChange={handleCategoryChange}
         clearFilters={clearFilters}
       />
-      <PropertyGrid properties={filteredProperties} />
+
+      {isInvalidLocation ? (
+        <div className="flex-1 flex flex-col gap-4 xl:gap-6 items-center justify-center bg-soft-white rounded-xs shadow-s3 p-10">
+          <p className="text-base xl:text-lg font-semibold text-black">
+            Ubicación no encontrada
+          </p>
+          <p className="text-black text-center max-w-md text-sm xl:text-base">
+            No logramos encontrar propiedades en la zona de <span className="font-semibold text-dark-gray">"{locationFilter.name}"</span>.
+            Por favor, seleccione otra ubicación desde los filtros.
+          </p>
+        </div>
+      ) : (
+        <PropertyGrid properties={filteredProperties} />
+      )}
     </div>
   );
 }

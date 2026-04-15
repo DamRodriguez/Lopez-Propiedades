@@ -32,8 +32,14 @@ export default function PropertyGrid({ properties }: PropertyGridProps) {
           ))}
         </div>
       ) : (
-        <div className="text-center py-20 bg-soft-white rounded-xs shadow-s3">
-          <h3 className="text-base xl:text-xl">No se encontraron resultados</h3>
+        <div className="flex-1 flex flex-col gap-4 xl:gap-6 items-center justify-center bg-soft-white rounded-xs shadow-s3 p-10 h-full">
+          <p className="text-base xl:text-lg font-semibold text-black">
+            No se encontraron resultados
+          </p>
+          <p className="text-black text-center max-w-md text-sm xl:text-base">
+            No encontramos coincidencias para tu búsqueda actual.
+            Intente ampliar los filtros para ver más opciones.
+          </p>
         </div>
       )}
     </div>
