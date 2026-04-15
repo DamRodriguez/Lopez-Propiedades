@@ -1,17 +1,18 @@
 "use client";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { PropertyCategories, PropertyData } from "@/types/property";
 import PropertyGrid from "@/components/pages/property-type/PropertyGrid";
 import PropertyFilters, { LocationOption } from "@/components/pages/property-type/PropertyFilters";
-import { useSearchParams } from "next/navigation";
 
 interface PropertyClientContentProps {
   initialProperties: PropertyData[];
 }
 
-export default function PropertyClientContent({ initialProperties }: PropertyClientContentProps) {
+function PropertyContentInner({ initialProperties }: { initialProperties: PropertyData[] }) {
   const searchParams = useSearchParams();
   const locationParamFilter = searchParams.get("locationFilter");
+
   const initialPriceFilter = 3000000;
   const [priceFilter, setPriceFilter] = useState<number>(initialPriceFilter);
   const [bedroomsFilter, setBedroomsFilter] = useState<number>(0);
@@ -26,15 +27,7 @@ export default function PropertyClientContent({ initialProperties }: PropertyCli
     return [{ id: "all", name: "Todas las ubicaciones" }, ...options];
   }, [initialProperties]);
 
-  const [locationFilter, setLocationFilter] = useState<LocationOption>(() => {
-    if (locationParamFilter) {
-      const match = locationOptions.find(
-        (opt) => opt.name.toLowerCase() === locationParamFilter.toLowerCase()
-      );
-      if (match) return match;
-    }
-    return locationOptions[0];
-  });
+  const [locationFilter, setLocationFilter] = useState<LocationOption>(locationOptions[0]);
 
   useEffect(() => {
     if (locationParamFilter) {
@@ -46,7 +39,9 @@ export default function PropertyClientContent({ initialProperties }: PropertyCli
         return;
       }
     }
-    setLocationFilter(locationOptions[0]);
+    if (locationFilter.id !== "all" && !locationParamFilter) {
+      setLocationFilter(locationOptions[0]);
+    }
   }, [locationParamFilter, locationOptions]);
 
   const filteredProperties = useMemo(() => {
@@ -91,8 +86,15 @@ export default function PropertyClientContent({ initialProperties }: PropertyCli
         handleCategoryChange={handleCategoryChange}
         clearFilters={clearFilters}
       />
-
       <PropertyGrid properties={filteredProperties} />
     </div>
+  );
+}
+
+export default function PropertyClientContent(props: PropertyClientContentProps) {
+  return (
+    <Suspense fallback={<div className="min-h-screen">Cargando catálogo...</div>}>
+      <PropertyContentInner {...props} />
+    </Suspense>
   );
 }
