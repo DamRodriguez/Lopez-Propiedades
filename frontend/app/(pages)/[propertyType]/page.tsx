@@ -41,10 +41,10 @@ export default async function PropertyTypePage({ params }: PageProps) {
             <span className="uppercase tracking-widest text-secondary-dark font-semibold text-xs mb-2 block">
               CATÁLOGO EXCLUSIVO
             </span>
-            <h1 className="text-2xl xl:text-5xl font-extrabold text-primary mb-4">
+            <h1 className="text-2xl xl:text-5xl font-extrabold text-black mb-4">
               {pageTitle}
             </h1>
-            <p className="max-w-2xl text-base xl:text-lg">
+            <p className="max-w-2xl text-base xl:text-lg text-black/80">
               {pageDescription}
             </p>
           </div>

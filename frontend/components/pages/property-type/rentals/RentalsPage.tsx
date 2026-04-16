@@ -1,10 +1,10 @@
 import Hero from "@/components/pages/common/Hero";
 import PropertiesSection from "@/components/pages/property-type/rentals/PropertiesSection";
-import StartExperience from "@/components/pages/property-type/rentals/StartExperience";
+import ActionFullSection from "@/components/pages/common/ActionFullSection";
 
 const RentalsPage = () => {
   return (
-    <section className="flex flex-col gap-[5rem] xl:gap-[8rem]  bg-soft-gray/5">
+    <section className="flex flex-col gap-[5rem] xl:gap-[8rem] bg-soft-gray/5">
       <Hero
         overline="vida excepcional"
         title="Alquileres Curados para Estilos de Vida Exigentes"
@@ -16,7 +16,12 @@ const RentalsPage = () => {
         }
       />
       <PropertiesSection />
-      <StartExperience />
+      <ActionFullSection
+        title="Comience su Experiencia de Alquiler"
+        subtitle="Ya sea un propietario que busca gestión profesional o un inquilino en busca de un hogar excepcional, nuestro equipo está listo para asesorarlo en su próximo paso."
+        backgroundImage="/images/home/appraise.png"
+        whatsAppMessage="Hola! Quisiera consultar por un alquiler. Muchas gracias."
+      />
     </section>
   );
 };

@@ -3,7 +3,7 @@ import SpaceX from "@/components/layout/SpaceX";
 import Image from "next/image";
 
 const PropertiesSection = () => {
-  const iconClassName = "w-[1rem] h-[1rem] xl:w-[1.5rem] xl:h-[1.5rem]";
+  const iconClassName = "w-[1rem] h-[1rem] xl:w-[1.5rem] xl:h-[1.5rem] stroke-black/80";
 
   return (
     <SpaceX className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">

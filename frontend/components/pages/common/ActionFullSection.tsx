@@ -5,29 +5,38 @@ import Button from "@/components/ui/buttons/Button";
 import config from "@/config/config";
 import { formatWpp } from "@/utils/formatWpp";
 import { openWhatsApp } from "@/utils/openWhatsapp";
+import clsx from "clsx";
 import Image from "next/image";
 
-const StartExperience = () => {
+type ActionFullSectionProps = {
+  title: string;
+  subtitle: string;
+  backgroundImage: string;
+  whatsAppMessage: string;
+  overlayClassName?: string;
+}
+
+const ActionFullSection = (props: ActionFullSectionProps) => {
   const handleConsultation = () => {
-    const mensaje = `Hola! Quisiera consultar por un alquiler. Muchas gracias.`;
-    openWhatsApp(formatWpp(config.info.whatsApp), mensaje);
+    openWhatsApp(formatWpp(config.info.whatsApp), props.whatsAppMessage);
   };
+
   return (
     <SpaceX className="py-[5rem] xl:py-[8rem] bg-primary text-white flex justify-center overflow-hidden relative group">
       <div className="max-w-4xl flex flex-col justify-center items-center text-center z-10">
         <Image
-          src="/images/home/appraise.png"
-          alt="Tasación de propiedades"
+          src={props.backgroundImage}
+          alt={`Imagen de ${props.title}`}
           fill
           className="object-cover -z-20 group-hover:scale-110 custom-transition-all w-full h-full"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b xl:bg-gradient-to-r from-primary via-primary/85 to-primary-light -z-10" />
+        <div className={clsx("absolute inset-0 bg-gradient-to-t from-primary via-primary/85 to-primary-light -z-10", props.overlayClassName)} />
         <h3 className="text-3xl xl:text-5xl text-soft-white font-extrabold mb-8">
-          Comience su Experiencia de Alquiler
+          {props.title}
         </h3>
         <p className="text-base xl:text-xl text-soft-white/80 mb-12 font-light">
-          Ya sea un propietario que busca gestión profesional o un inquilino en busca de un hogar excepcional, nuestro equipo está listo para asesorarlo en su próximo paso.
+          {props.subtitle}
         </p>
         <Button
           onClick={handleConsultation}
@@ -44,4 +53,4 @@ const StartExperience = () => {
   );
 };
 
-export default StartExperience;
+export default ActionFullSection;
