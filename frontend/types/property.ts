@@ -19,9 +19,12 @@ export interface PropertyData {
     neighborhood: string;
     city: string;
   };
+  fullLocation: string;
   category: PropertyCategories,
   characteristics: PropertyCharacteristics;
-  image: string;
+  mainImage: string;
+  images: string[];
+  description: string;
   isHomeFeatured?: {
     main: boolean;
     side: boolean;

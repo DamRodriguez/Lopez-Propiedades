@@ -6,7 +6,7 @@ import PropertyGrid from "@/components/pages/property-type/PropertyGrid";
 import PropertyFilters, { LocationOption } from "@/components/pages/property-type/PropertyFilters";
 import Spinner from "@/components/spinner/Spinner";
 
-interface PropertyClientContentProps {
+interface PropertyTypeContentProps {
   initialProperties: PropertyData[];
 }
 
@@ -110,7 +110,7 @@ function PropertyContentInner({ initialProperties }: { initialProperties: Proper
   );
 }
 
-export default function PropertyClientContent(props: PropertyClientContentProps) {
+export default function PropertyTypeContent(props: PropertyTypeContentProps) {
   return (
     <Suspense
       fallback={

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BathroomIcon, BedroomIcon, LocationIcon, RulerIcon } from "../icons/property";
+import { BathroomIcon, BedroomIcon, LocationIcon, SizeIcon } from "../icons/property";
 import { PropertyData } from "@/types/property";
 import clsx from "clsx";
 import Link from "next/link";
@@ -28,7 +28,7 @@ const PropertyCard = (props: PropertyCardProps) => {
       <div className={clsx("relative rounded-xs overflow-hidden w-full h-full shadow-s6", props.imageContainerClassName)}>
         <Image
           fill
-          src={data.image}
+          src={data.mainImage}
           alt={`Imagen de ${data.name}`}
           className="w-full h-full object-cover custom-transition-all group-hover:scale-110 bg-soft-gray/10"
         />
@@ -46,7 +46,7 @@ const PropertyCard = (props: PropertyCardProps) => {
             {data.name}
           </p>
           <span className="shrink-0 whitespace-nowrap text-lg xl:text-xl font-extrabold text-black">
-            {formatMoney(data.price)}{" "} USD
+            {formatMoney(data.price)}{" "}
           </span>
         </div>
         <div className="flex items-center gap-1">
@@ -62,7 +62,7 @@ const PropertyCard = (props: PropertyCardProps) => {
         </div>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-xs xl:text-sm font-semibold text-dark-gray">
           <div className="flex items-center gap-1">
-            <RulerIcon />
+            <SizeIcon />
             <p>
               {data.characteristics.squareMeters} m²
             </p>

@@ -1,9 +1,17 @@
+"use client";
 import { WhatsAppIcon } from "@/components/icons/social";
 import SpaceX from "@/components/layout/SpaceX";
-import LinkButton from "@/components/ui/buttons/LinkButton";
+import Button from "@/components/ui/buttons/Button";
+import config from "@/config/config";
+import { formatWpp } from "@/utils/formatWpp";
+import { openWhatsApp } from "@/utils/openWhatsapp";
 import Image from "next/image";
 
 const StartExperience = () => {
+  const handleConsultation = () => {
+    const mensaje = `Hola! Quisiera consultar por un alquiler. Muchas gracias.`;
+    openWhatsApp(formatWpp(config.info.whatsApp), mensaje);
+  };
   return (
     <SpaceX className="py-[5rem] xl:py-[8rem] bg-primary text-white flex justify-center overflow-hidden relative group">
       <div className="max-w-4xl flex flex-col justify-center items-center text-center z-10">
@@ -21,8 +29,8 @@ const StartExperience = () => {
         <p className="text-base xl:text-xl text-soft-white/80 mb-12 font-light">
           Ya sea un propietario que busca gestión profesional o un inquilino en busca de un hogar excepcional, nuestro equipo está listo para asesorarlo en su próximo paso.
         </p>
-        <LinkButton
-          href=""
+        <Button
+          onClick={handleConsultation}
           variant="secondary"
           big
         >
@@ -30,7 +38,7 @@ const StartExperience = () => {
           <p className="font-bold tracking-wider text-sm xl:text-base uppercase">
             Contactar por WhatsApp
           </p>
-        </LinkButton>
+        </Button>
       </div>
     </SpaceX>
   );

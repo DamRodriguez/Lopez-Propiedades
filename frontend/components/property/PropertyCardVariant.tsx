@@ -19,7 +19,7 @@ const PropertyCardVariant = (props: PropertyCardVariantProps) => {
         <Image
           width={200}
           height={200}
-          src={data.image}
+          src={data.mainImage}
           alt={`Imagen de ${data.name}`}
           className="w-full h-full object-cover custom-transition-all group-hover:scale-110"
         />
@@ -35,7 +35,7 @@ const PropertyCardVariant = (props: PropertyCardVariantProps) => {
           {data.location.neighborhood},{" "}{data.location.city}
         </p>
         <p className="text-lg font-extrabold text-black">
-          {formatMoney(data.price)}{" "} USD
+          {formatMoney(data.price)}{" "}
           {data.type === "alquileres" && (
             <span
               className="text-xs">

@@ -127,7 +127,7 @@ const InnerFilterFields = ({
 
       {onClose && (
         <div className="lg:hidden">
-          <Button onClick={onClose} full>
+          <Button onClick={onClose} variant="tertiary" full>
             VER RESULTADOS
           </Button>
         </div>
@@ -164,17 +164,19 @@ export default function PropertyFilters(props: PropertyFiltersProps) {
           variant="primary"
           className="flex items-center gap-2 justify-center w-full"
         >
-          <FilterIcon className="!w-7 !h-7" />
+          <FilterIcon className="!w-7 !h-7 stroke-soft-white" />
           FILTROS
         </Button>
       </div>
 
       <aside className="hidden lg:block w-72 flex-shrink-0">
         <div className="bg-soft-white p-8 rounded-xs sticky top-28 shadow-s3">
-          <p className="text-primary font-bold xl:text-lg mb-6 flex items-center gap-2">
-            <FilterIcon />
-            Filtros
-          </p>
+          <div className="mb-6 flex items-center gap-2">
+            <FilterIcon className="stroke-black" />
+            <p className="text-primary font-bold text-base xl:text-lg">
+              Filtros
+            </p>
+          </div>
           <InnerFilterFields props={props} />
         </div>
       </aside>

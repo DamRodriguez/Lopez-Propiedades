@@ -21,7 +21,7 @@ const config = {
     phone: "4750-2263",
     email: "lopezpropiedadesestudio@gmail.com",
     instagram: "lopezpropieades.l"
-  }
+  },
 };
 
 export default config;

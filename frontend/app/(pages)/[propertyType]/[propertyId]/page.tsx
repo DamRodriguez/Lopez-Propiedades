@@ -1,7 +1,11 @@
 import { notFound } from "next/navigation";
-// import rentalsProperties from "@/data/rentalsProperties.json";
-import salesProperties from "@/data/salesProperties.json";
-import { PropertyType } from "@/types/property";
+import rentalsPropertiesRaw from "@/data/rentalsProperties.json";
+import salesPropertiesRaw from "@/data/salesProperties.json";
+import { PropertyData, PropertyType } from "@/types/property";
+import PropertyDetailContent from "@/components/pages/property-detail/PropertyDetailContent";
+
+const rentalsProperties = rentalsPropertiesRaw as unknown as PropertyData[];
+const salesProperties = salesPropertiesRaw as unknown as PropertyData[];
 
 interface PropertyPageProps {
   params: Promise<{
@@ -11,38 +15,40 @@ interface PropertyPageProps {
 }
 
 export async function generateStaticParams() {
-  {/*
-    const rentalParams = rentalsProperties.map((prop) => ({
-    propertyType: "alquileres" as PropertyType,
+  const rentalParams = rentalsProperties.map((prop) => ({
+    propertyType: "alquileres",
     propertyId: prop.id.toString(),
   }));
-  */}
 
   const salesParams = salesProperties.map((prop) => ({
-    propertyType: "ventas" as PropertyType,
+    propertyType: "ventas",
     propertyId: prop.id.toString(),
   }));
 
-  // return [...rentalParams, ...salesParams];
-  return [...salesParams];
+  return [...rentalParams, ...salesParams];
 }
 
 export default async function PropertyDetailPage({ params }: PropertyPageProps) {
   const { propertyType, propertyId } = await params;
 
-  const validTypes = ["venta", "alquiler"];
-  if (!validTypes.includes(propertyType)) {
+  const propertiesData =
+    propertyType === "ventas" ? salesProperties :
+      propertyType === "alquileres" ? rentalsProperties :
+        null;
+
+  if (!propertiesData) {
+    notFound();
+  }
+
+  const property = propertiesData.find((p) => p.id.toString() === propertyId);
+
+  if (!property) {
     notFound();
   }
 
   return (
-    <div>
-      <p>
-        {propertyType}
-      </p>
-      <p>
-        {propertyId}
-      </p>
-    </div>
+    <>
+      <PropertyDetailContent property={property} />
+    </>
   );
 }

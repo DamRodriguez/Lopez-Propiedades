@@ -1,8 +1,17 @@
+"use client";
 import Image from "next/image";
 import SpaceX from "@/components/layout/SpaceX";
-import LinkButton from "@/components/ui/buttons/LinkButton";
+import { openWhatsApp } from "@/utils/openWhatsapp";
+import { formatWpp } from "@/utils/formatWpp";
+import config from "@/config/config";
+import Button from "@/components/ui/buttons/Button";
 
 const AppraiseProperty = () => {
+  const handleAppraise = () => {
+    const mensaje = "Hola! Quisiera solicitar una tasación con ustedes. ¿Qué información necesitan para comenzar? Muchas gracias.";
+    openWhatsApp(formatWpp(config.info.whatsApp), mensaje);
+  };
+
   return (
     <SpaceX className="mx-auto">
       <div className="relative rounded-xs p-8 xl:p-14 overflow-hidden shadow-s6 group min-h-[20rem] flex items-center">
@@ -29,15 +38,15 @@ const AppraiseProperty = () => {
             </p>
           </div>
 
-          <LinkButton
-            href=""
+          <Button
+            onClick={handleAppraise}
             variant="secondary"
             big
           >
             <p className="font-bold tracking-wider text-sm xl:text-base">
               SOLICITAR TASACIÓN
             </p>
-          </LinkButton>
+          </Button>
         </div>
       </div>
     </SpaceX>

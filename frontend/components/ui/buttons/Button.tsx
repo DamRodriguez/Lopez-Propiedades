@@ -22,6 +22,7 @@ type ButtonProps = {
   backButton?: boolean;
   small?: boolean;
   cursorNormal?: boolean;
+  big?: boolean;
 };
 
 const Button = ({
@@ -37,6 +38,7 @@ const Button = ({
     full: props.full,
     small: props.small,
     cursorNormal: cursorNormal,
+    big: props.big,
   }), props.className);
   return (
     <button

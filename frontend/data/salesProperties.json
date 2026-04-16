@@ -8,6 +8,7 @@
       "neighborhood": "Nordelta",
       "city": "Buenos Aires"
     },
+    "fullLocation": "Avenida del Puerto 215, Nordelta",
     "category": "casa",
     "characteristics": {
       "bedrooms": 5,
@@ -15,7 +16,9 @@
       "squareMeters": 850,
       "garage": false
     },
-    "image": "https://picsum.photos/seed/v1/800/600",
+    "description": "Exclusiva residencia de diseño vanguardista situada en el barrio más prestigioso de Nordelta.\n\nLa propiedad cuenta con amplios ventanales de doble altura que integran el paisaje exterior con los lujosos interiores. Posee master suite con vestidor, piscina climatizada y muelle propio al lago principal.",
+    "mainImage": "https://picsum.photos/seed/v1/800/600",
+    "images": ["https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600"],
     "isHomeFeatured": {
       "main": true
     }
@@ -29,6 +32,7 @@
       "neighborhood": "Ramos Mejía",
       "city": "Buenos Aires"
     },
+    "fullLocation": "Av. de Mayo 850, Ramos Mejía",
     "category": "departamento",
     "characteristics": {
       "bedrooms": 4,
@@ -36,7 +40,9 @@
       "squareMeters": 280,
       "garage": false
     },
-    "image": "https://picsum.photos/seed/v2/800/600",
+    "description": "Clásico chalet de época conservado en excelente estado, ideal para familias numerosas.\n\nDestaca por sus techos de teja francesa, pisos de madera de roble y una amplia cocina comedor. Ubicado en una de las zonas residenciales más tranquilas y seguras de Ramos Mejía.",
+    "mainImage": "https://picsum.photos/seed/v2/800/600",
+    "images": ["https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600"],
     "isHomeFeatured": {
       "side": true
     }
@@ -50,6 +56,7 @@
       "neighborhood": "Puerto Madero",
       "city": "Buenos Aires"
     },
+    "fullLocation": "Juana Manso 1100, Puerto Madero",
     "category": "lote",
     "characteristics": {
       "bedrooms": 3,
@@ -57,7 +64,9 @@
       "squareMeters": 210,
       "garage": true
     },
-    "image": "https://picsum.photos/seed/v3/800/600",
+    "description": "Espectacular Penthouse con vista panorámica inigualable al Río de la Plata y a la ciudad.\n\nUnidad de categoría con terminaciones premium, acceso directo por ascensor privado, gran terraza propia y servicios exclusivos del edificio (Gym, Spa y Seguridad 24hs).",
+    "mainImage": "https://picsum.photos/seed/v3/800/600",
+    "images": ["https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600"],
     "isHomeFeatured": {
       "side": true
     }
@@ -68,9 +77,10 @@
     "name": "Casa Quinta con Arboleda",
     "price": 155000,
     "location": {
-      "neighborhood": "Ituzaingó",
+      "neighborhood": "Ciudadela",
       "city": "Buenos Aires"
     },
+    "fullLocation": "Pampa 3449, Ciudadela",
     "category": "casa",
     "characteristics": {
       "bedrooms": 3,
@@ -78,7 +88,9 @@
       "squareMeters": 1200,
       "garage": false
     },
-    "image": "https://picsum.photos/seed/v4/800/600",
+    "description": "Oasis de paz sobre un lote de 1200 metros cuadrados rodeado de vegetación añeja.\n\nLa propiedad ofrece un entorno natural único con quincho, parrilla y una gran piscina. Perfecta para quienes buscan desconectar de la ciudad sin alejarse de los accesos principales.",
+    "mainImage": "https://picsum.photos/seed/v4/800/600",
+    "images": ["https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600"],
     "isHomeFeatured": {
       "side": true
     }
@@ -92,13 +104,16 @@
       "neighborhood": "Carrasco",
       "city": "Montevideo"
     },
+    "fullLocation": "Av. Alfredo Arocena 1600, Carrasco",
     "category": "lote",
     "characteristics": {
       "bedrooms": 4,
       "bathrooms": 3,
       "squareMeters": 520
     },
-    "image": "https://picsum.photos/seed/v5/800/600",
+    "description": "Importante propiedad de estilo clásico situada en el corazón de Carrasco.\n\nCuenta con amplias áreas de recepción, escritorio, jardín parquizado y máxima privacidad. Una combinación perfecta entre elegancia tradicional y confort moderno en una ubicación inmejorable.",
+    "mainImage": "https://picsum.photos/seed/v5/800/600",
+    "images": ["https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600"],
     "isHomeFeatured": {
       "side": true
     }
@@ -112,6 +127,7 @@
       "neighborhood": "Palermo Soho",
       "city": "Buenos Aires"
     },
+    "fullLocation": "Thames 1800, Palermo Soho",
     "category": "ph",
     "characteristics": {
       "bedrooms": 1,
@@ -119,6 +135,8 @@
       "squareMeters": 95,
       "garage": true
     },
-    "image": "https://picsum.photos/seed/v6/800/600"
+    "description": "Unidad de concepto abierto con techos altos y estética industrial de hormigón visto.\n\nUbicado en el epicentro gastronómico de Palermo Soho. El loft ofrece una distribución moderna, gran luminosidad y una terraza privada ideal para reuniones sociales.",
+    "mainImage": "https://picsum.photos/seed/v6/800/600",
+    "images": ["https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600"]
   }
 ]

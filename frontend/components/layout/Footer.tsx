@@ -118,7 +118,7 @@ const Footer = () => {
                 key={index}
                 className="flex items-center gap-2 text-sm text-soft-white"
               >
-                <div className="min-w-[1.5rem] ">
+                <div className="min-w-[1.5rem] flex justify-center">
                   {item.icon}
                 </div>
                 {item.link ? (

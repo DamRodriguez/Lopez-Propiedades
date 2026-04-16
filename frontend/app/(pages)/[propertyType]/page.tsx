@@ -1,5 +1,5 @@
 import SpaceX from "@/components/layout/SpaceX";
-import PropertyClientContent from "@/components/pages/property-type/PropertyClientContent";
+import PropertyTypeContent from "@/components/pages/property-type/PropertyTypeContent";
 import RentalsPage from "@/components/pages/property-type/rentals/RentalsPage";
 import rentalsProperties from "@/data/rentalsProperties.json";
 import salesProperties from "@/data/salesProperties.json";
@@ -36,7 +36,7 @@ export default async function PropertyTypePage({ params }: PageProps) {
   return (
     <>
       {propertyType === "ventas" ? (
-        <SpaceX className="flex-grow pt-[8rem] xl:pt-[10rem] pb-[5rem] xl:pb-[8rem] bg-soft-gray/5">
+        <SpaceX className="pt-[8rem] xl:pt-[10rem] pb-[5rem] xl:pb-[8rem] bg-soft-gray/5">
           <div className="mb-16 lg:mb-20">
             <span className="uppercase tracking-widest text-secondary-dark font-semibold text-xs mb-2 block">
               CATÁLOGO EXCLUSIVO
@@ -48,7 +48,7 @@ export default async function PropertyTypePage({ params }: PageProps) {
               {pageDescription}
             </p>
           </div>
-          <PropertyClientContent initialProperties={propertiesData} />
+          <PropertyTypeContent initialProperties={propertiesData} />
         </SpaceX>
       ) : (
         <RentalsPage />
