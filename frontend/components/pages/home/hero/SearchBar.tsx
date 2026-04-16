@@ -1,3 +1,4 @@
+"use client";
 import { BaseOption, InputCombobox } from "@/components/ui/inputs/InputCombobox";
 import { useMemo, useState } from "react";
 import rentalsProperties from "@/data/rentalsProperties.json";
@@ -49,7 +50,7 @@ const SearchBar = () => {
         <LinkButton
           href={routes.propertyType(formattedType)}
           query={{
-            location: locationFilter?.name
+            location: typeSwitcherFilter === "venta" ? locationFilter?.name : undefined,
           }}
           className="!px-8 tracking-wide h-[3rem] w-full md:w-auto"
         >

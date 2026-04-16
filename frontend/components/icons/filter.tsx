@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 export const FilterIcon = ({ className }: { className?: string }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} width="35" height="35" viewBox="0 0 21 21"><path fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" d="M4.5 7.5h12m-10 3h8m-6 3h4" /></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} width="35" height="35" viewBox="0 0 21 21"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 7.5h12m-10 3h8m-6 3h4" /></svg>
   );
 };
 

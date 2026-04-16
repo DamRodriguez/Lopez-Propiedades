@@ -1,0 +1,24 @@
+import Hero from "@/components/pages/common/Hero";
+import PropertiesSection from "@/components/pages/property-type/rentals/PropertiesSection";
+import StartExperience from "@/components/pages/property-type/rentals/StartExperience";
+
+const RentalsPage = () => {
+  return (
+    <section className="flex flex-col gap-[5rem] xl:gap-[8rem]  bg-soft-gray/5">
+      <Hero
+        overline="vida excepcional"
+        title="Alquileres Curados para Estilos de Vida Exigentes"
+        backgroundImage="/images/home/hero.png"
+        underTitleComponent={
+          <p className="text-soft-white/80 text-base xl:text-lg">
+            Experimente nuestro exclusivo servicio de gestión de alquileres, donde la excelencia arquitectónica se une a transiciones de vida fluidas. Administramos solo las propiedades más prestigiosas de la región.
+          </p>
+        }
+      />
+      <PropertiesSection />
+      <StartExperience />
+    </section>
+  );
+};
+
+export default RentalsPage;

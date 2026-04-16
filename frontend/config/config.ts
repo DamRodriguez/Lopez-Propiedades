@@ -9,12 +9,18 @@ const config = {
     "4xl": 1920,
   },
   urls: {
-    whatsApp: ""
+    whatsApp: "https://wa.me/5491132311876",
+    instagram: "https://www.instagram.com/lopezpropiedades.l",
+    email: "https://mail.google.com/mail/?view=cm&fs=1&to=lopezpropiedadesestudio@gmail.com&su=Consulta-Web",
+    damrod: "https://damrod.dev",
+    googleMaps: "https://maps.app.goo.gl/aXeiSgLXbkbDLYY4A",
   },
   info: {
-    address: "Av. Libertador 12500, Martínez, BA",
-    phone: "+54 9 11 4793-0000",
-    email: "info@lopezpropiedades.com.ar"
+    address: "Tres de Febrero 3435, Caseros",
+    whatsApp: "+54 9 11 3231-1876",
+    phone: "4750-2263",
+    email: "lopezpropiedadesestudio@gmail.com",
+    instagram: "lopezpropieades.l"
   }
 };
 

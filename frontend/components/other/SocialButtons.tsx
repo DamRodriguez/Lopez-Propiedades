@@ -1,10 +1,17 @@
 import Link from "next/link";
-import { WhatsAppIcon } from "../icons/social";
+import { InstagramIcon, WhatsAppIcon } from "../icons/social";
 import config from "@/config/config";
 
 const SocialButtons = () => {
   const socialItems = [
-    { href: config.urls.whatsApp, icon: <WhatsAppIcon /> },
+    {
+      href: config.urls.whatsApp,
+      icon: <WhatsAppIcon />
+    },
+    {
+      href: config.urls.instagram,
+      icon: <InstagramIcon className="w-[25px] h-[25px]" />
+    }
   ];
   return (
     <div className="flex flex-col items-end gap-[1.5rem] [&_svg]:fill-soft-white">

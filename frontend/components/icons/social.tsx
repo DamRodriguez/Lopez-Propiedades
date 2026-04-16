@@ -5,3 +5,9 @@ export const WhatsAppIcon = ({ className }: { className?: string }) => {
     </svg>
   )
 }
+
+export const InstagramIcon = ({ className }: { className?: string }) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} width="20" height="20" viewBox="0 0 24 24"><g fill="none"><rect width="17" height="17" x="3.5" y="3.5" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" rx="5.5" /><circle cx="12" cy="12" r="3.606" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" /><circle cx="16.894" cy="7.106" r="1.03" fill="#fff" /></g></svg>
+  );
+};

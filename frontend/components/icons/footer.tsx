@@ -2,7 +2,7 @@ const iconSize = 15;
 
 export const LocationIcon = ({ className }: { className?: string }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} width={iconSize} height={iconSize} viewBox="0 0 21 21" fill="#fff"><g fill="none" fillRule="evenodd" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" transform="translate(4 2)"><path d="m6.5 16.54l.631-.711c.716-.82 1.36-1.598 1.933-2.338l.473-.624c1.975-2.661 2.963-4.773 2.963-6.334C12.5 3.201 9.814.5 6.5.5s-6 2.701-6 6.033c0 1.561.988 3.673 2.963 6.334l.473.624a54.84 54.84 0 0 0 2.564 3.05z" /><circle cx="6.5" cy="6.5" r="2.5" /></g></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} width={iconSize} height={iconSize} viewBox="0 0 21 21" fill="#fff"><g fill="none" fillRule="evenodd" stroke="#fff" strokeLinecap="round" strokeWidth="1.5" strokeLinejoin="round" transform="translate(4 2)"><path d="m6.5 16.54l.631-.711c.716-.82 1.36-1.598 1.933-2.338l.473-.624c1.975-2.661 2.963-4.773 2.963-6.334C12.5 3.201 9.814.5 6.5.5s-6 2.701-6 6.033c0 1.561.988 3.673 2.963 6.334l.473.624a54.84 54.84 0 0 0 2.564 3.05z" /><circle cx="6.5" cy="6.5" r="2.5" /></g></svg>
   );
 };
 
@@ -23,4 +23,3 @@ export const CodeIcon = ({ className }: { className?: string }) => {
     <svg xmlns="http://www.w3.org/2000/svg" className={className} width={iconSize} height={iconSize} viewBox="0 0 17 16"><path fill="#fff" fillRule="evenodd" d="M11.74 11.993a.714.714 0 0 0 .493-.195l3.479-3.316a.644.644 0 0 0 0-.939l-3.479-3.318a.72.72 0 0 0-.984 0a.643.643 0 0 0 0 .938l2.987 2.85l-2.987 2.848a.643.643 0 0 0 0 .938a.713.713 0 0 0 .491.194zm-7.439-.11a.727.727 0 0 1-.497-.19L.287 8.425a.62.62 0 0 1 0-.923l3.517-3.268a.74.74 0 0 1 .995 0a.624.624 0 0 1 0 .924l-3.02 2.805l3.02 2.804a.626.626 0 0 1 0 .926a.736.736 0 0 1-.498.19zm2.384 3.006a.672.672 0 0 0 .503-.51L9.934 1.885a.636.636 0 0 0-.488-.768a.661.661 0 0 0-.77.514L5.93 14.125a.636.636 0 0 0 .755.764z" /></svg>
   );
 };
-

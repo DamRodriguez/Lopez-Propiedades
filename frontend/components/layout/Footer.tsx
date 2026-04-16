@@ -4,6 +4,7 @@ import Link from "next/link";
 import { CallIcon, CodeIcon, EmailIcon, LocationIcon } from "../icons/footer";
 import config from "@/config/config";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+import { InstagramIcon, WhatsAppIcon } from "../icons/social";
 
 const Footer = () => {
   const { handleSmoothScroll } = useSmoothScroll();
@@ -37,14 +38,26 @@ const Footer = () => {
   const contactItems = [
     {
       text: config.info.address,
+      link: config.urls.googleMaps,
       icon: <LocationIcon />
+    },
+    {
+      text: config.info.whatsApp,
+      link: config.urls.whatsApp,
+      icon: <WhatsAppIcon className="fill-soft-white w-[15px] h-[15px] " />
     },
     {
       text: config.info.phone,
       icon: <CallIcon />
     },
     {
+      text: config.info.instagram,
+      link: config.urls.instagram,
+      icon: <InstagramIcon />
+    },
+    {
       text: config.info.email,
+      link: config.urls.email,
       icon: <EmailIcon />
     }
   ]
@@ -86,7 +99,7 @@ const Footer = () => {
                   <Link
                     href={item.href}
                     onClick={(e) => handleSmoothScroll(e, item.href)}
-                    className="hover:underline custom-transition-all"
+                    className="hover:underline"
                   >
                     {item.text}
                   </Link>
@@ -105,12 +118,23 @@ const Footer = () => {
                 key={index}
                 className="flex items-center gap-2 text-sm text-soft-white"
               >
-                <div>
+                <div className="min-w-[1.5rem] ">
                   {item.icon}
                 </div>
-                <p>
-                  {item.text}
-                </p>
+                {item.link ? (
+                  <Link
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {item.text}
+                  </Link>
+                ) : (
+                  <span>
+                    {item.text}
+                  </span>
+                )}
               </div>
             ))}
           </div>
@@ -126,7 +150,7 @@ const Footer = () => {
             <p className="font-medium">
               Desarrollado por{" "}
               <Link
-                href="https://damrod.dev"
+                href={config.urls.damrod}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline font-semibold custom-transition-all"

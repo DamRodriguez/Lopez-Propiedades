@@ -12,9 +12,13 @@
     "characteristics": {
       "bedrooms": 5,
       "bathrooms": 6,
-      "squareMeters": 850
+      "squareMeters": 850,
+      "garage": false
     },
-    "image": "https://picsum.photos/seed/v1/800/600"
+    "image": "https://picsum.photos/seed/v1/800/600",
+    "isHomeFeatured": {
+      "main": true
+    }
   },
   {
     "id": 102,
@@ -25,11 +29,12 @@
       "neighborhood": "Ramos Mejía",
       "city": "Buenos Aires"
     },
-    "category": "apartamento",
+    "category": "departamento",
     "characteristics": {
       "bedrooms": 4,
       "bathrooms": 3,
-      "squareMeters": 280
+      "squareMeters": 280,
+      "garage": false
     },
     "image": "https://picsum.photos/seed/v2/800/600",
     "isHomeFeatured": {
@@ -45,11 +50,12 @@
       "neighborhood": "Puerto Madero",
       "city": "Buenos Aires"
     },
-    "category": "terreno",
+    "category": "lote",
     "characteristics": {
       "bedrooms": 3,
       "bathrooms": 4,
-      "squareMeters": 210
+      "squareMeters": 210,
+      "garage": true
     },
     "image": "https://picsum.photos/seed/v3/800/600",
     "isHomeFeatured": {
@@ -69,9 +75,13 @@
     "characteristics": {
       "bedrooms": 3,
       "bathrooms": 2,
-      "squareMeters": 1200
+      "squareMeters": 1200,
+      "garage": false
     },
-    "image": "https://picsum.photos/seed/v4/800/600"
+    "image": "https://picsum.photos/seed/v4/800/600",
+    "isHomeFeatured": {
+      "side": true
+    }
   },
   {
     "id": 105,
@@ -82,13 +92,16 @@
       "neighborhood": "Carrasco",
       "city": "Montevideo"
     },
-    "category": "terreno",
+    "category": "lote",
     "characteristics": {
       "bedrooms": 4,
       "bathrooms": 3,
       "squareMeters": 520
     },
-    "image": "https://picsum.photos/seed/v5/800/600"
+    "image": "https://picsum.photos/seed/v5/800/600",
+    "isHomeFeatured": {
+      "side": true
+    }
   },
   {
     "id": 106,
@@ -103,7 +116,8 @@
     "characteristics": {
       "bedrooms": 1,
       "bathrooms": 2,
-      "squareMeters": 95
+      "squareMeters": 95,
+      "garage": true
     },
     "image": "https://picsum.photos/seed/v6/800/600"
   }

@@ -4,9 +4,10 @@ export interface PropertyCharacteristics {
   bedrooms: number;
   bathrooms: number;
   squareMeters: number;
+  garage: boolean;
 }
 
-export type PropertyCategories = "casa" | "apartamento" | "ph" | "terreno"
+export type PropertyCategories = "casa" | "departamento" | "ph" | "lote"
 
 //con isHomeFeatured se fijan los detacados del home de la sección del layout grid, main para la principal, side para los demás
 export interface PropertyData {

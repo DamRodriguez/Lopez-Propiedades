@@ -12,13 +12,13 @@ export interface LocationOption extends BaseOption {
 }
 
 const CATEGORY_LABELS: Record<PropertyCategories, string> = {
-  casa: "Casas",
-  apartamento: "Apartamentos",
+  casa: "Casa",
+  departamento: "Departamento",
   ph: "PH",
-  terreno: "Terrenos",
+  lote: "Lote",
 };
 
-const CATEGORY_OPTIONS: PropertyCategories[] = ["casa", "apartamento", "ph", "terreno"];
+const CATEGORY_OPTIONS: PropertyCategories[] = ["casa", "departamento", "ph", "lote"];
 
 interface PropertyFiltersProps {
   locationOptions: LocationOption[];
@@ -121,7 +121,7 @@ const InnerFilterFields = ({
     </div>
 
     <div className="space-y-4">
-      <Button onClick={props.clearFilters} variant="secondary" full>
+      <Button onClick={props.clearFilters} variant="primary" full>
         LIMPIAR FILTROS
       </Button>
 
@@ -161,7 +161,7 @@ export default function PropertyFilters(props: PropertyFiltersProps) {
       <div className="lg:hidden sticky top-21 z-20">
         <Button
           onClick={() => setIsOpen(true)}
-          variant="secondary"
+          variant="primary"
           className="flex items-center gap-2 justify-center w-full"
         >
           <FilterIcon className="!w-7 !h-7" />

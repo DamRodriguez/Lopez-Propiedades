@@ -34,7 +34,7 @@ const PropertyCard = (props: PropertyCardProps) => {
         />
         {props.showType && (
           <div className="absolute m-4">
-            <span className="bg-primary shadow-s2 text-soft-white text-xs font-bold tracking-widest px-3 py-1 rounded-xs uppercase">
+            <span className="bg-primary-light shadow-s2 text-soft-white text-xs font-bold tracking-widest px-3 py-1 rounded-xs uppercase">
               {data.type === "ventas" ? "Venta" : "Alquiler"}
             </span>
           </div>

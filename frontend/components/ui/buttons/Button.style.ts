@@ -5,8 +5,8 @@ export const buttonClass = tv({
 
   variants: {
     intent: {
-      primary: "bg-primary text-soft-white [&_svg]:fill-soft-white hover:bg-primary-light",
-      secondary: "bg-secondary-light text-black hover:bg-secondary",
+      primary: "bg-primary text-soft-white [&_svg]:fill-soft-white [&_svg]:stroke-soft-white hover:bg-primary-light",
+      secondary: "bg-secondary text-black [&_svg]:fill-black [&_svg]:stroke-black hover:bg-secondary-light",
     },
 
     disabled: {

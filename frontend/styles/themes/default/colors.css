@@ -1,12 +1,12 @@
 @theme {
   --color-*: initial;
 
-  --color-primary: #1B263B;
-  --color-primary-light: #415A77;
+  --color-primary: #231C18;
+  --color-primary-light: #3D322B;
 
-  --color-secondary: #C5A059;
-  --color-secondary-dark: #A38446;
-  --color-secondary-light: #E9C176;
+  --color-secondary: #EAE3D9;
+  --color-secondary-dark: #CFC5B6;
+  --color-secondary-light: #F4F1ED;
 
   --color-neutral: #F8F9FA;
   --color-soft-white: #F5F5F5;

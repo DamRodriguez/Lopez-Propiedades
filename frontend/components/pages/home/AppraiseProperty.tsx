@@ -34,9 +34,9 @@ const AppraiseProperty = () => {
             variant="secondary"
             big
           >
-            <span className="font-bold tracking-wider text-sm xl:text-base">
+            <p className="font-bold tracking-wider text-sm xl:text-base">
               SOLICITAR TASACIÓN
-            </span>
+            </p>
           </LinkButton>
         </div>
       </div>
