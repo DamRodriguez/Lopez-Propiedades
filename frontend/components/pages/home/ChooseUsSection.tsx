@@ -1,6 +1,7 @@
 import { CheckIcon, MarketingIcon, MedalIcon, UserPinIcon } from "@/components/icons/chooseUs";
 import SpaceX from "@/components/layout/SpaceX";
 import Title from "@/components/other/Title";
+import Image from "next/image";
 
 const ChooseUsSection = () => {
   const items = [
@@ -27,22 +28,44 @@ const ChooseUsSection = () => {
   ]
 
   return (
-    <SpaceX className="text-center flex flex-col gap-10 xl:gap-16 bg-gradient-to-b from-soft-gray/10 to-soft-gray/25 py-[5rem] xl:py-[8rem] ">
-      <Title title="Por qué elegirnos" />
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12">
-        {items.map((item, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <div className="w-16 h-16 rounded-xs bg-soft-white shadow-sm flex items-center justify-center text-black mb-6">
-              {item.icon}
+    <SpaceX className="relative group text-center flex flex-col gap-10 xl:gap-16 bg-gradient-to-r from-secondary-dark to-primary-light py-[5rem] xl:py-[8rem] overflow-hidden">
+
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          clipPath: "polygon(50% 0, 100% 0, 100% 100%, 45% 100%)"
+        }}
+      >
+        <Image
+          fill
+          src="/images/home/hero.png"
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 custom-transition-all"
+        />
+        <div className="absolute inset-0 bg-primary-light/80" />
+      </div>
+
+      <div className="relative z-10">
+        <Title
+          title="Por qué elegirnos"
+          titleClassName="text-soft-white"
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 mt-10 xl:gap-16">
+          {items.map((item, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-soft-white shadow-sm flex items-center justify-center text-black mb-6">
+                {item.icon}
+              </div>
+              <p className="text-lg xl:text-xl font-bold mb-3 text-soft-white">
+                {item.title}
+              </p>
+              <p className="text-xs xl:text-sm w-1/2 xl:w-full text-soft-white/90">
+                {item.description}
+              </p>
             </div>
-            <p className="text-lg xl:text-xl font-bold mb-3 text-black">
-              {item.title}
-            </p>
-            <p className="text-xs xl:text-sm w-1/2 xl:w-full">
-              {item.description}
-            </p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </SpaceX>
   );

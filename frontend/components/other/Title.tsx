@@ -1,12 +1,15 @@
+import clsx from "clsx";
+
 type TitleProps = {
   title: string;
   withUnderline?: boolean;
+  titleClassName?: string;
 }
 
 const Title = (props: TitleProps) => {
   return (
     <div>
-      <h2 className="text-2xl xl:text-4xl font-extrabold text-black mb-2">
+      <h2 className={clsx("text-2xl xl:text-4xl font-extrabold text-black mb-2", props.titleClassName)}>
         {props.title}
       </h2>
       {props.withUnderline && (
