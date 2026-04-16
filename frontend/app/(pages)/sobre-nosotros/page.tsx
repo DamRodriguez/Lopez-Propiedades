@@ -1,6 +1,6 @@
 const AboutUsPage = () => {
   return (
-    <div>
+    <div className="h-dvh">
 
     </div>
   );

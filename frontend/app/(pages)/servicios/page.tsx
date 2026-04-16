@@ -34,7 +34,7 @@ const ServicesPage = () => {
               src="https://picsum.photos/seed/v6/800/600"
               className="group-hover:scale-110 custom-transition-all"
             />
-            <div className="relative z-20 h-[400px] flex flex-col justify-end p-8 lg:p-10">
+            <div className="relative z-20 h-[25rem] flex flex-col justify-end p-8 lg:p-10">
               <h2 className="text-xl xl:text-3xl font-bold text-soft-white mb-4">
                 Venta de propiedades
               </h2>
@@ -82,7 +82,7 @@ const ServicesPage = () => {
             </p>
           </div>
 
-          <div className="relative group overflow-hidden lg:col-span-12 bg-gradient-to-t from-primary to-primary-light shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center">
+          <div className="relative group overflow-hidden lg:col-span-12 bg-gradient-to-t from-primary to-primary-light shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center min-h-[20rem] ">
             <div className="absolute inset-0 bg-gradient-to-t from-primary to-primary/70 z-10"></div>
             <Image
               fill

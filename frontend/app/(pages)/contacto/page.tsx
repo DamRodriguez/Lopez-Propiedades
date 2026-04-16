@@ -1,6 +1,6 @@
 const ContactPage = () => {
   return (
-    <div>
+    <div className="h-dvh">
     </div>
   );
 };

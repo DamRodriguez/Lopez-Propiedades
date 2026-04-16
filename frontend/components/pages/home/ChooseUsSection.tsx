@@ -28,7 +28,7 @@ const ChooseUsSection = () => {
   ]
 
   return (
-    <SpaceX className="relative group text-center flex flex-col gap-10 xl:gap-16 bg-gradient-to-r from-secondary-dark to-primary-light py-[5rem] xl:py-[8rem] overflow-hidden">
+    <SpaceX className="relative group text-center flex flex-col gap-10 xl:gap-16 bg-gradient-to-r from-secondary-dark to-primary py-[5rem] xl:py-[8rem] overflow-hidden">
 
       <div
         className="absolute inset-0 z-0"
