@@ -27,8 +27,8 @@ const PropertyDetailContent = ({ property }: PropertyDetailContentProps) => {
 
       <div className="grid grid-cols-12 gap-8 lg:gap-4">
         <div className="col-span-12 lg:col-span-8">
-          <div className="mb-10">
-            <div className="flex flex-wrap items-center gap-4 mb-6">
+          <div className="mb-8 xl:mb-10">
+            <div className="flex flex-wrap items-center gap-4 mb-4 xl:mb-6">
               <span className="bg-primary text-soft-white text-xs xl:text-sm font-black tracking-widest px-4 xl:px-6 py-2 rounded-xs uppercase shadow-s2">
                 {property.type === "ventas" ? "VENTA" : "ALQUILER"}
               </span>
@@ -53,7 +53,7 @@ const PropertyDetailContent = ({ property }: PropertyDetailContentProps) => {
           </div>
 
           <div className="flex flex-col gap-10 xl:gap-15">
-            <div className="space-y-8">
+            <div className="space-y-6 xl:space-y-8">
               <h2 className="text-xl xl:text-2xl font-bold text-black border-b border-b-soft-gray/30 pb-4">
                 Descripción
               </h2>
@@ -64,7 +64,7 @@ const PropertyDetailContent = ({ property }: PropertyDetailContentProps) => {
               </div>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6 xl:space-y-8">
               <h2 className="text-xl xl:text-2xl font-bold text-black border-b border-b-soft-gray/30 pb-4">
                 Ubicación
               </h2>
