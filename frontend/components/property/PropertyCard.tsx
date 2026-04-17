@@ -22,7 +22,7 @@ const PropertyCard = (props: PropertyCardProps) => {
   return (
     <Link
       href={routes.propertyDetail(data.type, data.id)}
-      className={clsx("flex flex-col gap-4 group cursor-pointer rounded-xs", props.containerClassName, {
+      className={clsx("flex flex-col gap-3 xl:gap-4 group cursor-pointer rounded-xs", props.containerClassName, {
         "": props.bgHover
       })}>
       <div className={clsx("relative rounded-xs overflow-hidden w-full h-full shadow-s6", props.imageContainerClassName)}>
@@ -33,15 +33,15 @@ const PropertyCard = (props: PropertyCardProps) => {
           className="w-full h-full object-cover custom-transition-all group-hover:scale-110 bg-soft-gray/10"
         />
         {props.showType && (
-          <div className="absolute m-4">
+          <div className="absolute m-2 xl:m-4">
             <span className="bg-primary shadow-s2 text-soft-white text-xs font-bold tracking-widest px-3 py-1 rounded-xs uppercase">
               {data.type === "ventas" ? "venta" : "alquiler"}
             </span>
           </div>
         )}
       </div>
-      <div className={clsx("flex flex-col gap-2", props.infoContainerClassName)}>
-        <div className="flex flex-wrap items-center justify-between gap-4 w-full">
+      <div className={clsx("flex flex-col gap-1.5 xl:gap-2", props.infoContainerClassName)}>
+        <div className="flex flex-wrap items-center justify-between gap-2.5 xl:gap-4 w-full mb-1 xl:mb-2">
           <p className="text-lg xl:text-xl font-bold text-black truncate">
             {data.name}
           </p>
@@ -60,7 +60,7 @@ const PropertyCard = (props: PropertyCardProps) => {
             <div className="h-[0.05rem] w-full bg-soft-gray/20 my-2" />
           )}
         </div>
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-xs xl:text-sm font-semibold text-black/80">
+        <div className="flex flex-wrap items-center gap-x-5 xl:gap-x-6 gap-y-3 text-xs xl:text-sm font-semibold text-black/80">
           <div className="flex items-center gap-1">
             <SizeIcon className="stroke-black/80" />
             <p>

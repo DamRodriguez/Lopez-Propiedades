@@ -19,7 +19,7 @@ const ValueSection = ({ price, propertyName, fullLocation }: ValueSectionProps) 
   };
 
   return (
-    <div className="col-span-12 lg:col-span-4 mt-10 xl:mt-14 lg:mt-0 text-center lg:text-start">
+    <div className="col-span-12 lg:col-span-4 mt-10 lg:mt-0 text-center lg:text-start">
       <div className="sticky top-28 space-y-6">
         <div className="bg-soft-white p-6 xl:p-8 rounded-xs shadow-s3">
           <div className="mb-8">

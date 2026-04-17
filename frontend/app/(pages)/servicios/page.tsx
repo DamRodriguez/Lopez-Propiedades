@@ -13,10 +13,10 @@ const ServicesPage = () => {
           <span className="uppercase tracking-widest text-secondary-dark font-semibold text-sm xl:text-base mb-2 block">
             Excelencia Inmobiliaria
           </span>
-          <h1 className="text-5xl xl:text-7xl text-black font-extrabold leading-[3.5rem] xl:leading-[5rem] mb-4">
+          <h1 className="text-5xl xl:text-7xl text-black font-extrabold leading-[3.2rem] xl:leading-[4.5rem] mb-4">
             Nuestros Servicios
             <br />
-            <span className="text-primary-light/65">
+            <span className="text-primary-light/70">
               Soluciones a medida
             </span>
           </h1>

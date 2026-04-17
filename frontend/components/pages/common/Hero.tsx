@@ -36,7 +36,7 @@ const Hero = (props: HeroProps) => {
               <span className="text-sm xl:text-base text-secondary-dark text-shadow-sm font-extrabold uppercase tracking-widest">
                 {props.overline}
               </span>
-              <h1 className="text-5xl xl:text-7xl text-soft-white font-extrabold text-shadow-sm leading-[3.5rem] xl:leading-[5rem]">
+              <h1 className="text-5xl xl:text-7xl text-soft-white font-extrabold text-shadow-sm leading-[3.2rem] xl:leading-[4.5rem]">
                 {props.title}
               </h1>
             </div>

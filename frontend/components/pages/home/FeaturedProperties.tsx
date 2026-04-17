@@ -40,11 +40,11 @@ const FeaturedProperties = () => {
             data={mainProperty}
             showType
             hideSeparator
-            containerClassName="md:col-span-8 h-[30rem] xl:h-full"
+            containerClassName="sm:col-span-12 xl:col-span-8 h-[30rem] xl:h-full"
           />
         )}
 
-        <div className="xl:col-span-4 flex flex-col gap-8">
+        <div className="sm:grid sm:grid-cols-2 sm:col-span-12 xl:grid-cols-1 xl:col-span-4 flex flex-col gap-8">
           {sideProperties.map((prop) => (
             <PropertyCardVariant
               key={prop.id}
