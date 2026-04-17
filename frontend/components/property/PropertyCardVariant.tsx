@@ -31,7 +31,7 @@ const PropertyCardVariant = (props: PropertyCardVariantProps) => {
         <h4 className="font-bold text-black mb-1">
           {data.name}
         </h4>
-        <p className="text-xs text-on-surface-variant mb-2 text-dark-gray">
+        <p className="text-xs text-on-surface-variant mb-2 text-black">
           {data.location.neighborhood},{" "}{data.location.city}
         </p>
         <p className="text-lg font-extrabold text-black">

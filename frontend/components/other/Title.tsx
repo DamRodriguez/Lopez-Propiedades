@@ -13,7 +13,7 @@ const Title = (props: TitleProps) => {
         {props.title}
       </h2>
       {props.withUnderline && (
-        <div className="h-1 xl:h-1.5 w-24 bg-secondary-dark rounded-full"></div>
+        <div className="h-1 xl:h-1.5 w-24 bg-secondary-dark rounded-r-full"></div>
       )}
     </div>
   );
