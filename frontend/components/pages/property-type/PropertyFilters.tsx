@@ -121,14 +121,24 @@ const InnerFilterFields = ({
     </div>
 
     <div className="space-y-4">
-      <Button onClick={props.clearFilters} variant="primary" full>
-        LIMPIAR FILTROS
+      <Button
+        onClick={props.clearFilters}
+        variant="primary"
+        full
+        customUppercase
+      >
+        Limpiar Filtros
       </Button>
 
       {onClose && (
         <div className="lg:hidden">
-          <Button onClick={onClose} variant="tertiary" full>
-            VER RESULTADOS
+          <Button
+            onClick={onClose}
+            variant="tertiary"
+            full
+            customUppercase
+          >
+            Ver Resultados
           </Button>
         </div>
       )}
@@ -163,9 +173,10 @@ export default function PropertyFilters(props: PropertyFiltersProps) {
           onClick={() => setIsOpen(true)}
           variant="primary"
           className="flex items-center gap-2 justify-center w-full"
+          customUppercase
         >
           <FilterIcon className="!w-7 !h-7 stroke-soft-white" />
-          FILTROS
+          Filtros
         </Button>
       </div>
 

@@ -42,9 +42,10 @@ const ActionFullSection = (props: ActionFullSectionProps) => {
           onClick={handleConsultation}
           variant="secondary"
           big
+          customUppercase
         >
           <WhatsAppIcon />
-          <p className="font-bold tracking-wider text-sm xl:text-base uppercase">
+          <p>
             Contactar por WhatsApp
           </p>
         </Button>

@@ -42,9 +42,10 @@ const AppraiseProperty = () => {
             onClick={handleAppraise}
             variant="secondary"
             big
+            customUppercase
           >
-            <p className="font-bold tracking-wider text-sm xl:text-base">
-              SOLICITAR TASACIÓN
+            <p>
+              Solicitar Tasación
             </p>
           </Button>
         </div>

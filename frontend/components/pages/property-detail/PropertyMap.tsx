@@ -8,12 +8,12 @@ const PropertyMap = ({ fullLocation }: PropertyMapProps) => {
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullLocation)}`;
 
   return (
-    <div className="w-full space-y-4">
+    <div className="w-full">
       <div
         onClick={() => window.open(googleMapsUrl, '_blank')}
-        className="relative w-full h-[20rem] xl:h-[30rem] rounded-xs overflow-hidden cursor-pointer group border border-black/5"
+        className="relative w-full h-[20rem] xl:h-[30rem] rounded-xs overflow-hidden cursor-pointer shadow-s3 group"
       >
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 custom-transition-all z-10 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 custom-transition-all z-10 flex items-center justify-center">
           <div className="opacity-0 group-hover:opacity-100 bg-primary px-4 py-2 rounded-xs shadow-s3 custom-transition-all">
             <p className="text-sm font-semibold text-soft-white">
               Abrir ubicación

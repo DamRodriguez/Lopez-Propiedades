@@ -34,8 +34,8 @@ const PropertyCard = (props: PropertyCardProps) => {
         />
         {props.showType && (
           <div className="absolute m-4">
-            <span className="bg-primary-light shadow-s2 text-soft-white text-xs font-bold tracking-widest px-3 py-1 rounded-xs uppercase">
-              {data.type === "ventas" ? "Venta" : "Alquiler"}
+            <span className="bg-primary shadow-s2 text-soft-white text-xs font-bold tracking-widest px-3 py-1 rounded-xs uppercase">
+              {data.type === "ventas" ? "venta" : "alquiler"}
             </span>
           </div>
         )}
@@ -51,7 +51,7 @@ const PropertyCard = (props: PropertyCardProps) => {
         </div>
         <div className="flex items-center gap-1">
           <LocationIcon />
-          <p className="text-sm xl:text-base text-dark-gray">
+          <p className="text-sm xl:text-base text-black">
             {data.location.neighborhood},{" "}{data.location.city}
           </p>
         </div>
@@ -60,21 +60,21 @@ const PropertyCard = (props: PropertyCardProps) => {
             <div className="h-[0.05rem] w-full bg-soft-gray/20 my-2" />
           )}
         </div>
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-xs xl:text-sm font-semibold text-dark-gray">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-xs xl:text-sm font-semibold text-black/80">
           <div className="flex items-center gap-1">
-            <SizeIcon />
+            <SizeIcon className="stroke-black/80" />
             <p>
               {data.characteristics.squareMeters} m²
             </p>
           </div>
           <div className="flex items-center gap-1">
-            <BedroomIcon />
+            <BedroomIcon className="fill-black/80" />
             <p>
               {data.characteristics.bedrooms} Dorm.
             </p>
           </div>
           <div className="flex items-center gap-1">
-            <BathroomIcon />
+            <BathroomIcon className="fill-black/80" />
             <p>
               {data.characteristics.bathrooms}{" "}
               {data.characteristics.bathrooms > 1 ? "Baños" : "Baño"}

@@ -14,7 +14,7 @@ const NavMobile = ({ onClose }: NavMobileProps) => {
   const { handleSmoothScroll } = useSmoothScroll();
 
   return (
-    <div className="pt-[3rem] px-[2rem] flex flex-col h-full">
+    <div className="pt-[3rem] px-[1.5rem] md:px-[6.5rem] flex flex-col h-full">
       <nav>
         <ul>
           <MotionStagger

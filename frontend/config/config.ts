@@ -20,7 +20,7 @@ const config = {
     whatsApp: "+54 9 11 3231-1876",
     phone: "4750-2263",
     email: "lopezpropiedadesestudio@gmail.com",
-    instagram: "lopezpropieades.l"
+    instagram: "lopezpropiedades.l"
   },
 };
 

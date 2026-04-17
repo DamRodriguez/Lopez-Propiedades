@@ -26,7 +26,7 @@ const ImagesLayout = ({ mainImage, images }: ImagesLayoutProps) => {
   };
 
   return (
-    <div className="grid grid-cols-12 gap-4 mb-6 xl:mb-10 h-[20rem] md:h-[40rem]">
+    <div className="grid grid-cols-12 gap-4 mb-5 xl:mb-10 h-[20rem] md:h-[40rem]">
       <div
         className="col-span-12 md:col-span-8 overflow-hidden rounded-xs relative group cursor-pointer"
         onClick={() => openCarousel(0)}
@@ -113,26 +113,25 @@ const ImageCarouselModal = ({ images, initialIndex, onClose }: { images: string[
       className="fixed inset-0 z-20 bg-black/85 flex items-center justify-center backdrop-blur-[0.5rem]"
       onClick={onClose}
     >
-      <div
-        className="absolute top-16 xl:top-20 left-0 right-0 p-6 xl:p-10 flex justify-between items-center"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <span className="text-sm font-medium text-soft-white">{index + 1} / {images.length}</span>
-        <button
-          onClick={onClose}
-          className={clsx("p-3 z-30 rounded-full cursor-pointer hover:scale-110 custom-transition-all")}
-        >
-          <CloseIcon />
-        </button>
+      <div onClick={(e) => e.stopPropagation()}>
+        <SpaceX className="absolute top-25 xl:top-18 left-0 right-0 xl:p-10 flex justify-between items-center">
+          <span className="text-base xl:text-lg font-medium text-soft-white">
+            {index + 1} / {images.length}
+          </span>
+          <button
+            onClick={onClose}
+            className={clsx("z-30 rounded-full cursor-pointer hover:scale-110 custom-transition-all")}
+          >
+            <CloseIcon className="w-6 h-6 xl:w-7 xl:h-7" />
+          </button>
+        </SpaceX>
       </div>
 
       <SpaceX className="relative w-full h-[100dvh] flex items-center justify-center pt-[4.5rem] xl:pt-[5.5rem]">
-
         <div
-          className="relative w-full max-w-[90vw] xl:max-w-5xl h-[60vh] xl:h-[75vh]"
+          className="relative w-full h-[60vh] xl:h-[75vh]"
           onClick={(e) => e.stopPropagation()}
         >
-
           <motion.div
             key={index}
             initial={{ x: 100, opacity: 0 }}
@@ -150,7 +149,7 @@ const ImageCarouselModal = ({ images, initialIndex, onClose }: { images: string[
             />
           </motion.div>
 
-          <div className="absolute bottom-0 left-0 right-0 pb-4 xl:pb-0 xl:bottom-auto xl:top-1/2 xl:-translate-y-1/2 flex justify-center gap-10 xl:-left-20 xl:-right-20 xl:justify-between z-10 pointer-events-none">
+          <div className="absolute bottom-0 left-0 right-0 pb-4 xl:pb-0 xl:bottom-auto xl:top-1/2 xl:-translate-y-1/2 flex justify-center gap-10 xl:left-0 xl:right-0 xl:justify-between z-10 pointer-events-none">
             <button
               onClick={(e) => { e.stopPropagation(); prev(); }}
               className={clsx("p-3 rounded-full pointer-events-auto", hoverClassName)}

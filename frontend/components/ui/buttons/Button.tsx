@@ -23,6 +23,7 @@ type ButtonProps = {
   small?: boolean;
   cursorNormal?: boolean;
   big?: boolean;
+  customUppercase?: boolean;
 };
 
 const Button = ({
@@ -39,6 +40,7 @@ const Button = ({
     small: props.small,
     cursorNormal: cursorNormal,
     big: props.big,
+    customUppercase: props.customUppercase,
   }), props.className);
   return (
     <button

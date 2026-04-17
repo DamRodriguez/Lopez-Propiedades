@@ -16,6 +16,7 @@ type LinkButtonProps = {
   cursorNormal?: boolean;
   external?: boolean;
   big?: boolean;
+  customUppercase?: boolean;
 };
 
 const LinkButton = ({
@@ -36,6 +37,7 @@ const LinkButton = ({
     small: props.small,
     cursorNormal: cursorNormal,
     big: props.big,
+    customUppercase: props.customUppercase,
   }), props.className);
 
   return (

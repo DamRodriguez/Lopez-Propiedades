@@ -35,6 +35,11 @@ export const buttonClass = tv({
       true: "px-[1.5rem] xl:px-[2rem] min-h-[4rem] xl:min-h-[4.5rem] [&_svg]:w-[1.5rem] [&_svg]:h-[1.5rem] xl:[&_svg]:w-[2rem] xl:[&_svg]:h-[2rem]"
     },
 
+    customUppercase: {
+      false: null,
+      true: "font-bold tracking-wider text-sm xl:text-base uppercase"
+    },
+
     cursorNormal: {
       false: "cursor-pointer",
       true: "cursor-default",

@@ -52,10 +52,11 @@ const SearchBar = () => {
           query={{
             location: typeSwitcherFilter === "venta" ? locationFilter?.name : undefined,
           }}
-          className="!px-8 tracking-wide h-[3rem] w-full md:w-auto"
+          customUppercase
+          className="!px-8 h-[3rem] w-full md:w-auto"
         >
           <SearchIcon />
-          <p>BUSCAR</p>
+          <p>Buscar</p>
         </LinkButton>
       </div>
     </div>
