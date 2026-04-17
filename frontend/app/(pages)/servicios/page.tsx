@@ -8,9 +8,9 @@ const ServicesPage = () => {
 
   return (
     <section>
-      <SpaceX className="pt-[8rem] xl:pt-[10rem] pb-[5rem] xl:pb-[8rem]">
-        <div className="mb-16 lg:mb-20">
-          <span className="uppercase tracking-widest text-secondary-dark font-semibold text-sm xl:text-base mb-2 block">
+      <SpaceX className="flex flex-col pt-[8rem] xl:pt-[10rem] gap-[5rem] xl:gap-[8rem] pb-[5rem] xl:pb-[8rem]">
+        <div className="">
+          <span className="uppercase tracking-widest text-primary/60 font-semibold text-sm xl:text-base mb-2 block">
             Excelencia Inmobiliaria
           </span>
           <h1 className="text-5xl xl:text-7xl text-black font-extrabold leading-[3.2rem] xl:leading-[4.5rem] mb-4">

@@ -6,6 +6,7 @@ import "@/styles/globals.css";
 import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/other/ScrollToTop";
+import { ToastContainer } from "react-toastify";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -57,6 +58,7 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body className={clsx("antialiased min-h-svh flex flex-col bg-soft-white/60", inter.variable)}>
+        <ToastContainer />
         <ProgressBarProvider>
           <ScrollToTop />
           <div className="min-w-[20rem] max-w-[120rem] mx-auto w-full font-inter">

@@ -1,5 +1,6 @@
 import clsx from "clsx";
-import { inputClass } from "./Input.style"
+import { inputClass } from "@/components/ui/inputs/input/Input.style"
+import type { RefCallBack } from "react-hook-form";
 
 type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, "value" | "className" | "disabled"> & {
   error?: boolean;
@@ -7,12 +8,14 @@ type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, "value" | "c
   value?: string;
   className?: string;
   disabled?: boolean;
+  ref?: RefCallBack;
 };
 
-const Input = ({ error, size, value, className, disabled, ...props }: InputProps) => {
+const Input = ({ error, size, value, className, disabled, ref, ...props }: InputProps) => {
   return (
     <input
       value={value}
+      ref={ref}
       {...props}
       className={clsx(inputClass({
         hasError: error,

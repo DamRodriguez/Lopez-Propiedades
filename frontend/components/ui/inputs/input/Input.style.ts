@@ -1,10 +1,10 @@
 import { tv } from "tailwind-variants"
 
 export const inputClass = tv({
-  base: "border rounded-md min-h-[2.5rem] py-[0.5rem] px-[1rem] focus:border-black group-focus-within:border-black outline-none transition-all text-sm sm:text-lg text-soft-gray bg-transparent placeholder:text-soft-gray placeholder:text-xs sm:placeholder:text-sm shadow-s1",
+  base: "rounded-xs shadow-s2 bg-light-gray min-h-[2.5rem] py-[0.5rem] px-[1rem] group-focus-within:bg-lighter-gray outline-none custom-transition-all text-sm sm:text-base placeholder:text-soft-gray placeholder:text-xs sm:placeholder:text-sm",
   variants: {
     intent: {
-      default: "border-soft-gray",
+      default: "",
     },
     size: {
       small: "",
@@ -14,10 +14,10 @@ export const inputClass = tv({
       true: "cursor-not-allowed",
     },
     hasValue: {
-      true: "border-black text-black",
+      true: "bg-lighter-gray",
     },
     hasError: {
-      true: "border-red-error/50",
+      true: "bg-error/5",
     },
   },
   defaultVariants: {

@@ -13,7 +13,6 @@ type PropertyCardProps = {
   imageContainerClassName?: string;
   showType?: boolean;
   hideSeparator?: boolean;
-  bgHover?: boolean;
 }
 
 const PropertyCard = (props: PropertyCardProps) => {
@@ -22,9 +21,7 @@ const PropertyCard = (props: PropertyCardProps) => {
   return (
     <Link
       href={routes.propertyDetail(data.type, data.id)}
-      className={clsx("flex flex-col gap-3 xl:gap-4 group cursor-pointer rounded-xs", props.containerClassName, {
-        "": props.bgHover
-      })}>
+      className={clsx("flex flex-col gap-3 xl:gap-4 group cursor-pointer rounded-xs", props.containerClassName)}>
       <div className={clsx("relative rounded-xs overflow-hidden w-full h-full shadow-s6", props.imageContainerClassName)}>
         <Image
           fill

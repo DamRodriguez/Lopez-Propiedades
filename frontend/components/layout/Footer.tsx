@@ -39,7 +39,7 @@ const Footer = () => {
     {
       text: config.info.address,
       link: config.urls.googleMaps,
-      icon: <LocationIcon />
+      icon: <LocationIcon className="stroke-soft-white w-5 h-5 " />
     },
     {
       text: config.info.whatsApp,
@@ -48,17 +48,17 @@ const Footer = () => {
     },
     {
       text: config.info.phone,
-      icon: <CallIcon />
+      icon: <CallIcon className="stroke-soft-white" />
     },
     {
       text: config.info.instagram,
       link: config.urls.instagram,
-      icon: <InstagramIcon />
+      icon: <InstagramIcon className="stroke-soft-white" />
     },
     {
       text: config.info.email,
       link: config.urls.email,
-      icon: <EmailIcon />
+      icon: <EmailIcon className="fill-soft-white" />
     }
   ]
 

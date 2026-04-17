@@ -28,17 +28,16 @@ const TEAM_MEMBERS = [
 const TeamSection = () => {
   return (
     <section>
-      <div className="text-center mb-10 xl:mb-20">
+      <div className="mb-10 xl:mb-20 text-start lg:text-center">
         <h2 className="text-3xl xl:text-4xl font-extrabold text-black mb-3 xl:mb-4 tracking-tight">
           Nuestro Equipo
         </h2>
-        <p className="max-w-2xl mx-auto font-light text-base xl:text-lg">
+        <p className="max-w-2xl font-light text-base xl:text-lg lg:mx-auto">
           Expertos apasionados por la arquitectura y el servicio personalizado, dedicados a superar sus expectativas.
         </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
-
         {TEAM_MEMBERS.map((member) => (
           <div key={member.id} className="group">
             <div className="relative mb-4 xl:mb-6 overflow-hidden aspect-[3/4] rounded-xs">
@@ -47,7 +46,6 @@ const TeamSection = () => {
                 alt={`Imágen de ${member.name}`}
                 className="w-full h-full object-cover custom-transition-all group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 custom-transition-all"></div>
             </div>
             <h4 className="text-center sm:text-start text-base xl:text-xl font-bold text-black">
               {member.name}

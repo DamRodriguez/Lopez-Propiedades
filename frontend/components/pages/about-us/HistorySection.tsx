@@ -3,7 +3,7 @@ import { StarsIcon, TrustIcon } from '@/components/icons/aboutUs';
 const HistorySection = () => {
   return (
     <div className="grid grid-cols-1 xl:grid-cols-12 gap-10 xl:gap-16 items-end">
-      <div className="xl:col-span-5 text-center md:text-start">
+      <div className="xl:col-span-5">
         <h2 className="text-3xl xl:text-4xl font-bold text-black mb-8 leading-[2.4rem] xl:leading-[2.8rem]">
           Somos una inmobiliaria con historia y raíces familiares
         </h2>
@@ -19,22 +19,22 @@ const HistorySection = () => {
           </p>
         </div>
       </div>
-      <div className="xl:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-8 text-center md:text-start">
-        <div className="bg-white p-6 xl:p-10 rounded-xs shadow-s3 flex flex-col justify-center items-center md:items-start gap-2 xl:gap-4">
+      <div className="xl:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-8">
+        <div className="bg-white p-6 xl:p-10 rounded-xs shadow-s3 flex flex-col justify-center gap-2 xl:gap-4">
           <StarsIcon className="fill-secondary-dark w-8 h-8 xl:w-12 xl:h-12" />
           <p className="text-lg xl:text-xl font-bold mt-1 xl:mt-2">
             Curaduría
           </p>
-          <p className="text-md">
+          <p className="text-md text-black/80">
             No listamos propiedades; seleccionamos piezas arquitectónicas que representen un estilo de vida superior.
           </p>
         </div>
-        <div className="bg-white p-6 xl:p-10 rounded-xs shadow-s3 md:mt-12 flex flex-col justify-center items-center md:items-start gap-2 xl:gap-4">
+        <div className="bg-white p-6 xl:p-10 rounded-xs shadow-s3 md:mt-12 flex flex-col justify-center gap-2 xl:gap-4">
           <TrustIcon className="fill-secondary-dark w-8 h-8 xl:w-12 xl:h-12" />
           <p className="text-lg xl:text-xl font-bold mt-1 xl:mt-2">
             Confianza
           </p>
-          <p className="text-md">
+          <p className="text-md text-black/80">
             La transparencia es nuestra piedra angular. Construimos relaciones que trascienden una simple transacción.
           </p>
         </div>

@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
-import { inputClass } from "./input/Input.style";
-import { MotionHeight } from "../../motion/MotionHeight";
+import { inputClass } from "@/components/ui/inputs/input/Input.style";
+import { MotionHeight } from "@/components/motion/MotionHeight";
 import { AnimatePresence } from "framer-motion";
-import "../../../styles/scrollbarVertical.css";
+import "@/styles/scrollbarVertical.css";
 import { useClickOutside } from "@/hooks/useClickOutside";
 import { DownArrowIcon, UpArrowIcon } from "@/components/icons/filter";
 
@@ -85,7 +85,7 @@ export const InputCombobox = <T extends BaseOption>({
             disabled: disabled,
           }),
           inputClassName,
-          "flex items-center justify-between cursor-pointer w-full border-none shadow-s2 rounded-xs"
+          "flex items-center justify-between cursor-pointer w-full"
         )}
       >
         <div className="flex-1 text-left overflow-hidden">

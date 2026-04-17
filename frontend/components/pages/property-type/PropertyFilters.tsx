@@ -79,7 +79,7 @@ const InnerFilterFields = ({
             key={num}
             onClick={() => props.setBedroomsFilter(num === props.bedroomsFilter ? 0 : num)}
             className={clsx(
-              "cursor-pointer hover:bg-primary hover:text-soft-white flex-1 py-2 rounded-xs text-xs font-bold custom-transition-all",
+              "cursor-pointer shadow-s2 hover:bg-primary hover:text-soft-white flex-1 py-2 rounded-xs text-xs font-bold custom-transition-all",
               props.bedroomsFilter === num ? "bg-primary text-soft-white" : "bg-light-gray"
             )}
           >

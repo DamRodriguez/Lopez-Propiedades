@@ -40,7 +40,7 @@ const SearchBar = () => {
             placeholderLeftIcon={<LocationIcon />}
             placeholder="¿Dónde quieres vivir?"
             containerClassName="[&_svg]:fill-soft-white"
-            inputClassName="!bg-soft-gray/5 backdrop-blur-[0.5rem] text-soft-white !min-h-[3rem] "
+            inputClassName="!bg-soft-gray/5 backdrop-blur-[0.5rem] text-soft-white !min-h-[3rem] border-none shadow-s2"
             optionsContainerClassName="!bg-[#787878] text-soft-white"
             optionClassName="hover:bg-primary"
             placeholderClassName="text-soft-white tracking-wide !text-sm"
