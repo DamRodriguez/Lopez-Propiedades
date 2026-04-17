@@ -118,7 +118,7 @@ const ServicesPage = () => {
       </SpaceX>
 
       <ActionFullSection
-        title="¿Porque elegirnos?"
+        title="¿Por qué elegirnos?"
         subtitle="Porque combinamos experiencia inmobiliaria con respaldo juridico, cuidando tu propiedad y tus operaciones desde el primer contacto hasta el cierre. Contamos con 30 años de experiencia. Trabajamos de manera clara, profesional y personalizada, acompañandote en cada desicion."
         backgroundImage="/images/home/appraise.png"
         whatsAppMessage="Hola! Quisiera consultar por sus servicios. Muchas gracias."

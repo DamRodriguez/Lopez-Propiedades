@@ -10,7 +10,7 @@ import Image from "next/image";
 
 type ActionFullSectionProps = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   backgroundImage: string;
   whatsAppMessage: string;
   overlayClassName?: string;
@@ -35,9 +35,11 @@ const ActionFullSection = (props: ActionFullSectionProps) => {
         <h3 className="text-3xl xl:text-5xl text-soft-white font-extrabold mb-8">
           {props.title}
         </h3>
-        <p className="text-base xl:text-xl text-soft-white/80 mb-12 font-light">
-          {props.subtitle}
-        </p>
+        {props.subtitle && (
+          <p className="text-base xl:text-xl text-soft-white/80 mb-12 font-light">
+            {props.subtitle}
+          </p>
+        )}
         <Button
           onClick={handleConsultation}
           variant="secondary"
