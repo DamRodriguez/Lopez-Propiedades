@@ -54,7 +54,7 @@ const ChooseUsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 xl:gap-16">
           {items.map((item, index) => (
             <div key={index} className="flex flex-col items-center">
-              <div className="w-14 h-14 xl:w-16 xl:h-16 rounded-full bg-soft-white shadow-sm flex items-center justify-center text-black mb-4 xl:mb-6">
+              <div className="w-14 h-14 xl:w-16 xl:h-16 rounded-full bg-white shadow-sm flex items-center justify-center text-black mb-4 xl:mb-6">
                 {item.icon}
               </div>
               <p className="text-lg xl:text-xl font-bold mb-2 xl:mb-3 text-soft-white">

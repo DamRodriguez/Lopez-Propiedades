@@ -140,7 +140,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="border-t border-soft-gray/30 bg-white py-6">
+      <div className="border-t border-soft-gray/30 py-6">
         <div className="container mx-auto flex flex-col items-center justify-evenly gap-4 px-4 md:flex-row text-xs xl:text-sm text-soft-white">
           <p className="text-center">
             © {new Date().getFullYear()} <span className="font-semibold">Lopez Propiedades</span>. <br className="flex xl:hidden" />Todos los derechos reservados.

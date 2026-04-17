@@ -24,8 +24,7 @@ export default function PropertyGrid({ properties }: PropertyGridProps) {
             <PropertyCard
               key={property.id}
               data={property}
-              bgHover
-              containerClassName="h-[25rem] xl:h-[30rem] bg-soft-white shadow-s3"
+              containerClassName="h-[25rem] xl:h-[30rem] bg-white shadow-s3"
               infoContainerClassName="px-5 pb-5"
               imageContainerClassName="rounded-b-none"
             />

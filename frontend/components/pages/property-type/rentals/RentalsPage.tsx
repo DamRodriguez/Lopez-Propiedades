@@ -4,7 +4,7 @@ import ActionFullSection from "@/components/pages/common/ActionFullSection";
 
 const RentalsPage = () => {
   return (
-    <section className="flex flex-col gap-[5rem] xl:gap-[8rem] bg-soft-gray/5">
+    <section className="flex flex-col gap-[5rem] xl:gap-[8rem]">
       <Hero
         overline="vida excepcional"
         title="Alquileres Curados para Estilos de Vida Exigentes"

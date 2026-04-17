@@ -181,7 +181,7 @@ export default function PropertyFilters(props: PropertyFiltersProps) {
       </div>
 
       <aside className="hidden lg:block w-72 flex-shrink-0">
-        <div className="bg-soft-white p-8 rounded-xs sticky top-28 shadow-s3">
+        <div className="bg-white p-8 rounded-xs sticky top-28 shadow-s3">
           <div className="mb-6 flex items-center gap-2">
             <FilterIcon className="stroke-black" />
             <p className="text-primary font-bold text-base xl:text-lg">
@@ -208,7 +208,7 @@ export default function PropertyFilters(props: PropertyFiltersProps) {
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="absolute bottom-0 left-0 right-0 bg-soft-white rounded-t-xs p-[1rem] max-h-[85vh] overflow-y-auto"
+              className="absolute bottom-0 left-0 right-0 bg-white rounded-t-xs p-[1rem] max-h-[85vh] overflow-y-auto"
             >
               <InnerFilterFields props={props} onClose={() => setIsOpen(false)} />
             </motion.div>

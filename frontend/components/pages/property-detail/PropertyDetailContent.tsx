@@ -19,7 +19,7 @@ const Characteristic = ({ icon, label, value }: { icon: React.ReactNode; label: 
 
 const PropertyDetailContent = ({ property }: PropertyDetailContentProps) => {
   return (
-    <SpaceX className="pt-[8rem] xl:pt-[10rem] pb-[5rem] xl:pb-[8rem] bg-soft-gray/5">
+    <SpaceX className="pt-[8rem] xl:pt-[10rem] pb-[5rem] xl:pb-[8rem]">
       <ImagesLayout
         mainImage={property.mainImage}
         images={property.images}
@@ -45,7 +45,7 @@ const PropertyDetailContent = ({ property }: PropertyDetailContentProps) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 xl:p-8 bg-soft-white shadow-s3 rounded-xs mb-10 xl:mb-14">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 xl:p-8 bg-white shadow-s3 rounded-xs mb-10 xl:mb-14">
             <Characteristic icon={<BedroomIcon className="fill-black" />} label="Dormitorios" value={property.characteristics.bedrooms} />
             <Characteristic icon={<BathroomIcon className="fill-black" />} label="Baños" value={property.characteristics.bathrooms} />
             <Characteristic icon={<SizeIcon className="stroke-black" />} label="Superficie" value={`${property.characteristics.squareMeters} m²`} />

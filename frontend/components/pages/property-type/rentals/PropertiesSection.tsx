@@ -8,7 +8,7 @@ const PropertiesSection = () => {
   return (
     <SpaceX className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
 
-      <div className="lg:col-span-7 flex flex-col justify-center bg-soft-white p-12  rounded-xs shadow-lg">
+      <div className="lg:col-span-7 flex flex-col justify-center bg-white p-12  rounded-xs shadow-s3">
         <h2 className="text-xl xl:text-3xl font-bold text-black mb-6">
           El Estándar Exclusivo
         </h2>
@@ -57,7 +57,7 @@ const PropertiesSection = () => {
         />
       </div>
 
-      <div className="lg:col-span-8 bg-soft-white p-12 rounded-xs flex flex-col justify-center shadow-s3">
+      <div className="lg:col-span-8 bg-white p-12 rounded-xs flex flex-col justify-center shadow-s3">
         <h2 className="text-xl xl:text-3xl font-bold text-black mb-6">
           Valorización Estratégica de Activos
         </h2>

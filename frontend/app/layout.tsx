@@ -56,7 +56,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={clsx("antialiased min-h-svh flex flex-col bg-soft-white", inter.variable)}>
+      <body className={clsx("antialiased min-h-svh flex flex-col bg-soft-white/60", inter.variable)}>
         <ProgressBarProvider>
           <ScrollToTop />
           <div className="min-w-[20rem] max-w-[120rem] mx-auto w-full font-inter">

@@ -8,7 +8,7 @@ const ServicesPage = () => {
 
   return (
     <section>
-      <SpaceX className="pt-[8rem] xl:pt-[10rem] pb-[5rem] xl:pb-[8rem] bg-soft-gray/5">
+      <SpaceX className="pt-[8rem] xl:pt-[10rem] pb-[5rem] xl:pb-[8rem]">
         <div className="mb-16 lg:mb-20">
           <span className="uppercase tracking-widest text-secondary-dark font-semibold text-sm xl:text-base mb-2 block">
             Excelencia Inmobiliaria
@@ -45,7 +45,7 @@ const ServicesPage = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-4 bg-soft-white shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center">
+          <div className="lg:col-span-4 bg-white shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center">
             <h2 className="text-xl xl:text-3xl font-bold text-black mb-4">
               Alquileres
             </h2>
@@ -73,7 +73,7 @@ const ServicesPage = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-6 bg-soft-white shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center">
+          <div className="lg:col-span-6 bg-white shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center">
             <h2 className="text-xl xl:text-3xl font-bold text-black mb-4">
               Tasaciones Profesionales
             </h2>

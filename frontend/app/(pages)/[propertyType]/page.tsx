@@ -36,7 +36,7 @@ export default async function PropertyTypePage({ params }: PageProps) {
   return (
     <>
       {propertyType === "ventas" ? (
-        <SpaceX className="pt-[8rem] xl:pt-[10rem] pb-[5rem] xl:pb-[8rem] bg-soft-gray/5">
+        <SpaceX className="pt-[8rem] xl:pt-[10rem] pb-[5rem] xl:pb-[8rem]">
           <div className="mb-16 lg:mb-20">
             <span className="uppercase tracking-widest text-secondary-dark font-semibold text-xs mb-2 block">
               CATÁLOGO EXCLUSIVO

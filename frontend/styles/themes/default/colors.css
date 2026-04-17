@@ -5,7 +5,7 @@
   --color-primary-light: #3D322B;
 
   --color-secondary: #EAE3D9;
-  --color-secondary-dark: #CFC5B6;
+  --color-secondary-dark: #E0D8CE;
   --color-secondary-light: #F4F1ED;
 
   --color-neutral: #F8F9FA;
@@ -15,11 +15,13 @@
   --color-strong-black: #0F0F0F;
 
   --color-dark-gray: #3D3D3D;
-  --color-light-gray: #E3E3E3;
+  --color-light-gray: #F5F5F5;
   --color-opaque-gray: #6B7280;
   --color-soft-gray: #A6A6A6;
   --color-medium-gray: #C7C7C7;
   --color-tertiary: #E0E0E0;
+
+  --color-white: #FFF;
 
   --color-error: #CC492D;
   --color-success: #5FAB3A;
