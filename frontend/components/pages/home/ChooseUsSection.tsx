@@ -1,5 +1,6 @@
 import { CheckIcon, MarketingIcon, MedalIcon, UserPinIcon } from "@/components/icons/chooseUs";
 import SpaceX from "@/components/layout/SpaceX";
+import MotionSlide from "@/components/motion/MotionSlide";
 import Title from "@/components/other/Title";
 import Image from "next/image";
 
@@ -53,7 +54,7 @@ const ChooseUsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 xl:gap-16">
           {items.map((item, index) => (
-            <div key={index} className="flex flex-col items-center">
+            <MotionSlide direction="down" key={index} className="flex flex-col items-center">
               <div className="w-14 h-14 xl:w-16 xl:h-16 rounded-full bg-white shadow-sm flex items-center justify-center text-black mb-4 xl:mb-6">
                 {item.icon}
               </div>
@@ -63,7 +64,7 @@ const ChooseUsSection = () => {
               <p className="text-xs xl:text-sm w-1/2 xl:w-full text-soft-white/90">
                 {item.description}
               </p>
-            </div>
+            </MotionSlide>
           ))}
         </div>
       </div>

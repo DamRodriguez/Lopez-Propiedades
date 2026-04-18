@@ -5,6 +5,7 @@ import { openWhatsApp } from "@/utils/openWhatsapp";
 import { formatWpp } from "@/utils/formatWpp";
 import config from "@/config/config";
 import Button from "@/components/ui/buttons/Button";
+import MotionFade from "@/components/motion/MotionFade";
 
 const AppraiseProperty = () => {
   const handleAppraise = () => {
@@ -14,7 +15,7 @@ const AppraiseProperty = () => {
 
   return (
     <SpaceX className="mx-auto">
-      <div className="relative rounded-xs p-8 xl:p-14 overflow-hidden shadow-s6 group min-h-[20rem] flex items-center">
+      <MotionFade className="relative rounded-xs p-8 xl:p-14 overflow-hidden shadow-s6 group min-h-[20rem] flex items-center">
         <Image
           src="/images/home/appraise.png"
           alt="Tasación de propiedades"
@@ -49,7 +50,7 @@ const AppraiseProperty = () => {
             </p>
           </Button>
         </div>
-      </div>
+      </MotionFade>
     </SpaceX>
   );
 };

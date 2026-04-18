@@ -1,5 +1,7 @@
 "use client";
 import SpaceX from "@/components/layout/SpaceX";
+import MotionFade from "@/components/motion/MotionFade";
+import MotionSlide from "@/components/motion/MotionSlide";
 import Image from "next/image";
 
 type HeroProps = {
@@ -21,7 +23,7 @@ const Hero = (props: HeroProps) => {
             fill
             src={props.backgroundImage}
             alt={`Imagen de ${props.title}`}
-            className="object-cover"
+            className="object-cover bg-soft-gray/60"
             priority
             sizes="100vw"
           />
@@ -33,14 +35,26 @@ const Hero = (props: HeroProps) => {
         <SpaceX className="w-full text-white">
           <div className="max-w-[45rem] flex flex-col gap-[1.5rem] xl:gap-[3rem]">
             <div className="flex flex-col gap-[0.5rem] xl:gap-[1rem]">
-              <span className="text-sm xl:text-base text-secondary-dark text-shadow-sm font-extrabold uppercase tracking-widest">
+              <MotionFade
+                order={1}
+                className="text-sm xl:text-base text-secondary-dark text-shadow-sm font-extrabold uppercase tracking-widest"
+              >
                 {props.overline}
-              </span>
-              <h1 className="text-5xl xl:text-7xl text-soft-white font-extrabold text-shadow-sm leading-[3.2rem] xl:leading-[4.5rem]">
-                {props.title}
-              </h1>
+              </MotionFade>
+              <MotionSlide
+                direction="down"
+                order={0}
+              >
+                <h1 className="text-5xl xl:text-7xl text-soft-white font-extrabold text-shadow-sm leading-[3.2rem] xl:leading-[4.5rem]">
+                  {props.title}
+                </h1>
+              </MotionSlide>
             </div>
-            {props.underTitleComponent}
+            <MotionFade
+              order={1}
+            >
+              {props.underTitleComponent}
+            </MotionFade>
           </div>
         </SpaceX>
       </div>

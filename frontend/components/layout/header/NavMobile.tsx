@@ -5,6 +5,7 @@ import { homeRoute, routeItems } from "@/constants/routeItems";
 import SocialButtons from "@/components/other/SocialButtons";
 import MotionStagger from "@/components/motion/MotionStagger";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+import MotionFade from "@/components/motion/MotionFade";
 
 type NavMobileProps = {
   onClose: () => void;
@@ -40,13 +41,12 @@ const NavMobile = ({ onClose }: NavMobileProps) => {
           </MotionStagger>
         </ul>
       </nav>
-      <MotionSlide
-        direction="down"
+      <MotionFade
         order={1}
-        className="pt-[8rem]"
+        className="pt-[4rem]"
       >
         <SocialButtons />
-      </MotionSlide>
+      </MotionFade>
     </div>
   );
 };

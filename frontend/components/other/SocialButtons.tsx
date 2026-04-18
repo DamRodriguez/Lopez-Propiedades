@@ -14,7 +14,7 @@ const SocialButtons = () => {
     }
   ];
   return (
-    <div className="flex flex-col items-end gap-[1.5rem] [&_svg]:fill-soft-white">
+    <div className="flex justify-end gap-[1.5rem] [&_svg]:fill-soft-white">
       {socialItems.map((item, index) => (
         <Link
           key={index}

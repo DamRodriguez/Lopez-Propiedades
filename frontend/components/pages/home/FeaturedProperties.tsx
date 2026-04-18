@@ -5,6 +5,9 @@ import PropertyCard from "@/components/property/PropertyCard";
 import PropertyCardVariant from "@/components/property/PropertyCardVariant";
 import { PropertyData } from "@/types/property";
 import Title from "@/components/other/Title";
+import MotionFade from "@/components/motion/MotionFade";
+import MotionStagger from "@/components/motion/MotionStagger";
+import { MotionOpacity } from "@/components/motion/MotionOpacity";
 
 const FeaturedProperties = () => {
   const allProperties = [
@@ -35,23 +38,30 @@ const FeaturedProperties = () => {
       />
 
       <div className="grid grid-cols-1 xl:grid-cols-12 gap-10 xl:gap-8">
-        {mainProperty && (
-          <PropertyCard
-            data={mainProperty}
-            showType
-            hideSeparator
-            containerClassName="sm:col-span-12 xl:col-span-8 h-[30rem] xl:h-full"
-          />
-        )}
+        <MotionFade
+          className="sm:col-span-12 xl:col-span-8 h-[30rem] xl:h-full"
+        >
+          {mainProperty && (
+            <PropertyCard
+              data={mainProperty}
+              showType
+              hideSeparator
+              containerClassName="sm:col-span-12 xl:col-span-8 h-[30rem] xl:h-full"
+            />
+          )}
+        </MotionFade>
 
-        <div className="sm:grid sm:grid-cols-2 sm:col-span-12 xl:grid-cols-1 xl:col-span-4 flex flex-col gap-8">
+        <MotionStagger
+          stagger={0.2}
+          className="sm:grid sm:grid-cols-2 sm:col-span-12 xl:grid-cols-1 xl:col-span-4 flex flex-col gap-8"
+        >
           {sideProperties.map((prop) => (
             <PropertyCardVariant
               key={prop.id}
               data={prop}
             />
           ))}
-        </div>
+        </MotionStagger>
       </div>
     </SpaceX>
   );

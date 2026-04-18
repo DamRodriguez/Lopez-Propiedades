@@ -10,6 +10,7 @@ import LinkButton from "@/components/ui/buttons/LinkButton";
 import { WhatsAppIcon } from "@/components/icons/social";
 import RightSection from "@/components/layout/header/RightSection";
 import config from "@/config/config";
+import MotionSlide from "@/components/motion/MotionSlide";
 
 const Header = () => {
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
@@ -17,7 +18,10 @@ const Header = () => {
 
   return (
     <header>
-      <div className="z-9999 fixed w-full min-w-[20rem] max-w-[120rem] min-h-[4.5rem] xl:min-h-[5.5rem] bg-soft-white/90 backdrop-blur-[0.5rem] flex items-center justify-between px-[1rem] md:px-[6rem] shadow-s3">
+      <MotionSlide
+        direction="up"
+        className="z-9999 fixed w-full min-w-[20rem] max-w-[120rem] min-h-[4.5rem] xl:min-h-[5.5rem] bg-soft-white/90 backdrop-blur-[0.5rem] flex items-center justify-between px-[1rem] md:px-[6rem] shadow-s3"
+      >
         <LeftItem
           onClick={() => { if (isMobileNavVisible) { setIsMobileNavVisible(false); } }}
         />
@@ -35,7 +39,7 @@ const Header = () => {
             setIsMobileNavVisible={setIsMobileNavVisible}
           />
         </div>
-      </div>
+      </MotionSlide>
 
       <Drawer
         visible={isMobileNavVisible}

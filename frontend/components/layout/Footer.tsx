@@ -5,6 +5,8 @@ import { CallIcon, CodeIcon, EmailIcon, LocationIcon } from "../icons/footer";
 import config from "@/config/config";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { InstagramIcon, WhatsAppIcon } from "../icons/social";
+import MotionFade from "../motion/MotionFade";
+import MotionSlide from "../motion/MotionSlide";
 
 const Footer = () => {
   const { handleSmoothScroll } = useSmoothScroll();
@@ -65,14 +67,14 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-primary to-black w-full shadow-s7">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-12 px-6 md:px-12 w-full max-w-7xl mx-auto">
-        <div className="flex items-center">
+        <MotionFade className="flex items-center">
           <span className="text-lg font-semibold text-soft-white">
             Lopez Propiedades
           </span>
-        </div>
+        </MotionFade>
         <div className="grid grid-cols-2 gap-8">
-          <div>
-            <p className="font-bold text-soft-white mb-4 text-xs tracking-widest uppercase">
+          <MotionSlide direction="down" className="flex flex-col gap-4">
+            <p className="font-bold text-soft-white text-xs tracking-widest uppercase">
               Empresa
             </p>
             <ul className="flex flex-col gap-2 text-sm text-soft-white">
@@ -88,8 +90,8 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="flex flex-col gap-4">
+          </MotionSlide>
+          <MotionSlide direction="down" className="flex flex-col gap-4">
             <p className="font-bold text-soft-white text-xs tracking-widest uppercase">
               Inmuebles
             </p>
@@ -106,9 +108,9 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </MotionSlide>
         </div>
-        <div className="flex flex-col gap-4">
+        <MotionSlide direction="down" className="flex flex-col gap-4">
           <p className="font-bold text-soft-white text-xs tracking-widest uppercase">
             Contacto
           </p>
@@ -138,14 +140,16 @@ const Footer = () => {
               </div>
             ))}
           </div>
-        </div>
+        </MotionSlide>
       </div>
       <div className="border-t border-soft-gray/30 py-6">
         <div className="container mx-auto flex flex-col items-center justify-evenly gap-4 px-4 md:flex-row text-xs xl:text-sm text-soft-white">
-          <p className="text-center">
-            © {new Date().getFullYear()} <span className="font-semibold">Lopez Propiedades</span>. <br className="flex xl:hidden" />Todos los derechos reservados.
-          </p>
-          <div className="flex items-center gap-2">
+          <MotionSlide>
+            <p className="text-center">
+              © {new Date().getFullYear()} <span className="font-semibold">Lopez Propiedades</span>. <br className="flex xl:hidden" />Todos los derechos reservados.
+            </p>
+          </MotionSlide>
+          <MotionSlide direction="right" className="flex items-center gap-2">
             <CodeIcon />
             <p className="font-medium">
               Desarrollado por{" "}
@@ -158,7 +162,7 @@ const Footer = () => {
                 damrod
               </Link>
             </p>
-          </div>
+          </MotionSlide>
 
         </div>
       </div>
