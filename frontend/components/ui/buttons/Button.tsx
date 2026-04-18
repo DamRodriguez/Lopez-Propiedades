@@ -66,7 +66,7 @@ const Button = ({
     >
       {
         props.isLoading ? (
-          <div className="flex gap-x-[1rem] h-[1.5rem]">
+          <div className="">
             <Spinner size={20} color={props.spinnerColor} />
           </div>
         ) : (
