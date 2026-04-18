@@ -12,8 +12,8 @@ type PropertyDetailContentProps = {
 const Characteristic = ({ icon, label, value }: { icon: React.ReactNode; label: string; value: string | number }) => (
   <div className="flex flex-col items-center text-center p-2">
     <span className="mb-5 [&_svg]:w-7 [&_svg]:h-7 xl:[&_svg]:w-9 xl:[&_svg]:h-9">{icon}</span>
-    <span className="text-sm xl:text-base font-bold uppercase tracking-wider text-black/70 mb-1">{label}</span>
-    <span className="text-base xl:text-lg font-bold text-black/80">{value}</span>
+    <span className="text-sm xl:text-base font-bold uppercase tracking-wider text-black/90 mb-1">{label}</span>
+    <span className="text-base xl:text-lg font-bold text-black/90">{value}</span>
   </div>
 );
 
@@ -29,10 +29,10 @@ const PropertyDetailContent = ({ property }: PropertyDetailContentProps) => {
         <div className="col-span-12 lg:col-span-8">
           <div className="mb-8 xl:mb-10">
             <div className="flex flex-wrap items-center gap-3 xl:gap-4 mb-4 xl:mb-6">
-              <span className="bg-primary text-soft-white text-xs xl:text-sm font-black tracking-widest px-4 xl:px-6 py-2 rounded-xs uppercase shadow-s2">
+              <span className="bg-primary text-soft-white text-xs xl:text-sm font-black tracking-widest px-3 xl:px-6 py-1.5 xl:py-2 rounded-xs uppercase shadow-s2">
                 {property.type === "ventas" ? "venta" : "alquiler"}
               </span>
-              <span className="bg-secondary text-black text-xs xl:text-sm font-black tracking-widest px-4 xl:px-6 py-2 rounded-xs uppercase shadow-s2">
+              <span className="bg-secondary text-black text-xs xl:text-sm font-black tracking-widest px-3 xl:px-6 py-1.5 xl:py-2 rounded-xs uppercase shadow-s2">
                 {property.category}
               </span>
             </div>
@@ -46,10 +46,10 @@ const PropertyDetailContent = ({ property }: PropertyDetailContentProps) => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 xl:p-8 bg-white shadow-s3 rounded-xs mb-10 xl:mb-14">
-            <Characteristic icon={<BedroomIcon className="fill-black" />} label="Dormitorios" value={property.characteristics.bedrooms} />
-            <Characteristic icon={<BathroomIcon className="fill-black" />} label="Baños" value={property.characteristics.bathrooms} />
-            <Characteristic icon={<SizeIcon className="stroke-black" />} label="Superficie" value={`${property.characteristics.squareMeters} m²`} />
-            <Characteristic icon={<CarIcon className="fill-black" />} label="Cochera" value={property.characteristics.garage ? "Sí" : "No"} />
+            <Characteristic icon={<BedroomIcon className="fill-black/80" />} label="Dormitorios" value={property.characteristics.bedrooms} />
+            <Characteristic icon={<BathroomIcon className="fill-black/80" />} label="Baños" value={property.characteristics.bathrooms} />
+            <Characteristic icon={<SizeIcon className="stroke-black/80" />} label="Superficie" value={`${property.characteristics.squareMeters} m²`} />
+            <Characteristic icon={<CarIcon className="fill-black/80" />} label="Cochera" value={property.characteristics.garage ? "Sí" : "No"} />
           </div>
 
           <div className="flex flex-col gap-10 xl:gap-14">

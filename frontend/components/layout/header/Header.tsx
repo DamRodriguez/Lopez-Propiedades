@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <header>
-      <div className="z-999 fixed w-full min-w-[20rem] max-w-[120rem] min-h-[4.5rem] xl:min-h-[5.5rem] bg-soft-white/90 backdrop-blur-[0.5rem] flex items-center justify-between px-[1rem] md:px-[6rem] shadow-s3">
+      <div className="z-9999 fixed w-full min-w-[20rem] max-w-[120rem] min-h-[4.5rem] xl:min-h-[5.5rem] bg-soft-white/90 backdrop-blur-[0.5rem] flex items-center justify-between px-[1rem] md:px-[6rem] shadow-s3">
         <LeftItem
           onClick={() => { if (isMobileNavVisible) { setIsMobileNavVisible(false); } }}
         />
@@ -43,7 +43,7 @@ const Header = () => {
         position="right"
         closeButton={null}
         hideOverlay
-        className={clsx("pb-[7rem] bg-soft-white/80 backdrop-blur-[0.5rem] xl:hidden top-[4.5rem]", {
+        className={clsx("pb-[7rem] bg-soft-white/90 backdrop-blur-[0.5rem] xl:hidden top-[4.5rem]", {
         })}>
         <NavMobile onClose={() => { setIsMobileNavVisible(false); }} />
       </Drawer>

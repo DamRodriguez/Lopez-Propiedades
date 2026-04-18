@@ -22,7 +22,7 @@ const ActionFullSection = (props: ActionFullSectionProps) => {
   };
 
   return (
-    <SpaceX className="py-[5rem] xl:py-[8rem] bg-primary text-white flex justify-center overflow-hidden relative group">
+    <SpaceX className="py-[5rem] xl:py-[8rem] bg-primary text-white flex justify-center overflow-hidden relative group top-1">
       <div className="max-w-4xl flex flex-col justify-center items-center text-center z-10">
         <Image
           src={props.backgroundImage}

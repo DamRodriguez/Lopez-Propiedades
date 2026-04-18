@@ -51,9 +51,9 @@ const TypeSwitcher: React.FC<TypeSwitcherProps> = ({ onChange }) => {
           <button
             key={option.id}
             onClick={() => handleSelect(option.id as SwitcherType)}
-            className={clsx("relative z-10 flex-1 min-w-15 md:w-28 py-[0.6rem] px-4 rounded-xs text-sm font-semibold tracking-wide custom-transition-all flex items justify-center cursor-pointer hover:bg-soft-white/10", {
-              "text-black": isActive,
-              "text-soft-white": !isActive
+            className={clsx("relative z-10 flex-1 min-w-15 md:w-28 py-[0.6rem] px-4 rounded-xs text-sm font-semibold tracking-wide custom-transition-all flex items justify-center cursor-pointer", {
+              "text-black hover:bg-secondary-light": isActive,
+              "text-soft-white hover:bg-soft-white/20": !isActive
             })}
           >
             {option.label}

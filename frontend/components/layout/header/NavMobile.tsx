@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import MotionSlide from "@/components/motion/MotionSlide";
-import { routeItems } from "@/constants/routeItems";
+import { homeRoute, routeItems } from "@/constants/routeItems";
 import SocialButtons from "@/components/other/SocialButtons";
 import MotionStagger from "@/components/motion/MotionStagger";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
@@ -12,6 +12,7 @@ type NavMobileProps = {
 
 const NavMobile = ({ onClose }: NavMobileProps) => {
   const { handleSmoothScroll } = useSmoothScroll();
+  const routes = [homeRoute, ...routeItems];
 
   return (
     <div className="pt-[3rem] px-[1.5rem] md:px-[6.5rem] flex flex-col h-full">
@@ -22,7 +23,7 @@ const NavMobile = ({ onClose }: NavMobileProps) => {
             order={0}
             className="flex flex-col items-end text-end text-lg gap-[1rem] font-semibold"
           >
-            {routeItems.map(({ href, label }) => (
+            {routes.map(({ href, label }) => (
               <li key={href} className="w-full group">
                 <Link
                   href={href}
@@ -33,7 +34,7 @@ const NavMobile = ({ onClose }: NavMobileProps) => {
                   className="cursor-pointer text-black">
                   {label}
                 </Link>
-                <div className="h-[0.05rem] bg-soft-gray/50 my-[0.5rem] w-[8.5rem]" />
+                <div className="h-[0.05rem] bg-primary/15 my-[0.5rem] w-[8.5rem]" />
               </li>
             ))}
           </MotionStagger>

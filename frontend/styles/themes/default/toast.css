@@ -12,16 +12,16 @@
   background-color: var(--color-success) !important;
 }
 
+.Toastify__toast--success .Toastify__toast-icon svg {
+  fill: var(--color-success) !important;
+}
+
 .Toastify__progress-bar--error {
   background-color: var(--color-error) !important;
 }
 
-.Toastify__progress-bar--info {
-  background-color: var(--color-secondary-300) !important;
-}
-
-.Toastify__progress-bar--warning {
-  background-color: var(--color-primary-300) !important;
+.Toastify__toast--error .Toastify__toast-icon svg {
+  fill: var(--color-error) !important;
 }
 
 @media (max-width: 640px) {

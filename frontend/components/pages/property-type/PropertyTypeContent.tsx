@@ -12,7 +12,7 @@ interface PropertyTypeContentProps {
 
 function PropertyContentInner({ initialProperties }: { initialProperties: PropertyData[] }) {
   const searchParams = useSearchParams();
-  const locationParamFilter = searchParams.get("location");
+  const locationParamFilter = searchParams.get("localidad");
 
   const initialPriceFilter = 3000000;
   const [priceFilter, setPriceFilter] = useState<number>(initialPriceFilter);

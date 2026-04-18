@@ -10,7 +10,7 @@ type MotionStaggerProps = MotionDefaults & {
 
 const MotionStagger = ({
   direction = "down",
-  stagger = 0.2,
+  stagger = 0.1,
   ...props
 }: MotionStaggerProps) => {
   const {

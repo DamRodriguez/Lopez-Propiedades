@@ -14,7 +14,7 @@ const ContactMap = () => {
       >
         <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 custom-transition-all z-10 flex flex-col justify-center items-center">
           <div className="bg-soft-white p-6 xl:p-10 shadow-s3 rounded-xs text-center flex flex-col items-center gap-2 xl:gap-4">
-            <LocationIcon className="w-6 h-6 xl:w-10 xl:h-10" />
+            <LocationIcon className="w-7 h-7 xl:w-10 xl:h-10" />
             <div className="flex flex-col gap-1">
               <p className="font-semibold text-base xl:text-lg">
                 Nuestra Oficina

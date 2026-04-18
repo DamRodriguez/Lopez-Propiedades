@@ -37,8 +37,8 @@ const PropertyCard = (props: PropertyCardProps) => {
           </div>
         )}
       </div>
-      <div className={clsx("flex flex-col gap-1.5 xl:gap-2", props.infoContainerClassName)}>
-        <div className="flex flex-wrap items-center justify-between gap-2.5 xl:gap-4 w-full mb-1 xl:mb-2">
+      <div className={clsx("flex flex-col gap-1 xl:gap-2", props.infoContainerClassName)}>
+        <div className="flex flex-wrap items-center justify-between gap-2 xl:gap-4 w-full mb-1 xl:mb-2">
           <p className="text-lg xl:text-xl font-bold text-black truncate">
             {data.name}
           </p>

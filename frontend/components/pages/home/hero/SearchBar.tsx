@@ -38,10 +38,11 @@ const SearchBar = () => {
             onChange={setLocationFilter}
             renderOption={(option) => <span className="text-sm">{option.name}</span>}
             placeholderLeftIcon={<LocationIcon />}
+            placeholderLeftIconOnInput
             placeholder="¿Dónde quieres vivir?"
             containerClassName="[&_svg]:fill-soft-white"
             inputClassName="!bg-soft-gray/5 backdrop-blur-[0.5rem] text-soft-white !min-h-[3rem] border-none shadow-s2"
-            optionsContainerClassName="!bg-[#787878] text-soft-white"
+            optionsContainerClassName="!bg-soft-gray/80 backdrop-blur-[1rem] "
             optionClassName="hover:bg-primary"
             placeholderClassName="text-soft-white tracking-wide !text-sm"
           />
@@ -50,7 +51,7 @@ const SearchBar = () => {
         <LinkButton
           href={routes.propertyType(formattedType)}
           query={{
-            location: typeSwitcherFilter === "venta" ? locationFilter?.name : undefined,
+            localidad: typeSwitcherFilter === "venta" ? locationFilter?.name : undefined,
           }}
           customUppercase
           className="!px-8 h-[3rem] w-full md:w-auto"

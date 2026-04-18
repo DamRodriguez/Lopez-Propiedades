@@ -26,7 +26,7 @@ const ImagesLayout = ({ mainImage, images }: ImagesLayoutProps) => {
   };
 
   return (
-    <div className="grid grid-cols-12 gap-4 mb-4 xl:mb-10 h-[20rem] md:h-[40rem]">
+    <div className="grid grid-cols-12 gap-4 mb-3 xl:mb-8 h-[20rem] md:h-[30rem] xl:h-[40rem]">
       <div
         className="col-span-12 md:col-span-8 overflow-hidden rounded-xs relative group cursor-pointer"
         onClick={() => openCarousel(0)}

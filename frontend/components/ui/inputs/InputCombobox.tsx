@@ -27,6 +27,7 @@ export type InputComboboxProps<T extends BaseOption> = {
   optionClassName?: string;
   placeholderClassName?: string;
   placeholderLeftIcon?: React.ReactNode;
+  placeholderLeftIconOnInput?: boolean;
 };
 
 export const InputCombobox = <T extends BaseOption>({
@@ -43,7 +44,8 @@ export const InputCombobox = <T extends BaseOption>({
   optionsContainerClassName,
   optionClassName,
   placeholderClassName,
-  placeholderLeftIcon
+  placeholderLeftIcon,
+  placeholderLeftIconOnInput
 }: InputComboboxProps<T>) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState<T | undefined>(value);
@@ -90,7 +92,10 @@ export const InputCombobox = <T extends BaseOption>({
       >
         <div className="flex-1 text-left overflow-hidden">
           {selected ? (
-            renderOption(selected)
+            <div className="flex items-center gap-2">
+              {placeholderLeftIconOnInput && placeholderLeftIcon}
+              {renderOption(selected)}
+            </div>
           ) : (
             placeholder && (
               <div className="flex items-center gap-2">
@@ -114,9 +119,9 @@ export const InputCombobox = <T extends BaseOption>({
 
       <AnimatePresence>
         {isOpen && (
-          <div className="absolute z-50 mt-1 w-full border-none shadow-s2 rounded-xs overflow-hidden">
+          <div className={clsx("absolute z-50 mt-1 w-full border-none shadow-s2 rounded-xs overflow-hidden", optionsContainerClassName)}>
             <MotionHeight duration={0.3}>
-              <div className={clsx("max-h-[10.5rem] sm:max-h-[13rem] scrollbarCustom overflow-y-auto", optionsContainerClassName)}>
+              <div className={clsx("max-h-[10.5rem] sm:max-h-[13rem] scrollbarCustom overflow-y-auto")}>
                 {filteredOptions.length > 0 ? (
                   filteredOptions.map((option) => (
                     <div
