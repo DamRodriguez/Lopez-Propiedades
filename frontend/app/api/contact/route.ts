@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     const data = await resend.emails.send({
       from: "Web Inmobiliaria <onboarding@resend.dev>",
       to: ["damrod1999@gmail.com"],
-      subject: `Nueva Consulta Web: ${consultaTipo} - ${fullName}`,
+      subject: `${consultaTipo} - ${fullName}`,
       replyTo: email,
       html: `
         <div style="font-family: sans-serif; color: #333; max-width: 600px; margin: 0 auto;">
