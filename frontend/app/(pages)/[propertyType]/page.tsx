@@ -1,4 +1,6 @@
 import SpaceX from "@/components/layout/SpaceX";
+import { MotionOpacity } from "@/components/motion/MotionOpacity";
+import MotionSlide from "@/components/motion/MotionSlide";
 import PropertyTypeContent from "@/components/pages/property-type/PropertyTypeContent";
 import RentalsPage from "@/components/pages/property-type/rentals/RentalsPage";
 import rentalsProperties from "@/data/rentalsProperties.json";
@@ -38,17 +40,23 @@ export default async function PropertyTypePage({ params }: PageProps) {
       {propertyType === "ventas" ? (
         <SpaceX className="pt-[8rem] xl:pt-[10rem] pb-[5rem] xl:pb-[8rem]">
           <div className="mb-16 lg:mb-20">
-            <span className="uppercase tracking-widest text-primary/60 font-semibold text-xs mb-2 block">
+            <MotionOpacity order={1} className="uppercase tracking-widest text-primary/60 font-semibold text-xs mb-2 block">
               CATÁLOGO EXCLUSIVO
-            </span>
-            <h1 className="text-2xl xl:text-5xl font-extrabold text-black mb-4">
-              {pageTitle}
-            </h1>
-            <p className="max-w-2xl text-base xl:text-lg text-black/80">
-              {pageDescription}
-            </p>
+            </MotionOpacity>
+            <MotionSlide order={0}>
+              <h1 className="text-2xl xl:text-5xl font-extrabold text-black mb-4">
+                {pageTitle}
+              </h1>
+            </MotionSlide>
+            <MotionOpacity order={1}>
+              <p className="max-w-2xl text-base xl:text-lg text-black/80">
+                {pageDescription}
+              </p>
+            </MotionOpacity>
           </div>
-          <PropertyTypeContent initialProperties={propertiesData} />
+          <MotionOpacity order={1}>
+            <PropertyTypeContent initialProperties={propertiesData} />
+          </MotionOpacity>
         </SpaceX>
       ) : (
         <RentalsPage />

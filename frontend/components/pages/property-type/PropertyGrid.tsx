@@ -1,5 +1,7 @@
 import { PropertyData } from "@/types/property";
 import PropertyCard from "@/components/property/PropertyCard";
+import MotionStagger from "@/components/motion/MotionStagger";
+import MotionSlide from "@/components/motion/MotionSlide";
 
 interface PropertyGridProps {
   properties: PropertyData[];
@@ -21,13 +23,17 @@ export default function PropertyGrid({ properties }: PropertyGridProps) {
       {properties.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {properties.map((property) => (
-            <PropertyCard
+            <MotionSlide
               key={property.id}
-              data={property}
-              containerClassName="h-[25rem] xl:h-[30rem] bg-white shadow-s3"
-              infoContainerClassName="px-5 pb-5"
-              imageContainerClassName="rounded-b-none"
-            />
+              direction="down"
+            >
+              <PropertyCard
+                data={property}
+                containerClassName="h-[25rem] xl:h-[30rem] bg-white shadow-s3"
+                infoContainerClassName="px-5 pb-5"
+                imageContainerClassName="rounded-b-none"
+              />
+            </MotionSlide>
           ))}
         </div>
       ) : (

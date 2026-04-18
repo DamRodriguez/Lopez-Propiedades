@@ -1,5 +1,6 @@
 import { CallIcon, EmailIcon, LocationIcon } from "@/components/icons/footer";
 import { InstagramIcon } from "@/components/icons/social";
+import MotionSlide from "@/components/motion/MotionSlide";
 import config from "@/config/config";
 import ContactForm from "@/features/contact/components/ContactForm";
 
@@ -51,7 +52,7 @@ const ContactSection = () => {
 
         <div className="space-y-6 xl:space-y-8">
           {CONTACT_INFO.map((item) => (
-            <div key={item.id} className="flex items-center gap-4">
+            <MotionSlide direction="down" key={item.id} className="flex items-center gap-4">
               <div className="p-4 xl:p-5 bg-secondary-light/80 flex items-center justify-center rounded-xs shadow-s3 shrink-0">
                 {item.icon}
               </div>
@@ -63,12 +64,14 @@ const ContactSection = () => {
                   {item.content}
                 </div>
               </div>
-            </div>
+            </MotionSlide>
           ))}
         </div>
       </div>
 
-      <ContactForm />
+      <MotionSlide direction="right">
+        <ContactForm />
+      </MotionSlide>
     </div>
   );
 };

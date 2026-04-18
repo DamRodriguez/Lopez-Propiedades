@@ -1,3 +1,6 @@
+import { MotionOpacity } from "@/components/motion/MotionOpacity";
+import MotionSlide from "@/components/motion/MotionSlide";
+
 const TEAM_MEMBERS = [
   {
     id: 1,
@@ -29,17 +32,21 @@ const TeamSection = () => {
   return (
     <section>
       <div className="mb-10 xl:mb-20 text-start lg:text-center">
-        <h2 className="text-3xl xl:text-4xl font-extrabold text-black mb-3 xl:mb-4 tracking-tight">
-          Nuestro Equipo
-        </h2>
-        <p className="max-w-2xl font-light text-base xl:text-lg lg:mx-auto">
-          Expertos apasionados por la arquitectura y el servicio personalizado, dedicados a superar sus expectativas.
-        </p>
+        <MotionSlide>
+          <h2 className="text-3xl xl:text-4xl font-extrabold text-black mb-3 xl:mb-4 tracking-tight">
+            Nuestro Equipo
+          </h2>
+        </MotionSlide>
+        <MotionOpacity>
+          <p className="max-w-2xl font-light text-base xl:text-lg lg:mx-auto">
+            Expertos apasionados por la arquitectura y el servicio personalizado, dedicados a superar sus expectativas.
+          </p>
+        </MotionOpacity>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
         {TEAM_MEMBERS.map((member) => (
-          <div key={member.id} className="group">
+          <MotionSlide direction="down" key={member.id} className="group">
             <div className="relative mb-4 xl:mb-6 overflow-hidden aspect-[3/4] rounded-xs">
               <img
                 src={member.image}
@@ -53,7 +60,7 @@ const TeamSection = () => {
             <p className="text-black/60 text-xs text-center sm:text-start uppercase font-bold tracking-widest mt-1">
               {member.position}
             </p>
-          </div>
+          </MotionSlide>
         ))}
       </div>
     </section>

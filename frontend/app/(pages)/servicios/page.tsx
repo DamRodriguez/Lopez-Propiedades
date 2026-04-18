@@ -1,5 +1,7 @@
 import { CheckIcon } from "@/components/icons/rentalsPage";
 import SpaceX from "@/components/layout/SpaceX";
+import { MotionOpacity } from "@/components/motion/MotionOpacity";
+import MotionSlide from "@/components/motion/MotionSlide";
 import ActionFullSection from "@/components/pages/common/ActionFullSection";
 import Image from "next/image";
 
@@ -10,23 +12,27 @@ const ServicesPage = () => {
     <section>
       <SpaceX className="flex flex-col pt-[8rem] xl:pt-[10rem] gap-[5rem] xl:gap-[8rem] pb-[5rem] xl:pb-[8rem]">
         <div className="">
-          <span className="uppercase tracking-widest text-primary/60 font-semibold text-sm xl:text-base mb-2 block">
+          <MotionOpacity order={1} className="uppercase tracking-widest text-primary/60 font-semibold text-sm xl:text-base mb-2 block">
             Excelencia Inmobiliaria
-          </span>
-          <h1 className="text-5xl xl:text-7xl text-black font-extrabold leading-[3.2rem] xl:leading-[4.5rem] mb-4">
-            Nuestros Servicios
-            <br />
-            <span className="text-primary-light/70">
-              Soluciones a medida
-            </span>
-          </h1>
-          <p className="text-lg lg:text-xl max-w-2xl leading-relaxed text-black/80">
-            Brindamos un servicio inmobiliario integral, combinando experiencia en el mercado con estrategias de comercialización para lograr resultados concretos.
-          </p>
+          </MotionOpacity>
+          <MotionSlide order={0}>
+            <h1 className="text-5xl xl:text-7xl text-black font-extrabold leading-[3.2rem] xl:leading-[4.5rem] mb-4">
+              Nuestros Servicios
+              <br />
+              <span className="text-primary-light/70">
+                Soluciones a medida
+              </span>
+            </h1>
+          </MotionSlide>
+          <MotionOpacity order={1}>
+            <p className="text-lg lg:text-xl max-w-2xl leading-relaxed text-black/80">
+              Brindamos un servicio inmobiliario integral, combinando experiencia en el mercado con estrategias de comercialización para lograr resultados concretos.
+            </p>
+          </MotionOpacity>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          <div className="lg:col-span-8 group relative overflow-hidden rounded-xs group">
+        <MotionOpacity order={1} className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <MotionSlide className="lg:col-span-8 group relative overflow-hidden rounded-xs group">
             <div className="absolute inset-0 bg-gradient-to-t from-primary to-primary-light/50 z-10"></div>
             <Image
               fill
@@ -43,18 +49,18 @@ const ServicesPage = () => {
                 Revisión de documentación y lo necesario para solucionar cualquier inconveniente jurídico que aparezca en  el inmueble.
               </p>
             </div>
-          </div>
+          </MotionSlide>
 
-          <div className="lg:col-span-4 bg-white shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center">
+          <MotionSlide direction="right" className="lg:col-span-4 bg-white shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center">
             <h2 className="text-xl xl:text-3xl font-bold text-black mb-4">
               Alquileres
             </h2>
             <p className="text-black/90 text-sm xl:text-base leading-relaxed">
               Gestionamos alquileres de forma eficiente y segura. Nos ocupamos de la publicación, evaluación de inquilinos, contratos y seguimiento, brindando tranquilidad tanto a propietarios como a inquilinos.
             </p>
-          </div>
+          </MotionSlide>
 
-          <div className="lg:col-span-6 bg-gradient-to-r from-primary to-primary-light rounded-xs flex flex-col lg:flex-row gap-8 items-center group">
+          <MotionSlide className="lg:col-span-6 bg-gradient-to-r from-primary to-primary-light rounded-xs flex flex-col lg:flex-row gap-8 items-center group">
             <div className="p-8 lg:p-10">
               <h2 className="text-xl xl:text-3xl font-bold text-soft-white mb-4">
                 Asesoramiento Jurídico
@@ -71,18 +77,18 @@ const ServicesPage = () => {
                 src="https://picsum.photos/seed/v6/800/600"
               />
             </div>
-          </div>
+          </MotionSlide>
 
-          <div className="lg:col-span-6 bg-white shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center">
+          <MotionSlide direction="right" className="lg:col-span-6 bg-white shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center">
             <h2 className="text-xl xl:text-3xl font-bold text-black mb-4">
               Tasaciones Profesionales
             </h2>
             <p className="text-black/90 text-sm xl:text-base leading-relaxed">
               Realizamos Tasaciones precisas basadas en análisis de mercado, ubicación y características del inmueble. Asegurando valores reales.
             </p>
-          </div>
+          </MotionSlide>
 
-          <div className="relative group overflow-hidden lg:col-span-12 bg-gradient-to-t from-primary to-primary-light shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center min-h-[20rem] ">
+          <MotionSlide direction="down" className="relative group overflow-hidden lg:col-span-12 bg-gradient-to-t from-primary to-primary-light shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center min-h-[20rem] ">
             <div className="absolute inset-0 bg-gradient-to-t from-primary to-primary/70 z-10"></div>
             <Image
               fill
@@ -113,8 +119,8 @@ const ServicesPage = () => {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
+          </MotionSlide>
+        </MotionOpacity>
       </SpaceX>
 
       <ActionFullSection

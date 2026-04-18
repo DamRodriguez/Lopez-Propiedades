@@ -1,5 +1,6 @@
 import { CheckIcon } from "@/components/icons/rentalsPage";
 import SpaceX from "@/components/layout/SpaceX";
+import MotionSlide from "@/components/motion/MotionSlide";
 import Image from "next/image";
 
 const PropertiesSection = () => {
@@ -8,7 +9,7 @@ const PropertiesSection = () => {
   return (
     <SpaceX className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
 
-      <div className="lg:col-span-7 flex flex-col justify-center bg-white p-12  rounded-xs shadow-s3">
+      <MotionSlide className="lg:col-span-7 flex flex-col justify-center bg-white p-12  rounded-xs shadow-s3">
         <h2 className="text-xl xl:text-3xl font-bold text-black mb-6">
           El Estándar Exclusivo
         </h2>
@@ -35,9 +36,9 @@ const PropertiesSection = () => {
             <span>Gestión integral de contratos y supervisión legal</span>
           </li>
         </ul>
-      </div>
+      </MotionSlide>
 
-      <div className="lg:col-span-5 rounded-xs overflow-hidden h-full shadow-s3">
+      <MotionSlide direction="right" className="lg:col-span-5 rounded-xs overflow-hidden h-full shadow-s3">
         <Image
           width={400}
           height={400}
@@ -45,9 +46,9 @@ const PropertiesSection = () => {
           alt=""
           className="w-full h-full object-cover hover:scale-110 custom-transition-all"
         />
-      </div>
+      </MotionSlide>
 
-      <div className="lg:col-span-4 rounded-xs overflow-hidden h-full">
+      <MotionSlide direction="left" className="lg:col-span-4 rounded-xs overflow-hidden h-full">
         <Image
           width={400}
           height={400}
@@ -55,16 +56,16 @@ const PropertiesSection = () => {
           alt=""
           className="w-full h-full object-cover hover:scale-110 custom-transition-all"
         />
-      </div>
+      </MotionSlide>
 
-      <div className="lg:col-span-8 bg-white p-12 rounded-xs flex flex-col justify-center shadow-s3">
+      <MotionSlide direction="right" className="lg:col-span-8 bg-white p-12 rounded-xs flex flex-col justify-center shadow-s3">
         <h2 className="text-xl xl:text-3xl font-bold text-black mb-6">
           Valorización Estratégica de Activos
         </h2>
         <p className="leading-relaxed text-base xl:text-lg text-black/80">
           Tratamos su propiedad como un activo de alto rendimiento. Nuestro equipo de gestión se enfoca en la preservación del valor a largo plazo, asegurando que su inversión continúe apreciándose mientras genera rendimientos por alquiler de nivel premium. Desde el mantenimiento preventivo hasta la relación con el inquilino de nivel concierge, brindamos una experiencia sin preocupaciones para los propietarios.
         </p>
-      </div>
+      </MotionSlide>
 
     </SpaceX>
   );

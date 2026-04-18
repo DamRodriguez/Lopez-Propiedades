@@ -7,6 +7,8 @@ import { CloseIcon, LeftIcon, PictureIcon, RightIcon } from "@/components/icons/
 import SpaceX from "@/components/layout/SpaceX";
 import clsx from "clsx";
 import { useScrollLock } from "@/hooks/useScrollLock";
+import MotionFade from "@/components/motion/MotionFade";
+import MotionSlide from "@/components/motion/MotionSlide";
 
 type ImagesLayoutProps = {
   mainImage: string;
@@ -27,7 +29,7 @@ const ImagesLayout = ({ mainImage, images }: ImagesLayoutProps) => {
 
   return (
     <div className="grid grid-cols-12 gap-4 mb-3 xl:mb-8 h-[20rem] md:h-[30rem] xl:h-[40rem]">
-      <div
+      <MotionFade
         className="col-span-12 md:col-span-8 overflow-hidden rounded-xs relative group cursor-pointer"
         onClick={() => openCarousel(0)}
       >
@@ -39,10 +41,11 @@ const ImagesLayout = ({ mainImage, images }: ImagesLayoutProps) => {
           src={mainImage}
           sizes="(max-width: 768px) 100vw, 66vw"
         />
-      </div>
+      </MotionFade>
 
       <div className="hidden md:grid col-span-4 grid-rows-2 gap-4">
-        <div
+        <MotionSlide
+          direction="up"
           className="overflow-hidden rounded-xs relative group cursor-pointer"
           onClick={() => openCarousel(1)}
         >
@@ -53,9 +56,10 @@ const ImagesLayout = ({ mainImage, images }: ImagesLayoutProps) => {
             src={images[0] || mainImage}
             sizes="33vw"
           />
-        </div>
+        </MotionSlide>
 
-        <div
+        <MotionSlide
+          direction="down"
           className="overflow-hidden rounded-xs relative group cursor-pointer"
           onClick={() => openCarousel(2)}
         >
@@ -72,7 +76,7 @@ const ImagesLayout = ({ mainImage, images }: ImagesLayoutProps) => {
               Ver {allImages.length} fotos
             </span>
           </div>
-        </div>
+        </MotionSlide>
       </div>
 
       <AnimatePresence>

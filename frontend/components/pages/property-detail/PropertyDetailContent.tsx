@@ -4,6 +4,9 @@ import { PropertyData } from "@/types/property";
 import ImagesLayout from "./ImagesLayout";
 import PropertyMap from "./PropertyMap";
 import ValueSection from "./ValueSection";
+import { MotionOpacity } from "@/components/motion/MotionOpacity";
+import MotionSlide from "@/components/motion/MotionSlide";
+import MotionFade from "@/components/motion/MotionFade";
 
 type PropertyDetailContentProps = {
   property: PropertyData;
@@ -28,47 +31,57 @@ const PropertyDetailContent = ({ property }: PropertyDetailContentProps) => {
       <div className="grid grid-cols-12 gap-0 lg:gap-4">
         <div className="col-span-12 lg:col-span-8">
           <div className="mb-8 xl:mb-10">
-            <div className="flex flex-wrap items-center gap-3 xl:gap-4 mb-4 xl:mb-6">
+            <MotionOpacity className="flex flex-wrap items-center gap-3 xl:gap-4 mb-4 xl:mb-6">
               <span className="bg-primary text-soft-white text-xs xl:text-sm font-black tracking-widest px-3 xl:px-6 py-1.5 xl:py-2 rounded-xs uppercase shadow-s2">
                 {property.type === "ventas" ? "venta" : "alquiler"}
               </span>
               <span className="bg-secondary text-black text-xs xl:text-sm font-black tracking-widest px-3 xl:px-6 py-1.5 xl:py-2 rounded-xs uppercase shadow-s2">
                 {property.category}
               </span>
-            </div>
-            <h1 className="text-3xl md:text-5xl font-bold text-black tracking-tight mb-3 xl:mb-4 leading-[2.2rem] md:leading-[3rem] ">
-              {property.name}
-            </h1>
-            <p className="text-lg xl:text-xl text-black flex items-center gap-1">
-              <LocationIcon className="w-6 h-6 xl:w-7 xl:h-7" />
-              {property.fullLocation}
-            </p>
+            </MotionOpacity>
+            <MotionSlide>
+              <h1 className="text-3xl md:text-5xl font-bold text-black tracking-tight mb-3 xl:mb-4 leading-[2.2rem] md:leading-[3rem] ">
+                {property.name}
+              </h1>
+            </MotionSlide>
+            <MotionOpacity>
+              <p className="text-lg xl:text-xl text-black flex items-center gap-1">
+                <LocationIcon className="w-6 h-6 xl:w-7 xl:h-7" />
+                {property.fullLocation}
+              </p>
+            </MotionOpacity>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 xl:p-8 bg-white shadow-s3 rounded-xs mb-10 xl:mb-14">
+          <MotionFade className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 xl:p-8 bg-white shadow-s3 rounded-xs mb-10 xl:mb-14">
             <Characteristic icon={<BedroomIcon className="fill-black/80" />} label="Dormitorios" value={property.characteristics.bedrooms} />
             <Characteristic icon={<BathroomIcon className="fill-black/80" />} label="Baños" value={property.characteristics.bathrooms} />
             <Characteristic icon={<SizeIcon className="stroke-black/80" />} label="Superficie" value={`${property.characteristics.squareMeters} m²`} />
             <Characteristic icon={<CarIcon className="fill-black/80" />} label="Cochera" value={property.characteristics.garage ? "Sí" : "No"} />
-          </div>
+          </MotionFade>
 
           <div className="flex flex-col gap-10 xl:gap-14">
             <div className="space-y-6 xl:space-y-8">
-              <h2 className="text-xl xl:text-2xl font-bold text-black border-b border-b-soft-gray/30 pb-2 xl:pb-4">
-                Descripción
-              </h2>
-              <div className="text-base xl:text-lg text-black/80 leading-relaxed">
+              <MotionSlide>
+                <h2 className="text-xl xl:text-2xl font-bold text-black border-b border-b-soft-gray/30 pb-2 xl:pb-4">
+                  Descripción
+                </h2>
+              </MotionSlide>
+              <MotionOpacity className="text-base xl:text-lg text-black/80 leading-relaxed">
                 <p className="whitespace-pre-line">
                   {property.description}
                 </p>
-              </div>
+              </MotionOpacity>
             </div>
 
             <div className="space-y-6 xl:space-y-8">
-              <h2 className="text-xl xl:text-2xl font-bold text-black border-b border-b-soft-gray/30 pb-2 xl:pb-4">
-                Ubicación
-              </h2>
-              <PropertyMap fullLocation={property.fullLocation} />
+              <MotionSlide>
+                <h2 className="text-xl xl:text-2xl font-bold text-black border-b border-b-soft-gray/30 pb-2 xl:pb-4">
+                  Ubicación
+                </h2>
+              </MotionSlide>
+              <MotionFade>
+                <PropertyMap fullLocation={property.fullLocation} />
+              </MotionFade>
             </div>
           </div>
         </div>

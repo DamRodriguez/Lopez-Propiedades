@@ -1,5 +1,6 @@
 "use client";
 import { WhatsAppIcon } from "@/components/icons/social";
+import MotionFade from "@/components/motion/MotionFade";
 import Button from "@/components/ui/buttons/Button";
 import config from "@/config/config";
 import { formatMoney } from "@/utils/formatMoney";
@@ -19,7 +20,7 @@ const ValueSection = ({ price, propertyName, fullLocation }: ValueSectionProps) 
   };
 
   return (
-    <div className="col-span-12 lg:col-span-4 mt-10 lg:mt-0 text-center lg:text-start">
+    <MotionFade className="col-span-12 lg:col-span-4 mt-10 lg:mt-0 text-center lg:text-start">
       <div className="sticky top-28 space-y-6">
         <div className="bg-white p-6 xl:p-8 rounded-xs shadow-s3">
           <div className="mb-8">
@@ -46,7 +47,7 @@ const ValueSection = ({ price, propertyName, fullLocation }: ValueSectionProps) 
           </Button>
         </div>
       </div>
-    </div>
+    </MotionFade>
   );
 };
 
