@@ -38,9 +38,7 @@ const FeaturedProperties = () => {
       />
 
       <div className="grid grid-cols-1 xl:grid-cols-12 gap-10 xl:gap-8">
-        <MotionFade
-          className="sm:col-span-12 xl:col-span-8 h-[30rem] xl:h-full"
-        >
+        <MotionFade className="sm:col-span-12 xl:col-span-8 h-[30rem] xl:h-full">
           {mainProperty && (
             <PropertyCard
               data={mainProperty}

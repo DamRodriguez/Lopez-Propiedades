@@ -61,7 +61,7 @@ export default function RootLayout({
         <ToastContainer />
         <ProgressBarProvider>
           <ScrollToTop />
-          <div className="min-w-[20rem] max-w-[120rem] mx-auto w-full font-inter">
+          <div className="min-w-[20rem] max-w-[120rem] mx-auto w-full font-inter overflow-x-hidden">
             <Header />
             {children}
             <Footer />
