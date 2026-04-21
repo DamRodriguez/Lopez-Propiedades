@@ -158,7 +158,7 @@ const ImageCarouselModal = ({ images, initialIndex, onClose }: { images: string[
             <Spinner size={80} color="var(--color-placeholder)" />
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 pb-4 xl:pb-0 xl:bottom-auto xl:top-1/2 xl:-translate-y-1/2 flex justify-center gap-10 xl:left-0 xl:right-0 xl:justify-between z-10 pointer-events-none">
+          <div className="fixed bottom-6 pb-[calc(env(safe-area-inset-bottom)+1rem)] left-0 right-0 flex justify-center gap-10 z-20 pointer-events-none xl:absolute xl:pb-0 xl:bottom-auto xl:top-1/2 xl:-translate-y-1/2 xl:justify-between">
             <button
               onClick={(e) => { e.stopPropagation(); prev(); }}
               className={clsx("p-3 rounded-full pointer-events-auto", hoverClassName)}
