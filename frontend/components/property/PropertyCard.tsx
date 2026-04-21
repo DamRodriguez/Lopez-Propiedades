@@ -26,8 +26,9 @@ const PropertyCard = (props: PropertyCardProps) => {
         <Image
           fill
           src={data.mainImage}
+          priority
           alt={`Imagen de ${data.name}`}
-          className="w-full h-full object-cover custom-transition-all group-hover:scale-110 bg-soft-gray/10"
+          className="w-full h-full object-cover custom-transition-all group-hover:scale-110 bg-placeholder"
         />
         {props.showType && (
           <div className="absolute m-2 xl:m-4">

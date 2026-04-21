@@ -23,7 +23,7 @@ const Hero = (props: HeroProps) => {
             fill
             src={props.backgroundImage}
             alt={`Imagen de ${props.title}`}
-            className="object-cover bg-soft-gray/60"
+            className="object-cover bg-placeholder"
             priority
             sizes="100vw"
           />

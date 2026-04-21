@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 export const PictureIcon = ({ className }: { className?: string }) => {
   return (
-    <svg width="30" height="30" className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path fill="#fff" d="m3 4l1-2l1 3H1l1-2m5 4V2h1v6H1V7m5-1V1H0v5" /></svg>
+    <svg width="30" height="30" className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path fill="" d="m3 4l1-2l1 3H1l1-2m5 4V2h1v6H1V7m5-1V1H0v5" /></svg>
   );
 };
 

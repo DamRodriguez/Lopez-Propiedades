@@ -2,13 +2,13 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { WhatsAppIcon } from "@/components/icons/social";
 import { CloseIcon, LeftIcon, PictureIcon, RightIcon } from "@/components/icons/propertyDetail";
 import SpaceX from "@/components/layout/SpaceX";
 import clsx from "clsx";
 import { useScrollLock } from "@/hooks/useScrollLock";
 import MotionFade from "@/components/motion/MotionFade";
 import MotionSlide from "@/components/motion/MotionSlide";
+import Spinner from "@/components/spinner/Spinner";
 
 type ImagesLayoutProps = {
   mainImage: string;
@@ -37,7 +37,7 @@ const ImagesLayout = ({ mainImage, images }: ImagesLayoutProps) => {
           fill
           alt="Vista principal"
           priority
-          className="object-cover group-hover:scale-110 custom-transition-all"
+          className="object-cover group-hover:scale-110 custom-transition-all bg-placeholder"
           src={mainImage}
           sizes="(max-width: 768px) 100vw, 66vw"
         />
@@ -52,7 +52,8 @@ const ImagesLayout = ({ mainImage, images }: ImagesLayoutProps) => {
           <Image
             fill
             alt="Interior vista"
-            className="object-cover group-hover:scale-110 custom-transition-all"
+            priority
+            className="object-cover group-hover:scale-110 custom-transition-all bg-placeholder"
             src={images[0] || mainImage}
             sizes="33vw"
           />
@@ -66,12 +67,13 @@ const ImagesLayout = ({ mainImage, images }: ImagesLayoutProps) => {
           <Image
             fill
             alt="Interior vista 2"
-            className="object-cover group-hover:scale-110 custom-transition-all"
+            priority
+            className="object-cover group-hover:scale-110 custom-transition-all bg-placeholder"
             src={images[1] || mainImage}
             sizes="33vw"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/50 opacity-100 group-hover:bg-black/30 custom-transition-all">
-            <PictureIcon />
+            <PictureIcon className="fill-soft-white" />
             <span className="text-soft-white font-semibold text-sm">
               Ver {allImages.length} fotos
             </span>
@@ -138,20 +140,23 @@ const ImageCarouselModal = ({ images, initialIndex, onClose }: { images: string[
         >
           <motion.div
             key={index}
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: -100, opacity: 0 }}
+            initial={{ scale: 0.90 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0.90 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="absolute inset-0"
+            className="absolute inset-0 z-10"
           >
             <Image
               src={images[index]}
               alt={`Galería ${index}`}
               fill
               className="object-contain"
-              quality={90}
             />
           </motion.div>
+
+          <div className="h-full flex flex-col gap-4 justify-center items-center -z-10">
+            <Spinner size={80} color="var(--color-placeholder)" />
+          </div>
 
           <div className="absolute bottom-0 left-0 right-0 pb-4 xl:pb-0 xl:bottom-auto xl:top-1/2 xl:-translate-y-1/2 flex justify-center gap-10 xl:left-0 xl:right-0 xl:justify-between z-10 pointer-events-none">
             <button

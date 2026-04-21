@@ -19,9 +19,10 @@ const PropertyCardVariant = (props: PropertyCardVariantProps) => {
         <Image
           width={200}
           height={200}
+          priority
           src={data.mainImage}
           alt={`Imagen de ${data.name}`}
-          className="w-full h-full object-cover custom-transition-all group-hover:scale-110"
+          className="w-full h-full object-cover custom-transition-all group-hover:scale-110 bg-placeholder"
         />
       </div>
       <div className="w-2/3 flex flex-col justify-center">
