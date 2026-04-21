@@ -5,6 +5,7 @@ import PropertyTypeContent from "@/components/pages/property-type/PropertyTypeCo
 import RentalsPage from "@/components/pages/property-type/rentals/RentalsPage";
 import rentalsProperties from "@/data/rentalsProperties.json";
 import salesProperties from "@/data/salesProperties.json";
+import { propertiesService } from "@/supabase/services/properties";
 import { PropertyData, PropertyType } from "@/types/property";
 
 interface PageProps {
@@ -21,10 +22,14 @@ export async function generateStaticParams() {
 export default async function PropertyTypePage({ params }: PageProps) {
   const { propertyType } = await params;
 
+  {/*
   const propertiesData: PropertyData[] =
     propertyType === "ventas"
       ? (salesProperties as PropertyData[])
-      : (rentalsProperties as PropertyData[]);
+      : (rentalsProperties as PropertyData[]);  
+  */}
+
+  const properties = await propertiesService.getAll();
 
   const pageTitle = propertyType === "ventas" ?
     "Propiedades en Venta"
@@ -55,7 +60,7 @@ export default async function PropertyTypePage({ params }: PageProps) {
             </MotionOpacity>
           </div>
           <MotionOpacity order={1}>
-            <PropertyTypeContent initialProperties={propertiesData} />
+            <PropertyTypeContent initialProperties={properties} />
           </MotionOpacity>
         </SpaceX>
       ) : (

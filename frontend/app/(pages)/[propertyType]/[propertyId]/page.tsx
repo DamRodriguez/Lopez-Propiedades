@@ -3,6 +3,7 @@ import rentalsPropertiesRaw from "@/data/rentalsProperties.json";
 import salesPropertiesRaw from "@/data/salesProperties.json";
 import { PropertyData, PropertyType } from "@/types/property";
 import PropertyDetailContent from "@/components/pages/property-detail/PropertyDetailContent";
+import { propertiesService } from "@/supabase/services/properties";
 
 const rentalsProperties = rentalsPropertiesRaw as unknown as PropertyData[];
 const salesProperties = salesPropertiesRaw as unknown as PropertyData[];
@@ -40,7 +41,10 @@ export default async function PropertyDetailPage({ params }: PropertyPageProps) 
     notFound();
   }
 
-  const property = propertiesData.find((p) => p.id.toString() === propertyId);
+  // const property = propertiesData.find((p) => p.id.toString() === propertyId);
+
+  const property = await propertiesService.getById(propertyId);
+  console.log(property)
 
   if (!property) {
     notFound();

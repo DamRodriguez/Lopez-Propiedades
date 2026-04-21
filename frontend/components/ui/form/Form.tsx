@@ -15,6 +15,18 @@ import {
   InputCombobox as InputComboboxComponent,
   type InputComboboxProps,
 } from "@/components/ui/inputs/InputCombobox";
+import {
+  InputDragFile as InputDragFileComponent,
+  type InputDragFileProps,
+} from "@/components/ui/inputs/InputDragFile";
+import {
+  InputCheckbox as InputCheckboxComponent,
+  type InputCheckboxProps,
+} from "@/components/ui/inputs/InputCheckbox";
+import {
+  InputNumber as InputNumberComponent,
+  type InputNumberProps,
+} from "@/components/ui/inputs/InputNumber";
 
 type FormProps<T extends FieldValues> = {
   methods: UseFormReturn<T>;
@@ -78,6 +90,9 @@ function createFormInputComponent<
 
 Form.InputText = createFormInputComponent<InputTextProps>(InputTextComponent);
 Form.InputTextArea = createFormInputComponent<InputTextAreaProps>(InputTextAreaComponent);
-Form.InputCombobox = createFormInputComponent<InputComboboxProps<BaseOption>>(InputComboboxComponent);
+Form.InputCombobox = createFormInputComponent<InputComboboxProps<any>>(InputComboboxComponent);
+Form.InputDragfile = createFormInputComponent<InputDragFileProps>(InputDragFileComponent);
+Form.InputCheckBox = createFormInputComponent<InputCheckboxProps>(InputCheckboxComponent);
+Form.InputNumber = createFormInputComponent<InputNumberProps>(InputNumberComponent);
 
 export default Form;

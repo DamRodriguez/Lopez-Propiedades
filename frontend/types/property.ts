@@ -1,4 +1,4 @@
-export type PropertyType = "ventas" | "alquileres";
+export type PropertyType = "venta" | "alquiler";
 
 export interface PropertyCharacteristics {
   bedrooms: number;
@@ -29,6 +29,5 @@ export interface PropertyData {
     main: boolean;
     side: boolean;
   }
+  createdAt?: string;
 }
-
-pepe
