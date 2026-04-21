@@ -9,7 +9,7 @@ const HomePage = () => {
     <section className="flex flex-col gap-[5rem] xl:gap-[8rem] mb-[5rem] xl:mb-[8rem]">
       <Hero
         overline="Exclusividad & Prestigio"
-        title="Encuentra el hogar de tus sueños"
+        title="Encontrá el Hogar de tus sueños"
         backgroundImage="/images/home/hero.png"
         underTitleComponent={<SearchBar />}
       />

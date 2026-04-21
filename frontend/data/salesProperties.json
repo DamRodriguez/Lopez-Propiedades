@@ -4,6 +4,7 @@
     "type": "ventas",
     "name": "Mansión Contemporánea Nordelta",
     "price": 2450000,
+    "credit": true,
     "location": {
       "neighborhood": "Nordelta",
       "city": "Buenos Aires"

@@ -39,7 +39,7 @@ const SearchBar = () => {
             renderOption={(option) => <span className="text-sm">{option.name}</span>}
             placeholderLeftIcon={<LocationIcon />}
             placeholderLeftIconOnInput
-            placeholder="¿Dónde quieres vivir?"
+            placeholder="¿Dónde querés vivir?"
             containerClassName="[&_svg]:fill-soft-white"
             inputClassName="!bg-soft-gray/5 backdrop-blur-[0.5rem] text-soft-white !min-h-[3rem] border-none shadow-s2"
             optionsContainerClassName="!bg-soft-gray/80 backdrop-blur-[1rem] "

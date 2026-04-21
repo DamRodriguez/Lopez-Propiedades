@@ -1,5 +1,6 @@
 import { CheckIcon, MarketingIcon, MedalIcon, UserPinIcon } from "@/components/icons/chooseUs";
 import SpaceX from "@/components/layout/SpaceX";
+import MotionFade from "@/components/motion/MotionFade";
 import MotionSlide from "@/components/motion/MotionSlide";
 import Title from "@/components/other/Title";
 import Image from "next/image";
@@ -7,14 +8,9 @@ import Image from "next/image";
 const ChooseUsSection = () => {
   const items = [
     {
-      icon: <CheckIcon />,
-      title: "Confianza",
-      description: "Más de 20 años construyendo relaciones basadas en la honestidad y la transparencia total"
-    },
-    {
       icon: <MedalIcon />,
       title: "Experiencia",
-      description: "Expertos en el mercado inmobiliario de alta gama con un historial comprobado de éxito."
+      description: "Mas de 30 años de experiencia en el rubro  inmobiliario y de asesoramiento juridico integral."
     },
     {
       icon: <UserPinIcon />,
@@ -47,12 +43,19 @@ const ChooseUsSection = () => {
       </div>
 
       <div className="relative z-10 flex flex-col gap-10 xl:gap-14">
-        <Title
-          title="Por qué elegirnos"
-          titleClassName="text-soft-white"
-        />
+        <div className="flex flex-col gap-4 xl:gap-6">
+          <Title
+            title="¿Por qué elegirnos?"
+            titleClassName="text-soft-white"
+          />
+          <MotionFade>
+            <p className="text-soft-white text-base xl:text-lg max-w-3xl mx-auto font-medium">
+              Buscamos combinar seguridad y  confianza a través de nuestros conocimientos. No solo somos una inmobiliaria, también un estudio jurídico notarial.
+            </p>
+          </MotionFade>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 xl:gap-16">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-10 xl:gap-16">
           {items.map((item, index) => (
             <MotionSlide direction="down" key={index} className="flex flex-col items-center">
               <div className="w-14 h-14 xl:w-16 xl:h-16 rounded-full bg-white shadow-sm flex items-center justify-center text-black mb-4 xl:mb-6">

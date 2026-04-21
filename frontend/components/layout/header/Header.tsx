@@ -26,19 +26,10 @@ const Header = () => {
           onClick={() => { if (isMobileNavVisible) { setIsMobileNavVisible(false); } }}
         />
         <NavDesk />
-        <div className="flex items-center gap-[1rem]">
-          <LinkButton
-            href={config.urls.whatsApp}
-            external
-          >
-            <WhatsAppIcon />
-            <p>WhatsApp</p>
-          </LinkButton>
-          <RightSection
-            isMobileNavVisible={isMobileNavVisible}
-            setIsMobileNavVisible={setIsMobileNavVisible}
-          />
-        </div>
+        <RightSection
+          isMobileNavVisible={isMobileNavVisible}
+          setIsMobileNavVisible={setIsMobileNavVisible}
+        />
       </MotionSlide>
 
       <Drawer

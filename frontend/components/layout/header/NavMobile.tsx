@@ -41,12 +41,6 @@ const NavMobile = ({ onClose }: NavMobileProps) => {
           </MotionStagger>
         </ul>
       </nav>
-      <MotionFade
-        order={1}
-        className="pt-[4rem]"
-      >
-        <SocialButtons />
-      </MotionFade>
     </div>
   );
 };

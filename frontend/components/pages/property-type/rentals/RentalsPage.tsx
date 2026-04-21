@@ -11,13 +11,13 @@ const RentalsPage = () => {
         backgroundImage="/images/home/hero.png"
         underTitleComponent={
           <p className="text-soft-white/80 text-base xl:text-lg">
-            Experimente nuestro exclusivo servicio de gestión de alquileres, donde la excelencia arquitectónica se une a transiciones de vida fluidas. Administramos solo las propiedades más prestigiosas de la región.
+            Experimentá nuestro exclusivo servicio de gestión de alquileres, donde la excelencia arquitectónica se une a transiciones de vida fluidas. Administramos solo las propiedades más prestigiosas de la región.
           </p>
         }
       />
       <PropertiesSection />
       <ActionFullSection
-        title="Comience su experiencia de Alquiler"
+        title="Comenzá tu experiencia de Alquiler"
         subtitle="Ya sea un propietario que busca gestión profesional o un inquilino en busca de un hogar excepcional, nuestro equipo está listo para asesorarlo en su próximo paso."
         backgroundImage="/images/home/appraise.png"
         whatsAppMessage="Hola! Quisiera consultar por un alquiler. Muchas gracias."

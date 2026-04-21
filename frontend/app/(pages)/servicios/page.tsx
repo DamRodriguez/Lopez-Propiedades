@@ -60,7 +60,7 @@ const ServicesPage = () => {
             </p>
           </MotionSlide>
 
-          <MotionSlide className="lg:col-span-6 bg-gradient-to-r from-primary to-primary-light rounded-xs flex flex-col lg:flex-row gap-8 items-center group">
+          <MotionSlide className="lg:col-span-6 bg-gradient-to-r from-primary to-primary-light rounded-xs flex flex-col lg:flex-row gap-8 items-start group">
             <div className="p-8 lg:p-10">
               <h2 className="text-xl xl:text-3xl font-bold text-soft-white mb-4">
                 Asesoramiento Jurídico
@@ -88,7 +88,7 @@ const ServicesPage = () => {
             </p>
           </MotionSlide>
 
-          <MotionSlide direction="down" className="relative group overflow-hidden lg:col-span-12 bg-gradient-to-t from-primary to-primary-light shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center min-h-[20rem] ">
+          <MotionSlide className="lg:col-span-4 relative group overflow-hidden bg-gradient-to-t from-primary to-primary-light shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center">
             <div className="absolute inset-0 bg-gradient-to-t from-primary to-primary/70 z-10"></div>
             <Image
               fill
@@ -100,25 +100,28 @@ const ServicesPage = () => {
               <h2 className="text-xl xl:text-3xl font-bold text-soft-white mb-4">
                 Marketing Digital
               </h2>
-              <p className="text-soft-white/90 text-sm xl:text-base leading-relaxed mb-6 max-w-3xl">
+              <p className="text-soft-white/90 text-sm xl:text-base leading-relaxed max-w-3xl">
                 Potenciamos cada propiedad con estrategias de marketing digital. Publicaciones en portales, redes sociales y contenido visual de calidad para lograr mayor alcance y mejores resultados.
               </p>
-              <div className="flex flex-col md:flex-row flex-wrap gap-4 xl:gap-y-4 xl:gap-x-6 max-w-5xl">
-                {marketingItems.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-2"
-                  >
-                    <CheckIcon className="stroke-soft-white/90" />
-                    <p
-                      className="text-soft-white/90 text-sm"
-                    >
-                      {item}
-                    </p>
-                  </div>
-                ))}
-              </div>
             </div>
+          </MotionSlide>
+
+          <MotionSlide direction="right" className="lg:col-span-8 bg-white shadow-s3 p-8 lg:p-10 rounded-xs grid md:grid-cols-2 gap-y-2 gap-x-5">
+            {marketingItems.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-2"
+              >
+                <div>
+                  <CheckIcon className="stroke-black/80" />
+                </div>
+                <p
+                  className="text-black/90 text-sm xl:text-base leading-relaxed"
+                >
+                  {item}
+                </p>
+              </div>
+            ))}
           </MotionSlide>
         </MotionOpacity>
       </SpaceX>

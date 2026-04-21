@@ -47,8 +47,8 @@ const PropertyCard = (props: PropertyCardProps) => {
           </span>
         </div>
         <div className="flex items-center gap-1">
-          <LocationIcon />
-          <p className="text-sm xl:text-base text-black">
+          <LocationIcon className="stroke-black" />
+          <p className="text-sm xl:text-base text-black truncate">
             {data.location.neighborhood},{" "}{data.location.city}
           </p>
         </div>

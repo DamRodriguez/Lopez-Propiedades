@@ -30,7 +30,7 @@ const CONTACT_INFO = [
     id: 4,
     title: "Instagram",
     content: config.info.instagram,
-    icon: <InstagramIcon className="stroke-black/90 w-6 h-6 xl:w-8 xl:h-8" />,
+    icon: <InstagramIcon className="fill-black/90 w-6 h-6 xl:w-8 xl:h-8" />,
   },
 ];
 
@@ -43,10 +43,10 @@ const ContactSection = () => {
             Contacto
           </span>
           <h2 className="text-3xl xl:text-5xl font-extrabold text-black leading-[2rem] xl:leading-[3rem] mb-4 xl:mb-6 tracking-tighter">
-            Hablemos de su próximo paso
+            Hablemos de tu próximo paso
           </h2>
           <p className="text-base xl:text-lg text-black/80 max-w-md">
-            Estamos aquí para asesorarle de forma personalizada. Elija el canal que prefiera para conectar con nosotros.
+            Estamos acá para asesorarte de forma personalizada. Elegí el canal que prefieras para conectar con nosotros.
           </p>
         </div>
 

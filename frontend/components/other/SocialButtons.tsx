@@ -10,7 +10,7 @@ const SocialButtons = () => {
     },
     {
       href: config.urls.instagram,
-      icon: <InstagramIcon className="stroke-soft-white w-[25px] h-[25px]" />
+      icon: <InstagramIcon />
     }
   ];
   return (

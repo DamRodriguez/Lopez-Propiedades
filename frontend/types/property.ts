@@ -15,6 +15,7 @@ export interface PropertyData {
   type: PropertyType;
   name: string;
   price: number;
+  credit?: boolean;
   location: {
     neighborhood: string;
     city: string;

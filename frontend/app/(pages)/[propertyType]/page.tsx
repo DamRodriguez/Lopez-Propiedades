@@ -31,9 +31,9 @@ export default async function PropertyTypePage({ params }: PageProps) {
     :
     "Propiedades en Alquiler";
   const pageDescription = propertyType === "ventas" ?
-    "Descubra una curada selección de residencias de lujo y oportunidades de inversión en las zonas más privilegiadas de Buenos Aires."
+    "Descrubrí una curada selección de residencias de lujo y oportunidades de inversión en las zonas más privilegiadas de Buenos Aires."
     :
-    "Descubre una selección editorial de residencias de lujo disponibles para alquiler a largo plazo. Espacios diseñados para una vida extraordinaria."
+    "Descubrí una selección editorial de residencias de lujo disponibles para alquiler a largo plazo. Espacios diseñados para una vida extraordinaria."
 
   return (
     <>

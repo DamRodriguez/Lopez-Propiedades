@@ -17,7 +17,7 @@ const AboutUsPage = () => {
         <TeamSection />
       </SpaceX>
       <ActionFullSection
-        title="¿Listo para encontrar su próximo hogar?"
+        title="¿Listo para encontrar tu próximo Hogar?"
         backgroundImage="/images/home/appraise.png"
         whatsAppMessage="Hola! Quisiera realizar una consulta. Muchas gracias."
       />

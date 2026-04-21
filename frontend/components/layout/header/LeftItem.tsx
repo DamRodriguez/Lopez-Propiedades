@@ -25,3 +25,12 @@ const LeftItem = (props: LeftItemProps) => {
 };
 
 export default LeftItem;
+
+{/*
+<Image
+        src="/images/logo/logo.png"
+        alt=""
+        width={72}
+        height={72}
+      />
+*/}

@@ -28,7 +28,7 @@ const AppraiseProperty = () => {
         <div className="z-10 flex flex-col xl:flex-row items-center justify-between gap-10 w-full">
           <div className="text-soft-white w-full xl:w-3/5 space-y-4 text-center xl:text-start">
             <h3 className="text-3xl xl:text-4xl font-bold tracking-tight">
-              ¿Quieres tasar tu propiedad?
+              ¿Querés tasar tu propiedad?
             </h3>
             <p className="text-base xl:text-lg text-soft-white/90 max-w-xl leading-relaxed">
               Realizamos tasaciones profesionales en el día para que conozcas el

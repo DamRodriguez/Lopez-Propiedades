@@ -7,6 +7,7 @@ import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { InstagramIcon, WhatsAppIcon } from "../icons/social";
 import MotionFade from "../motion/MotionFade";
 import MotionSlide from "../motion/MotionSlide";
+import Image from "next/image";
 
 const Footer = () => {
   const { handleSmoothScroll } = useSmoothScroll();
@@ -55,7 +56,7 @@ const Footer = () => {
     {
       text: config.info.instagram,
       link: config.urls.instagram,
-      icon: <InstagramIcon className="stroke-soft-white" />
+      icon: <InstagramIcon className="fill-soft-white w-[16px] h-[16px] " />
     },
     {
       text: config.info.email,
@@ -66,7 +67,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-gradient-to-b from-primary to-black w-full shadow-s7">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-12 px-6 md:px-12 w-full max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-12 px-6 md:px-12 w-full max-w-7xl mx-auto">
         <MotionFade className="flex items-center">
           <span className="text-lg font-semibold text-soft-white">
             Lopez Propiedades

@@ -7,6 +7,7 @@ import ValueSection from "./ValueSection";
 import { MotionOpacity } from "@/components/motion/MotionOpacity";
 import MotionSlide from "@/components/motion/MotionSlide";
 import MotionFade from "@/components/motion/MotionFade";
+import { CheckIcon } from "@/components/icons/rentalsPage";
 
 type PropertyDetailContentProps = {
   property: PropertyData;
@@ -44,12 +45,30 @@ const PropertyDetailContent = ({ property }: PropertyDetailContentProps) => {
                 {property.name}
               </h1>
             </MotionSlide>
-            <MotionOpacity>
-              <p className="text-lg xl:text-xl text-black flex items-center gap-1">
-                <LocationIcon className="w-6 h-6 xl:w-7 xl:h-7" />
-                {property.fullLocation}
-              </p>
-            </MotionOpacity>
+            <div className="flex flex-col gap-1 xl:gap-2">
+              <MotionOpacity>
+                <div className="flex items-center gap-1">
+                  <div className="min-w-[1.5rem] xl:min-w-[2rem] flex justify-center">
+                    <LocationIcon className="stroke-black w-6 h-6 xl:w-7 xl:h-7" />
+                  </div>
+                  <p className="text-lg xl:text-xl text-black">
+                    {property.fullLocation}
+                  </p>
+                </div>
+              </MotionOpacity>
+              {property.credit && (
+                <MotionOpacity>
+                  <p className="flex items-center gap-1">
+                    <div className="min-w-[1.5rem] xl:min-w-[2rem] flex justify-center">
+                      <CheckIcon className="stroke-black w-5 h-5 xl:w-6 xl:h-6" />
+                    </div>
+                    <p className="text-lg xl:text-xl text-black">
+                      Apto crédito
+                    </p>
+                  </p>
+                </MotionOpacity>
+              )}
+            </div>
           </div>
 
           <MotionFade className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 xl:p-8 bg-white shadow-s3 rounded-xs mb-10 xl:mb-14">
