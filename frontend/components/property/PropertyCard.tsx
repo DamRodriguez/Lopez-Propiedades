@@ -31,7 +31,7 @@ const PropertyCard = (props: PropertyCardProps) => {
         />
         {props.showType && (
           <div className="absolute m-2 xl:m-4">
-            <span className="bg-primary shadow-s2 text-soft-white text-xs font-bold tracking-widest px-3 py-1 rounded-xs uppercase">
+            <span className="bg-secondary-light shadow-s2 text-black text-xs font-bold tracking-widest px-3 py-1 rounded-xs uppercase">
               {data.type === "ventas" ? "venta" : "alquiler"}
             </span>
           </div>
@@ -64,19 +64,23 @@ const PropertyCard = (props: PropertyCardProps) => {
               {data.characteristics.squareMeters} m²
             </p>
           </div>
-          <div className="flex items-center gap-1">
-            <BedroomIcon className="fill-black/80" />
-            <p>
-              {data.characteristics.bedrooms} Dorm.
-            </p>
-          </div>
-          <div className="flex items-center gap-1">
-            <BathroomIcon className="fill-black/80" />
-            <p>
-              {data.characteristics.bathrooms}{" "}
-              {data.characteristics.bathrooms > 1 ? "Baños" : "Baño"}
-            </p>
-          </div>
+          {data.characteristics.bedrooms && (
+            <div className="flex items-center gap-1">
+              <BedroomIcon className="fill-black/80" />
+              <p>
+                {data.characteristics.bedrooms} Dorm.
+              </p>
+            </div>
+          )}
+          {data.characteristics.bathrooms !== undefined && (
+            <div className="flex items-center gap-1">
+              <BathroomIcon className="fill-black/80" />
+              <p>
+                {data.characteristics.bathrooms}{" "}
+                {data.characteristics.bathrooms > 1 ? "Baños" : "Baño"}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </Link>

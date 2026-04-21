@@ -13,7 +13,7 @@ type PropertyDetailContentProps = {
   property: PropertyData;
 };
 
-const Characteristic = ({ icon, label, value }: { icon: React.ReactNode; label: string; value: string | number }) => (
+const Characteristic = ({ icon, label, value }: { icon: React.ReactNode; label: string; value: string | number | undefined }) => (
   <div className="flex flex-col items-center text-center p-2">
     <span className="mb-5 [&_svg]:w-7 [&_svg]:h-7 xl:[&_svg]:w-9 xl:[&_svg]:h-9">{icon}</span>
     <span className="text-sm xl:text-base font-bold uppercase tracking-wider text-black/90 mb-1">{label}</span>
@@ -58,25 +58,33 @@ const PropertyDetailContent = ({ property }: PropertyDetailContentProps) => {
               </MotionOpacity>
               {property.credit && (
                 <MotionOpacity>
-                  <p className="flex items-center gap-1">
+                  <div className="flex items-center gap-1">
                     <div className="min-w-[1.5rem] xl:min-w-[2rem] flex justify-center">
                       <CheckIcon className="stroke-black w-5 h-5 xl:w-6 xl:h-6" />
                     </div>
                     <p className="text-lg xl:text-xl text-black">
                       Apto crédito
                     </p>
-                  </p>
+                  </div>
                 </MotionOpacity>
               )}
             </div>
           </div>
 
-          <MotionFade className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 xl:p-8 bg-white shadow-s3 rounded-xs mb-10 xl:mb-14">
-            <Characteristic icon={<BedroomIcon className="fill-black/80" />} label="Dormitorios" value={property.characteristics.bedrooms} />
-            <Characteristic icon={<BathroomIcon className="fill-black/80" />} label="Baños" value={property.characteristics.bathrooms} />
-            <Characteristic icon={<SizeIcon className="stroke-black/80" />} label="Superficie" value={`${property.characteristics.squareMeters} m²`} />
-            <Characteristic icon={<CarIcon className="fill-black/80" />} label="Cochera" value={property.characteristics.garage ? "Sí" : "No"} />
-          </MotionFade>
+          {property.category !== "lote" && (
+            <MotionFade className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 xl:p-8 bg-white shadow-s3 rounded-xs mb-10 xl:mb-14">
+              <Characteristic icon={<BedroomIcon className="fill-black/80" />} label="Dormitorios" value={property.characteristics.bedrooms} />
+              <Characteristic icon={<BathroomIcon className="fill-black/80" />} label="Baños" value={property.characteristics.bathrooms} />
+              <Characteristic icon={<SizeIcon className="stroke-black/80" />} label="Superficie" value={`${property.characteristics.squareMeters} m²`} />
+              <Characteristic icon={<CarIcon className="fill-black/80" />} label="Cochera" value={property.characteristics.garage ? "Sí" : "No"} />
+            </MotionFade>
+          )}
+
+          {property.category === "lote" && (
+            <MotionFade className="p-5 xl:p-8 bg-white shadow-s3 rounded-xs mb-10 xl:mb-14">
+              <Characteristic icon={<SizeIcon className="stroke-black/80" />} label="Superficie" value={`${property.characteristics.squareMeters} m²`} />
+            </MotionFade>
+          )}
 
           <div className="flex flex-col gap-10 xl:gap-14">
             <div className="space-y-6 xl:space-y-8">

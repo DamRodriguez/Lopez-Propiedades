@@ -2,142 +2,297 @@
   {
     "id": 101,
     "type": "ventas",
-    "name": "Mansión Contemporánea Nordelta",
-    "price": 2450000,
+    "name": "Departamento en Gaona",
+    "price": 63000,
     "credit": true,
-    "location": {
-      "neighborhood": "Nordelta",
-      "city": "Buenos Aires"
-    },
-    "fullLocation": "Avenida del Puerto 215, Nordelta",
-    "category": "casa",
-    "characteristics": {
-      "bedrooms": 5,
-      "bathrooms": 6,
-      "squareMeters": 850,
-      "garage": false
-    },
-    "description": "Exclusiva residencia de diseño vanguardista situada en el barrio más prestigioso de Nordelta.\n\nLa propiedad cuenta con amplios ventanales de doble altura que integran el paisaje exterior con los lujosos interiores. Posee master suite con vestidor, piscina climatizada y muelle propio al lago principal.",
-    "mainImage": "https://picsum.photos/seed/v1/800/600",
-    "images": ["https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600"],
-    "isHomeFeatured": {
-      "main": true
-    }
-  },
-  {
-    "id": 102,
-    "type": "ventas",
-    "name": "Chalet Estilo Inglés",
-    "price": 320000,
     "location": {
       "neighborhood": "Ramos Mejía",
       "city": "Buenos Aires"
     },
-    "fullLocation": "Av. de Mayo 850, Ramos Mejía",
+    "fullLocation": "Gaona 2226, Ramos Mejía",
     "category": "departamento",
     "characteristics": {
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "squareMeters": 280,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "squareMeters": 45,
       "garage": false
     },
-    "description": "Clásico chalet de época conservado en excelente estado, ideal para familias numerosas.\n\nDestaca por sus techos de teja francesa, pisos de madera de roble y una amplia cocina comedor. Ubicado en una de las zonas residenciales más tranquilas y seguras de Ramos Mejía.",
-    "mainImage": "https://picsum.photos/seed/v2/800/600",
-    "images": ["https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600"],
-    "isHomeFeatured": {
-      "side": true
-    }
+    "description": "Departamento de 3 ambientes en el 9no piso. Cocina comedor, 2 dormitorios y baño. Se encuentra en muy buen estado. Bien cuidado.",
+    "mainImage": "/images/properties/sales/101/main.jpg",
+    "images": ["/images/properties/sales/101/1.jpg", "/images/properties/sales/101/2.jpg", "/images/properties/sales/101/3.jpg", "/images/properties/sales/101/4.jpg", "/images/properties/sales/101/5.jpg", "/images/properties/sales/101/6.jpg"]
+  },
+  {
+    "id": 102,
+    "type": "ventas",
+    "name": "Dpto. 2 ambientes - 9no piso",
+    "price": 53000,
+    "credit": true,
+    "location": {
+      "neighborhood": "Ramos Mejía",
+      "city": "Buenos Aires"
+    },
+    "fullLocation": "French 120, Ramos Mejía",
+    "category": "departamento",
+    "characteristics": {
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "squareMeters": 50,
+      "garage": false
+    },
+    "description":"Gran departamento en el 9no piso. Posee 2 ambientes, cuenta con luminoso living, cocina eléctrica, baño, dormitorio, placard y balcón. Gran oportunidad en muy buenas condiciones.",
+    "mainImage": "/images/properties/sales/102/main.jpg",
+    "images": ["/images/properties/sales/102/1.jpg", "/images/properties/sales/102/2.jpg", "/images/properties/sales/102/3.jpg", "/images/properties/sales/102/4.jpg", "/images/properties/sales/102/5.jpg", "/images/properties/sales/102/6.jpg", "/images/properties/sales/102/7.jpg", "/images/properties/sales/102/8.jpg", "/images/properties/sales/102/9.jpg", "/images/properties/sales/102/10.jpg"]
   },
   {
     "id": 103,
     "type": "ventas",
-    "name": "Penthouse Vista al Río",
-    "price": 890000,
+    "name": "Dpto. 2 ambientes - 6to piso",
+    "price": 45000,
+    "credit": true,
     "location": {
-      "neighborhood": "Puerto Madero",
+      "neighborhood": "Ramos Mejía",
       "city": "Buenos Aires"
     },
-    "fullLocation": "Juana Manso 1100, Puerto Madero",
-    "category": "lote",
+    "fullLocation": "French 120, Ramos Mejía",
+    "category": "departamento",
     "characteristics": {
-      "bedrooms": 3,
-      "bathrooms": 4,
-      "squareMeters": 210,
-      "garage": true
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "squareMeters": 0,
+      "garage": false
     },
-    "description": "Espectacular Penthouse con vista panorámica inigualable al Río de la Plata y a la ciudad.\n\nUnidad de categoría con terminaciones premium, acceso directo por ascensor privado, gran terraza propia y servicios exclusivos del edificio (Gym, Spa y Seguridad 24hs).",
-    "mainImage": "https://picsum.photos/seed/v3/800/600",
-    "images": ["https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600"],
-    "isHomeFeatured": {
-      "side": true
-    }
+    "description": "Muy buena opción de 2 ambientes en el 6to piso. A media cuadra de la estación del tren sarmiento, locales comerciales a la bajada del edificio. Gran ubicación.",
+    "mainImage": "/images/properties/sales/103/main.jpg",
+    "images": ["/images/properties/sales/103/1.jpg", "/images/properties/sales/103/2.jpg", "/images/properties/sales/103/3.jpg", "/images/properties/sales/103/4.jpg", "/images/properties/sales/103/5.jpg"]
   },
   {
     "id": 104,
     "type": "ventas",
-    "name": "Casa Quinta con Arboleda",
-    "price": 155000,
+    "name": "Dpto. 2 ambientes - 1er piso",
+    "price": 75000,
+    "credit": true,
     "location": {
-      "neighborhood": "Ciudadela",
+      "neighborhood": "Ramos Mejía",
       "city": "Buenos Aires"
     },
-    "fullLocation": "Pampa 3449, Ciudadela",
-    "category": "casa",
+    "fullLocation": "Berruti 656, Ramos Mejía",
+    "category": "departamento",
     "characteristics": {
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "squareMeters": 1200,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "squareMeters": 60,
       "garage": false
     },
-    "description": "Oasis de paz sobre un lote de 1200 metros cuadrados rodeado de vegetación añeja.\n\nLa propiedad ofrece un entorno natural único con quincho, parrilla y una gran piscina. Perfecta para quienes buscan desconectar de la ciudad sin alejarse de los accesos principales.",
-    "mainImage": "https://picsum.photos/seed/v4/800/600",
-    "images": ["https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600"],
     "isHomeFeatured": {
       "side": true
-    }
+    },
+    "description": "Departamento interno en el 1er piso. Se encuentra en muy buenas condiciones. Amplio 2 ambientes, cuenta con cocina, living, baño y dormitorio con placard. Recomendable.",
+    "mainImage": "/images/properties/sales/104/main.jpg",
+    "images": ["/images/properties/sales/104/1.jpg", "/images/properties/sales/104/2.jpg", "/images/properties/sales/104/3.jpg", "/images/properties/sales/104/4.jpg", "/images/properties/sales/104/5.jpg"]
   },
   {
     "id": 105,
     "type": "ventas",
-    "name": "Residencia de Lujo Carrasco",
-    "price": 1100000,
+    "name": "Departamento en Morón",
+    "price": 40000,
+    "credit": true,
     "location": {
-      "neighborhood": "Carrasco",
-      "city": "Montevideo"
+      "neighborhood": "Morón",
+      "city": "Buenos Aires"
     },
-    "fullLocation": "Av. Alfredo Arocena 1600, Carrasco",
-    "category": "lote",
+    "fullLocation": "Larralde 800, Morón",
+    "category": "departamento",
     "characteristics": {
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "squareMeters": 520
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "squareMeters": 45,
+      "garage": false
     },
-    "description": "Importante propiedad de estilo clásico situada en el corazón de Carrasco.\n\nCuenta con amplias áreas de recepción, escritorio, jardín parquizado y máxima privacidad. Una combinación perfecta entre elegancia tradicional y confort moderno en una ubicación inmejorable.",
-    "mainImage": "https://picsum.photos/seed/v5/800/600",
-    "images": ["https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600"],
     "isHomeFeatured": {
       "side": true
-    }
+    },
+    "description": "Buena oportunidad en el centro de Morón. Departamento de 2 ambientes. Cocina, living, baño, dormitorio.",
+    "mainImage": "/images/properties/sales/105/main.jpg",
+    "images": ["/images/properties/sales/105/1.jpg", "/images/properties/sales/105/2.jpg", "/images/properties/sales/105/3.jpg", "/images/properties/sales/105/4.jpg", "/images/properties/sales/105/5.jpg", "/images/properties/sales/105/6.jpg", "/images/properties/sales/105/7.jpg", "/images/properties/sales/105/8.jpg", "/images/properties/sales/105/9.jpg", "/images/properties/sales/105/10.jpg", "/images/properties/sales/105/11.jpg", "/images/properties/sales/105/12.jpg"]
   },
   {
     "id": 106,
     "type": "ventas",
-    "name": "Loft Industrial Palermo",
-    "price": 275000,
+    "name": "Casa 5 ambientes Banco Provincia",
+    "price": 300000,
+    "credit": true,
     "location": {
-      "neighborhood": "Palermo Soho",
+      "neighborhood": "Francisco Alvarez",
       "city": "Buenos Aires"
     },
-    "fullLocation": "Thames 1800, Palermo Soho",
-    "category": "ph",
+    "fullLocation": "Country Banco Provincia, Francisco Alvarez",
+    "category": "casa",
     "characteristics": {
-      "bedrooms": 1,
-      "bathrooms": 2,
-      "squareMeters": 95,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "squareMeters": 0,
       "garage": true
     },
-    "description": "Unidad de concepto abierto con techos altos y estética industrial de hormigón visto.\n\nUbicado en el epicentro gastronómico de Palermo Soho. El loft ofrece una distribución moderna, gran luminosidad y una terraza privada ideal para reuniones sociales.",
-    "mainImage": "https://picsum.photos/seed/v6/800/600",
-    "images": ["https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600", "https://picsum.photos/seed/v1/800/600"]
+    "isHomeFeatured": {
+      "main": true
+    },
+    "description": "Gran opción, casa amplia de 5 ambientes en country Banco Provincia. Garage con entrada para mas de 4 autos, cuenta con pileta, galería con parrilla, quincho con lavadero, baño y cuarto de servicio. En el interior de la casa cuenta con amplio living, cocina comedor, 1 baño en cada planta, 1 dormitorio en planta baja, 3 en planta superior. Uno de los dormitorios es en suit. Excelente estado",
+    "mainImage": "/images/properties/sales/106/main.jpg",
+    "images": ["/images/properties/sales/106/1.jpg", "/images/properties/sales/106/2.jpg", "/images/properties/sales/106/3.jpg", "/images/properties/sales/106/4.jpg", "/images/properties/sales/106/5.jpg", "/images/properties/sales/106/6.jpg", "/images/properties/sales/106/7.jpg"]
+  },
+  {
+    "id": 107,
+    "type": "ventas",
+    "name": "Casa 3 ambientes Banco Provincia",
+    "price": 190000,
+    "credit": true,
+    "location": {
+      "neighborhood": "Francisco Alvarez",
+      "city": "Buenos Aires"
+    },
+    "fullLocation": "Country Banco Provincia, Francisco Alvarez",
+    "category": "casa",
+    "characteristics": {
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "squareMeters": 0,
+      "garage": false
+    },
+    "isHomeFeatured": {
+      "side": true
+    },
+    "description": "Amplia y luminosa casa en el sector V del country Banco Provincia. Cuenta con 2 dormitorios, living luminoso, cocina separada y un espacio verde hasta para constuir una pileta. Recomendada.",
+    "mainImage": "/images/properties/sales/107/main.jpg",
+    "images": ["/images/properties/sales/107/1.jpg", "/images/properties/sales/107/2.jpg", "/images/properties/sales/107/3.jpg", "/images/properties/sales/107/4.jpg", "/images/properties/sales/107/5.jpg", "/images/properties/sales/107/6.jpg", "/images/properties/sales/107/7.jpg", "/images/properties/sales/107/8.jpg"]
+  },
+  {
+    "id": 108,
+    "type": "ventas",
+    "name": "Lote en Villa Bosh",
+    "price": 180000,
+    "credit": true,
+    "location": {
+      "neighborhood": "Caseros",
+      "city": "Buenos Aires"
+    },
+    "fullLocation": "Villa Bosh - Esquina Martín Fierro y Echague, Caseros",
+    "category": "lote",
+    "characteristics": {
+      "squareMeters": 0
+    },
+    "description": "Ideal para inversionistas, toda la ochava en venta.\nEn su interior cuenta con 5 departamentos y un local:\n- 2 departamentos de 3 ambientes.\n- 2 departamentos de 2 ambientes.\n- 1 monoambiente.\n- 1 local.\n\nSe vende todo junto.",
+    "mainImage": "/images/properties/sales/108/main.jpg",
+    "images": ["/images/properties/sales/108/1.jpg", "/images/properties/sales/108/2.jpg", "/images/properties/sales/108/3.jpg", "/images/properties/sales/108/4.jpg", "/images/properties/sales/108/5.jpg", "/images/properties/sales/108/6.jpg", "/images/properties/sales/108/7.jpg", "/images/properties/sales/108/8.jpg", "/images/properties/sales/108/9.jpg", "/images/properties/sales/108/10.jpg"]
+  },
+  {
+    "id": 109,
+    "type": "ventas",
+    "name": "Lote a reciclar - PH",
+    "price": 35000,
+    "location": {
+      "neighborhood": "Caseros",
+      "city": "Buenos Aires"
+    },
+    "fullLocation": "Guamini 5420, Caseros",
+    "category": "ph",
+    "characteristics": {
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "squareMeters": 0,
+      "garage": false
+    },
+    "description": "Es un ph fondo. Lote a reciclar, no al 100%. Gran oportunidad para inversor. Cuenta con 2 dormitorios, cocina comedor, baño completo, patio delantero y trasero.",
+    "mainImage": "/images/properties/sales/109/main.jpg",
+    "images": ["/images/properties/sales/109/1.jpg", "/images/properties/sales/109/2.jpg", "/images/properties/sales/109/3.jpg", "/images/properties/sales/109/4.jpg", "/images/properties/sales/109/5.jpg", "/images/properties/sales/109/6.jpg", "/images/properties/sales/109/7.jpg", "/images/properties/sales/109/8.jpg", "/images/properties/sales/109/9.jpg"]
+  },
+  {
+    "id": 110,
+    "type": "ventas",
+    "name": "PH de 3 ambientes",
+    "price": 53000,
+    "location": {
+      "neighborhood": "Caseros",
+      "city": "Buenos Aires"
+    },
+    "fullLocation": "Catrilo 5149, Caseros",
+    "category": "ph",
+    "characteristics": {
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "squareMeters": 0,
+      "garage": false
+    },
+    "description": "Buena oportunidad, ph de 3 ambientes ubicado en Caseros, calle catrilo. Al ingresar cuenta con living comedor, 2 dormitorios, baño, lavadero y un espacio para utilizar como quincho o estar! Recomendado para aquellos que buscan una propiedad y no cuentan con un monto superior a los 55.000 USD.",
+    "mainImage": "/images/properties/sales/110/main.jpg",
+    "images": ["/images/properties/sales/110/1.jpg", "/images/properties/sales/110/2.jpg", "/images/properties/sales/110/3.jpg", "/images/properties/sales/110/4.jpg", "/images/properties/sales/110/5.jpg", "/images/properties/sales/110/6.jpg"]
+  },
+  {
+    "id": 111,
+    "type": "ventas",
+    "name": "Casa de 5 ambientes en Barrio Derqui",
+    "price": 68000,
+    "credit": true,
+    "location": {
+      "neighborhood": "Caseros",
+      "city": "Buenos Aires"
+    },
+    "fullLocation": "Barrio Derqui, Caseros",
+    "category": "casa",
+    "characteristics": {
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "squareMeters": 212,
+      "garage": true
+    },
+    "description": "Casa de 2 plantas en excelente estado. En planta baja cuenta con amplio living, dormitorio con placard, baño, cocina y garage. En planta alta cuenta con 2 departamentos de 2 ambientes unidos por un patio pulmón. Ambos cuentan con cocina comedor, baño y dormitorio.",
+    "mainImage": "/images/properties/sales/111/main.jpg",
+    "images": ["/images/properties/sales/111/1.jpg", "/images/properties/sales/111/2.jpg", "/images/properties/sales/111/3.jpg", "/images/properties/sales/111/4.jpg", "/images/properties/sales/111/5.jpg", "/images/properties/sales/111/6.jpg", "/images/properties/sales/111/7.jpg", "/images/properties/sales/111/8.jpg", "/images/properties/sales/111/9.jpg", "/images/properties/sales/111/10.jpg", "/images/properties/sales/111/11.jpg", "/images/properties/sales/111/12.jpg"]
+  },
+  {
+    "id": 112,
+    "type": "ventas",
+    "name": "Casa de 3 ambientes Caseros",
+    "price": 73000,
+    "credit": true,
+    "location": {
+      "neighborhood": "Caseros",
+      "city": "Buenos Aires"
+    },
+    "fullLocation": "Caseros 3386, Caseros",
+    "category": "casa",
+    "characteristics": {
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "squareMeters": 70,
+      "garage": false
+    },
+    "description": "Casa Funcional. Al ingresar te recibe un amplio living, siguiendo el recorrido te encontras con 2 lindos dormitorios con placard, baño, cocina y lavadero.",
+    "mainImage": "/images/properties/sales/112/main.jpg",
+    "images": ["/images/properties/sales/112/1.jpg", "/images/properties/sales/112/2.jpg", "/images/properties/sales/112/3.jpg", "/images/properties/sales/112/4.jpg", "/images/properties/sales/112/5.jpg", "/images/properties/sales/112/6.jpg", "/images/properties/sales/112/7.jpg", "/images/properties/sales/112/8.jpg"]
+  },
+  {
+    "id": 113,
+    "type": "ventas",
+    "name": "Casa de 4 ambientes Caseros",
+    "price": 91000,
+    "credit": true,
+    "location": {
+      "neighborhood": "Caseros",
+      "city": "Buenos Aires"
+    },
+    "fullLocation": "Juan de Garay 5086, Caseros",
+    "category": "casa",
+    "characteristics": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "squareMeters": 238.49,
+      "garage": true
+    },
+    "isHomeFeatured": {
+      "side": true
+    },
+    "description": "Gran y amplia casa. En planta baja cuenta con garage, baño y lavadero funcional. Subiendo por escaleras se ingresa al hogar, cocina comedor, living, balcon frente, 3 dormitorios. baños, y lavadero. En tercer piso cuenta con quincho cerrado con parrilla y terraza al aire libre. Se encuentra en muy buenas condiciones.",
+    "mainImage": "/images/properties/sales/113/main.jpg",
+    "images": ["/images/properties/sales/113/1.jpg", "/images/properties/sales/113/2.jpg", "/images/properties/sales/113/3.jpg", "/images/properties/sales/113/4.jpg", "/images/properties/sales/113/5.jpg", "/images/properties/sales/113/6.jpg", "/images/properties/sales/113/7.jpg", "/images/properties/sales/113/8.jpg", "/images/properties/sales/113/9.jpg", "/images/properties/sales/113/10.jpg", "/images/properties/sales/113/11.jpg", "/images/properties/sales/113/12.jpg", "/images/properties/sales/113/13.jpg", "/images/properties/sales/113/14.jpg"]
   }
 ]

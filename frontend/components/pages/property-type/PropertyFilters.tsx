@@ -58,16 +58,16 @@ const InnerFilterFields = ({
       <label className="text-black font-semibold mb-3 text-base block">PRECIO MÁXIMO</label>
       <input
         className="w-full accent-primary cursor-pointer"
-        max="3000000"
-        min="100000"
-        step="50000"
+        max="300000"
+        min="0"
+        step="1000"
         type="range"
         value={props.priceFilter}
         onChange={(e) => props.setPriceFilter(Number(e.target.value))}
       />
-      <div className="flex justify-between text-xs font-bold text-primary mt-2">
-        <span>$100k</span>
-        <span>${(props.priceFilter / 1000).toFixed(0)}k</span>
+      <div className="flex justify-between text-xs font-bold text-black mt-2">
+        <span>$ 0</span>
+        <span>$ {(props.priceFilter / 1000).toFixed(0)}{props.priceFilter === 0 ? "" : "k"}</span>
       </div>
     </div>
 
@@ -184,7 +184,7 @@ export default function PropertyFilters(props: PropertyFiltersProps) {
         <div className="bg-white p-8 rounded-xs sticky top-28 shadow-s3">
           <div className="mb-6 flex items-center gap-2">
             <FilterIcon className="stroke-black" />
-            <p className="text-primary font-bold text-base xl:text-lg">
+            <p className="text-black font-bold text-base xl:text-lg">
               Filtros
             </p>
           </div>

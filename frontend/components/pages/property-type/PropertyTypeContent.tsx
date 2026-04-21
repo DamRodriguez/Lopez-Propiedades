@@ -14,7 +14,7 @@ function PropertyContentInner({ initialProperties }: { initialProperties: Proper
   const searchParams = useSearchParams();
   const locationParamFilter = searchParams.get("localidad");
 
-  const initialPriceFilter = 3000000;
+  const initialPriceFilter = 300000;
   const [priceFilter, setPriceFilter] = useState<number>(initialPriceFilter);
   const [bedroomsFilter, setBedroomsFilter] = useState<number>(0);
   const [categoryFilter, setCategoryFilter] = useState<PropertyCategories[]>([]);
@@ -57,7 +57,7 @@ function PropertyContentInner({ initialProperties }: { initialProperties: Proper
         property.location.neighborhood === locationFilter.name;
 
       const matchPrice = property.price <= priceFilter;
-      const matchBedrooms = property.characteristics.bedrooms >= bedroomsFilter;
+      const matchBedrooms = property.characteristics.bedrooms ?? 0 >= bedroomsFilter;
       const matchCategory =
         categoryFilter.length === 0 || categoryFilter.includes(property.category);
 

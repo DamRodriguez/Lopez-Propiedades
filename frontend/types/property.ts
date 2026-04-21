@@ -1,10 +1,10 @@
 export type PropertyType = "ventas" | "alquileres";
 
 export interface PropertyCharacteristics {
-  bedrooms: number;
-  bathrooms: number;
+  bedrooms?: number;
+  bathrooms?: number;
   squareMeters: number;
-  garage: boolean;
+  garage?: boolean;
 }
 
 export type PropertyCategories = "casa" | "departamento" | "ph" | "lote"
