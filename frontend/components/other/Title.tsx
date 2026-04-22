@@ -17,7 +17,7 @@ const Title = (props: TitleProps) => {
       </MotionSlide>
       <MotionSlide direction="right">
         {props.withUnderline && (
-          <div className="h-1 xl:h-1.5 w-24 bg-secondary-dark rounded-r-full"></div>
+          <div className="h-1 xl:h-1.5 w-24 bg-primary-light rounded-xs"></div>
         )}
       </MotionSlide>
     </div>

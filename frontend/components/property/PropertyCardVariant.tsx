@@ -25,7 +25,7 @@ const PropertyCardVariant = (props: PropertyCardVariantProps) => {
         />
       </div>
       <div className="w-2/3 flex flex-col justify-center">
-        <span className="text-[10px] font-bold text-primary-light uppercase mb-1">
+        <span className="text-[10px] font-bold text-primary uppercase mb-1">
           {data.type === "ventas" ? "venta" : "alquiler"}
         </span>
         <p className="font-bold text-black mb-1 line-clamp-1">

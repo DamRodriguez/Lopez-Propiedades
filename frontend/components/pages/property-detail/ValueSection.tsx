@@ -28,7 +28,7 @@ const ValueSection = ({ price, propertyName, fullLocation }: ValueSectionProps) 
               VALOR
             </span>
             <div className="mt-2">
-              <span className="text-2xl xl:text-3xl font-extrabold text-primary">
+              <span className="text-2xl xl:text-3xl font-extrabold text-black">
                 {formatMoney(price)}
               </span>
             </div>

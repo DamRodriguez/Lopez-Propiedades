@@ -175,8 +175,10 @@ export default function PropertyFilters(props: PropertyFiltersProps) {
           className="flex items-center gap-2 justify-center w-full"
           customUppercase
         >
-          <FilterIcon className="!w-7 !h-7 stroke-soft-white" />
-          Filtros
+          <FilterIcon className="!w-7 !h-7" />
+          <p>
+            Filtros
+          </p>
         </Button>
       </div>
 

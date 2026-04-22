@@ -33,13 +33,13 @@ const ActionFullSection = (props: ActionFullSectionProps) => {
           className="object-cover -z-20 group-hover:scale-110 custom-transition-all w-full h-full"
         />
 
-        <div className={clsx("absolute inset-0 bg-gradient-to-t from-primary via-primary/85 to-primary-light -z-10", props.overlayClassName)} />
+        <div className={clsx("absolute inset-0 bg-gradient-to-t from-black/90 via-primary/40 to-primary-light/30 -z-10", props.overlayClassName)} />
         <MotionFade className="flex flex-col justify-center items-center">
           <h3 className="text-3xl xl:text-5xl text-soft-white font-extrabold mb-8">
             {props.title}
           </h3>
           {props.subtitle && (
-            <p className="text-base xl:text-xl text-soft-white/80 mb-12 font-light">
+            <p className="text-base xl:text-xl text-soft-white/90 mb-12 font-light">
               {props.subtitle}
             </p>
           )}

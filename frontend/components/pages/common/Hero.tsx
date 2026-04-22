@@ -37,7 +37,7 @@ const Hero = (props: HeroProps) => {
             <div className="flex flex-col gap-[0.5rem] xl:gap-[1rem]">
               <MotionFade
                 order={1}
-                className="text-sm xl:text-base text-secondary-dark text-shadow-sm font-extrabold uppercase tracking-widest"
+                className="text-sm xl:text-base text-soft-white/90 bg-secondary-light/5 shadow-s3 backdrop-blur-[0.5rem] px-1 rounded-xs w-fit text-shadow-sm font-extrabold uppercase tracking-widest"
               >
                 {props.overline}
               </MotionFade>

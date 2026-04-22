@@ -9,11 +9,11 @@
 }
 
 .Toastify__progress-bar--success {
-  background-color: var(--color-success) !important;
+  background-color: var(--color-primary-light) !important;
 }
 
 .Toastify__toast--success .Toastify__toast-icon svg {
-  fill: var(--color-success) !important;
+  fill: var(--color-primary-light) !important;
 }
 
 .Toastify__progress-bar--error {

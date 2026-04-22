@@ -33,7 +33,7 @@ const ServicesPage = () => {
 
         <MotionOpacity order={1} className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           <MotionSlide className="lg:col-span-8 group relative overflow-hidden rounded-xs group">
-            <div className="absolute inset-0 bg-gradient-to-t from-primary to-primary-light/50 z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black to-primary/50 z-10"></div>
             <Image
               src="https://picsum.photos/seed/v6/800/600"
               alt="Imágen de venta de propiedades"
@@ -62,7 +62,7 @@ const ServicesPage = () => {
             </p>
           </MotionSlide>
 
-          <MotionSlide className="lg:col-span-6 bg-gradient-to-r from-primary to-primary-light rounded-xs flex flex-col lg:flex-row gap-8 items-start group">
+          <MotionSlide className="lg:col-span-6 bg-gradient-to-r from-black/95 to-primary/80 rounded-xs flex flex-col lg:flex-row gap-8 items-start group">
             <div className="p-8 lg:p-10">
               <h2 className="text-xl xl:text-3xl font-bold text-soft-white mb-4">
                 Asesoramiento Jurídico
@@ -71,7 +71,7 @@ const ServicesPage = () => {
                 Acompañamos a cada cliente en la toma de decisiones, ya sea para comprar, vender o invertir.
               </p>
             </div>
-            <div className="w-full hidden 2xl:flex lg:w-1/3 h-full rounded-xs overflow-hidden grayscale opacity-50">
+            <div className="w-full hidden 2xl:flex lg:w-1/3 h-full rounded-xs overflow-hidden grayscale opacity-70">
               <Image
                 src="https://picsum.photos/seed/v6/800/600"
                 alt="Imágen de asesoramiento jurídico"
@@ -91,8 +91,8 @@ const ServicesPage = () => {
             </p>
           </MotionSlide>
 
-          <MotionSlide className="lg:col-span-4 relative group overflow-hidden bg-gradient-to-t from-primary to-primary-light shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center">
-            <div className="absolute inset-0 bg-gradient-to-t from-primary to-primary/70 z-10"></div>
+          <MotionSlide className="lg:col-span-4 relative group overflow-hidden shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center">
+            <div className="absolute inset-0 bg-gradient-to-t from-black to-primary/50 z-10"></div>
             <Image
               src="https://picsum.photos/seed/v6/800/600"
               alt="Imágen de marketing digital"

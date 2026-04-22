@@ -1,12 +1,11 @@
 @theme {
   --color-*: initial;
 
-  --color-primary: #231C18;
-  --color-primary-light: #3D322B;
+  --color-primary: #1F6B5C;
+  --color-primary-light: #3E8C7A;
 
-  --color-secondary: #EAE3D9;
-  --color-secondary-dark: #E0D8CE;
-  --color-secondary-light: #F4F1ED;
+  --color-secondary: #7FC6B5;
+  --color-secondary-light: #DCEFEA;
 
   --color-neutral: #F8F9FA;
   --color-soft-white: #F5F5F5;
@@ -29,3 +28,12 @@
   --color-error: #CC492D;
   --color-success: #5FAB3A;
 }
+
+/*
+--color-primary: #231C18;
+--color-primary-light: #3D322B;
+
+--color-secondary: #EAE3D9;
+--color-secondary-dark: #E0D8CE;
+--color-secondary-light: #F4F1ED;
+*/

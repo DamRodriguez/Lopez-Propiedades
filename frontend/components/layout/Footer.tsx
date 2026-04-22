@@ -65,7 +65,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-gradient-to-b from-primary to-black w-full shadow-s7">
+    <footer className="bg-gradient-to-b from-primary to-black/95 w-full shadow-s7">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-12 px-6 md:px-12 w-full max-w-7xl mx-auto">
         <MotionFade className="flex items-center">
           <span className="text-lg font-semibold text-soft-white">

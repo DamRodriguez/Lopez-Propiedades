@@ -34,7 +34,7 @@ const TypeSwitcher: React.FC<TypeSwitcherProps> = ({ onChange }) => {
           <motion.div
             key="active_background"
             layoutId="activeBackgroundPill"
-            className="absolute inset-y-1 z-0 rounded-xs bg-secondary"
+            className="absolute inset-y-1 z-0 rounded-xs bg-secondary-light"
             style={{
               left: index === 0 ? "4px" : "50%",
               width: "calc(50% - 4px)",
@@ -52,7 +52,7 @@ const TypeSwitcher: React.FC<TypeSwitcherProps> = ({ onChange }) => {
             key={option.id}
             onClick={() => handleSelect(option.id as SwitcherType)}
             className={clsx("relative z-10 flex-1 min-w-15 md:w-28 py-[0.6rem] px-4 rounded-xs text-sm font-semibold tracking-wide custom-transition-all flex items justify-center cursor-pointer", {
-              "text-black hover:bg-secondary-light": isActive,
+              "text-black hover:bg-white": isActive,
               "text-soft-white hover:bg-soft-white/20": !isActive
             })}
           >

@@ -24,7 +24,7 @@ const AppraiseProperty = () => {
           className="object-cover -z-20 group-hover:scale-110 custom-transition-all"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b xl:bg-gradient-to-r from-primary via-primary/85 to-primary-light -z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b xl:bg-gradient-to-t from-black/60 to-primary-light/40 -z-10" />
 
         <div className="z-10 flex flex-col xl:flex-row items-center justify-between gap-10 w-full">
           <div className="text-soft-white w-full xl:w-3/5 space-y-4 text-center xl:text-start">

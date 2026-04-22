@@ -36,7 +36,7 @@ const PropertyDetailContent = ({ property }: PropertyDetailContentProps) => {
               <span className="bg-primary text-soft-white text-xs xl:text-sm font-black tracking-widest px-3 xl:px-6 py-1.5 xl:py-2 rounded-xs uppercase shadow-s2">
                 {property.type === "ventas" ? "venta" : "alquiler"}
               </span>
-              <span className="bg-secondary text-black text-xs xl:text-sm font-black tracking-widest px-3 xl:px-6 py-1.5 xl:py-2 rounded-xs uppercase shadow-s2">
+              <span className="bg-secondary-light text-black text-xs xl:text-sm font-black tracking-widest px-3 xl:px-6 py-1.5 xl:py-2 rounded-xs uppercase shadow-s2">
                 {property.category}
               </span>
             </MotionOpacity>

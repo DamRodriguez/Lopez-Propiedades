@@ -47,7 +47,7 @@ const TeamSection = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
         {TEAM_MEMBERS.map((member) => (
           <MotionSlide direction="down" key={member.id} className="group">
-            <div className="relative mb-4 xl:mb-6 overflow-hidden aspect-[3/4] rounded-xs">
+            <div className="relative mb-4 xl:mb-6 overflow-hidden aspect-[3/4] rounded-xs shadow-s3">
               <img
                 src={member.image}
                 alt={`Imágen de ${member.name}`}

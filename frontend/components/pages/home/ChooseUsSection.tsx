@@ -25,7 +25,7 @@ const ChooseUsSection = () => {
   ]
 
   return (
-    <SpaceX className="relative group text-center flex flex-col gap-10 xl:gap-16 bg-gradient-to-r from-secondary-dark to-primary py-[5rem] xl:py-[8rem] overflow-hidden">
+    <SpaceX className="relative group text-center flex flex-col gap-10 xl:gap-16 bg-gradient-to-r from-secondary to-black/90 py-[5rem] xl:py-[8rem] overflow-hidden">
 
       <div
         className="absolute inset-0 z-0"
@@ -40,7 +40,7 @@ const ChooseUsSection = () => {
           fill
           className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 custom-transition-all"
         />
-        <div className="absolute inset-0 bg-primary-light/80" />
+        <div className="absolute inset-0 bg-black/55" />
       </div>
 
       <div className="relative z-10 flex flex-col gap-10 xl:gap-14">
