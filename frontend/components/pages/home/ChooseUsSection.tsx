@@ -40,7 +40,7 @@ const ChooseUsSection = () => {
           fill
           className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 custom-transition-all"
         />
-        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       <div className="relative z-10 flex flex-col gap-10 xl:gap-14">
