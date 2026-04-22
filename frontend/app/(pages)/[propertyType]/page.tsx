@@ -40,7 +40,7 @@ export default async function PropertyTypePage({ params }: PageProps) {
       {propertyType === "ventas" ? (
         <SpaceX className="pt-[8rem] xl:pt-[10rem] pb-[5rem] xl:pb-[8rem]">
           <div className="mb-16 lg:mb-20">
-            <MotionOpacity order={1} className="uppercase tracking-widest text-primary/60 font-semibold text-xs mb-2 block">
+            <MotionOpacity order={1} className="uppercase tracking-widest text-primary/60 font-semibold text-xs xl:text-sm mb-2 block">
               CATÁLOGO EXCLUSIVO
             </MotionOpacity>
             <MotionSlide order={0}>

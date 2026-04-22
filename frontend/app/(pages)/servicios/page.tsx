@@ -12,7 +12,7 @@ const ServicesPage = () => {
     <section>
       <SpaceX className="flex flex-col pt-[8rem] xl:pt-[10rem] gap-[5rem] xl:gap-[8rem] pb-[5rem] xl:pb-[8rem]">
         <div className="">
-          <MotionOpacity order={1} className="uppercase tracking-widest text-primary/60 font-semibold text-sm xl:text-base mb-2 block">
+          <MotionOpacity order={1} className="uppercase tracking-widest text-primary/60 font-semibold text-xs xl:text-sm mb-2 block">
             Excelencia Inmobiliaria
           </MotionOpacity>
           <MotionSlide order={0}>
