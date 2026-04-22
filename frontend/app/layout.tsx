@@ -32,12 +32,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://lopezpropiedades.com.ar"),
   openGraph: {
     title: "Lopez Propiedades | Tu hogar, nuestra prioridad",
-    description: "Venta y alquiler de propiedades. Tasaciones profesionales y asesoramiento jurídico.",
+    description: "Venta y alquiler de propiedades. Tasaciones profesionales, asesoramiento jurídico y marketing digital",
     url: "https://lopezpropiedades.com.ar",
     siteName: "Lopez Propiedades",
     locale: "es_AR",
     type: "website",
-    // images: [{ url: '/og-image.jpg', width: 1200, height: 630 }] // Imagen de portada
+    images: [{ url: '/images/logo/logo.png', width: 1200, height: 630 }]
   },
   twitter: {
     card: "summary_large_image",
