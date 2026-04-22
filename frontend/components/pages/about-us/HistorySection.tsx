@@ -1,4 +1,5 @@
 import { StarsIcon, TrustIcon } from '@/components/icons/aboutUs';
+import MotionFade from '@/components/motion/MotionFade';
 import { MotionOpacity } from '@/components/motion/MotionOpacity';
 import MotionSlide from '@/components/motion/MotionSlide';
 import MotionStagger from '@/components/motion/MotionStagger';
@@ -25,7 +26,7 @@ const HistorySection = () => {
           </p>
         </MotionOpacity>
       </div>
-      <div className="xl:col-span-7">
+      <MotionFade className="xl:col-span-7">
         <div className="relative overflow-hidden bg-white rounded-xs shadow-s3 aspect-video w-full">
           <Image
             src="/images/team/equipo.jpeg"
@@ -35,24 +36,9 @@ const HistorySection = () => {
             className="object-cover hover:scale-110 custom-transition-all"
           />
         </div>
-      </div>
+      </MotionFade>
     </div>
   );
 };
 
 export default HistorySection;
-
-
-{/*
-<MotionStagger stagger={0.3} className="xl:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-8">
-        <div className="bg-white p-6 xl:p-10 rounded-xs shadow-s3 flex flex-col justify-center gap-2 xl:gap-4">
-          <TrustIcon className="fill-secondary-dark w-8 h-8 xl:w-12 xl:h-12" />
-          <p className="text-lg xl:text-xl font-bold mt-1 xl:mt-2">
-            Confianza
-          </p>
-          <p className="text-md text-black/80">
-            La transparencia es nuestra piedra angular. Construimos relaciones que trascienden una simple transacción.
-          </p>
-        </div>
-      </MotionStagger>
-  */}
