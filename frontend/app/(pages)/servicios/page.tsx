@@ -35,9 +35,11 @@ const ServicesPage = () => {
           <MotionSlide className="lg:col-span-8 group relative overflow-hidden rounded-xs group">
             <div className="absolute inset-0 bg-gradient-to-t from-primary to-primary-light/50 z-10"></div>
             <Image
-              fill
-              alt="Ventas"
               src="https://picsum.photos/seed/v6/800/600"
+              alt="Imágen de venta de propiedades"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              fill
+              priority
               className="group-hover:scale-110 custom-transition-all"
             />
             <div className="relative z-20 h-[25rem] flex flex-col justify-end p-8 lg:p-10">
@@ -71,10 +73,11 @@ const ServicesPage = () => {
             </div>
             <div className="w-full hidden 2xl:flex lg:w-1/3 h-full rounded-xs overflow-hidden grayscale opacity-50">
               <Image
-                fill
-                alt="Legal"
-                className="w-full h-full object-cover group-hover:scale-110 custom-transition-all"
                 src="https://picsum.photos/seed/v6/800/600"
+                alt="Imágen de asesoramiento jurídico"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                fill
+                className="w-full h-full object-cover group-hover:scale-110 custom-transition-all"
               />
             </div>
           </MotionSlide>
@@ -91,9 +94,10 @@ const ServicesPage = () => {
           <MotionSlide className="lg:col-span-4 relative group overflow-hidden bg-gradient-to-t from-primary to-primary-light shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center">
             <div className="absolute inset-0 bg-gradient-to-t from-primary to-primary/70 z-10"></div>
             <Image
-              fill
-              alt="Ventas"
               src="https://picsum.photos/seed/v6/800/600"
+              alt="Imágen de marketing digital"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              fill
               className="group-hover:scale-110 custom-transition-all"
             />
             <div className="z-20">

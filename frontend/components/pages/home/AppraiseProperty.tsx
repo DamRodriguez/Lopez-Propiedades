@@ -18,7 +18,8 @@ const AppraiseProperty = () => {
       <MotionFade className="relative rounded-xs p-8 xl:p-14 overflow-hidden shadow-s6 group min-h-[20rem] flex items-center">
         <Image
           src="/images/home/appraise.png"
-          alt="Tasación de propiedades"
+          alt="Imágen de tasación de propiedades"
+          sizes="(max-width: 768px) 100vw, 50vw"
           fill
           className="object-cover -z-20 group-hover:scale-110 custom-transition-all"
         />

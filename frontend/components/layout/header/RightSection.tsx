@@ -17,14 +17,14 @@ const RightSection = (props: RightSectionProps) => {
           external
           className="!rounded-full !px-4 xl:!px-5"
         >
-          <WhatsAppIcon />
+          <WhatsAppIcon className="!w-5 !h-5 xl:!w-6 xl:!h-6" />
         </LinkButton>
         <LinkButton
           href={config.urls.instagram}
           external
           className="!rounded-full !px-4 xl:!px-5"
         >
-          <InstagramIcon />
+          <InstagramIcon className="!w-5 !h-5 xl:!w-6 xl:!h-6" />
         </LinkButton>
       </div>
       <div className="flex xl:hidden">

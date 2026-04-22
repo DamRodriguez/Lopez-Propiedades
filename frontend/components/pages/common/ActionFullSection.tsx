@@ -28,6 +28,7 @@ const ActionFullSection = (props: ActionFullSectionProps) => {
         <Image
           src={props.backgroundImage}
           alt={`Imagen de ${props.title}`}
+          sizes="100vw"
           fill
           className="object-cover -z-20 group-hover:scale-110 custom-transition-all w-full h-full"
         />

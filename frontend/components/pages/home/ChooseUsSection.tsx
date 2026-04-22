@@ -34,9 +34,10 @@ const ChooseUsSection = () => {
         }}
       >
         <Image
-          fill
           src="/images/home/hero.png"
-          alt="Background"
+          alt="Imágen de elegirnos"
+          sizes="100vw"
+          fill
           className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 custom-transition-all"
         />
         <div className="absolute inset-0 bg-primary-light/80" />

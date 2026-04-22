@@ -17,11 +17,10 @@ const PropertyCardVariant = (props: PropertyCardVariantProps) => {
       className="flex gap-3 xl:gap-4 group cursor-pointer">
       <div className="w-1/3 aspect-square rounded-xs overflow-hidden shadow-s6">
         <Image
+          src={data.mainImage}
+          alt={`Imágen de ${data.name}`}
           width={200}
           height={200}
-          priority
-          src={data.mainImage}
-          alt={`Imagen de ${data.name}`}
           className="w-full h-full object-cover custom-transition-all group-hover:scale-110 bg-placeholder"
         />
       </div>

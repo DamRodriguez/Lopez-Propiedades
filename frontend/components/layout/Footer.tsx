@@ -7,7 +7,6 @@ import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { InstagramIcon, WhatsAppIcon } from "../icons/social";
 import MotionFade from "../motion/MotionFade";
 import MotionSlide from "../motion/MotionSlide";
-import Image from "next/image";
 
 const Footer = () => {
   const { handleSmoothScroll } = useSmoothScroll();

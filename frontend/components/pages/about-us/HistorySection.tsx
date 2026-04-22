@@ -2,6 +2,7 @@ import { StarsIcon, TrustIcon } from '@/components/icons/aboutUs';
 import { MotionOpacity } from '@/components/motion/MotionOpacity';
 import MotionSlide from '@/components/motion/MotionSlide';
 import MotionStagger from '@/components/motion/MotionStagger';
+import Image from 'next/image';
 
 const HistorySection = () => {
   return (
@@ -24,17 +25,27 @@ const HistorySection = () => {
           </p>
         </MotionOpacity>
       </div>
-      <MotionStagger stagger={0.3} className="xl:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-8">
-        <div className="bg-white p-6 xl:p-10 rounded-xs shadow-s3 flex flex-col justify-center gap-2 xl:gap-4">
-          <StarsIcon className="fill-secondary-dark w-8 h-8 xl:w-12 xl:h-12" />
-          <p className="text-lg xl:text-xl font-bold mt-1 xl:mt-2">
-            Curaduría
-          </p>
-          <p className="text-md text-black/80">
-            No listamos propiedades; seleccionamos piezas arquitectónicas que representen un estilo de vida superior.
-          </p>
+      <div className="xl:col-span-7">
+        <div className="relative overflow-hidden bg-white rounded-xs shadow-s3 aspect-video w-full">
+          <Image
+            src="/images/team/equipo.jpeg"
+            alt="Imágen del equipo Lopez Propiedades"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            fill
+            className="object-cover hover:scale-110 custom-transition-all"
+          />
         </div>
-        <div className="bg-white p-6 xl:p-10 rounded-xs shadow-s3 md:mt-12 flex flex-col justify-center gap-2 xl:gap-4">
+      </div>
+    </div>
+  );
+};
+
+export default HistorySection;
+
+
+{/*
+<MotionStagger stagger={0.3} className="xl:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-8">
+        <div className="bg-white p-6 xl:p-10 rounded-xs shadow-s3 flex flex-col justify-center gap-2 xl:gap-4">
           <TrustIcon className="fill-secondary-dark w-8 h-8 xl:w-12 xl:h-12" />
           <p className="text-lg xl:text-xl font-bold mt-1 xl:mt-2">
             Confianza
@@ -44,8 +55,4 @@ const HistorySection = () => {
           </p>
         </div>
       </MotionStagger>
-    </div>
-  );
-};
-
-export default HistorySection;
+  */}

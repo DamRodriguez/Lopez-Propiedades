@@ -24,10 +24,10 @@ const PropertyCard = (props: PropertyCardProps) => {
       className={clsx("flex flex-col gap-3 xl:gap-4 group cursor-pointer rounded-xs", props.containerClassName)}>
       <div className={clsx("relative rounded-xs overflow-hidden w-full h-full shadow-s6", props.imageContainerClassName)}>
         <Image
-          fill
           src={data.mainImage}
-          priority
-          alt={`Imagen de ${data.name}`}
+          alt={`Imágen de ${data.name}`}
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          fill
           className="w-full h-full object-cover custom-transition-all group-hover:scale-110 bg-placeholder"
         />
         {props.showType && (

@@ -40,20 +40,20 @@ const PropertiesSection = () => {
 
       <MotionSlide direction="right" className="lg:col-span-5 rounded-xs overflow-hidden h-full shadow-s3">
         <Image
+          src="https://picsum.photos/seed/v1/800/600"
+          alt="Imágen de alquiler primera"
           width={400}
           height={400}
-          src="https://picsum.photos/seed/v1/800/600"
-          alt=""
           className="w-full h-full object-cover hover:scale-110 custom-transition-all"
         />
       </MotionSlide>
 
       <MotionSlide direction="left" className="lg:col-span-4 rounded-xs overflow-hidden h-full">
         <Image
+          src="https://picsum.photos/seed/v1/800/600"
+          alt="Imágen de alquiler segunda"
           width={400}
           height={400}
-          src="https://picsum.photos/seed/v1/800/600"
-          alt=""
           className="w-full h-full object-cover hover:scale-110 custom-transition-all"
         />
       </MotionSlide>

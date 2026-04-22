@@ -20,12 +20,12 @@ const Hero = (props: HeroProps) => {
       >
         <div className="fixed inset-0 w-full h-[100lvh] transform-gpu">
           <Image
-            fill
             src={props.backgroundImage}
             alt={`Imagen de ${props.title}`}
+            sizes="100vw"
+            fill
             className="object-cover bg-placeholder"
             priority
-            sizes="100vw"
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>

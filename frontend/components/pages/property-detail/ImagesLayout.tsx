@@ -34,12 +34,12 @@ const ImagesLayout = ({ mainImage, images }: ImagesLayoutProps) => {
         onClick={() => openCarousel(0)}
       >
         <Image
+          src={mainImage}
+          alt="Imágen principal"
+          sizes="(max-width: 768px) 100vw, 66vw"
           fill
-          alt="Vista principal"
           priority
           className="object-cover group-hover:scale-110 custom-transition-all bg-placeholder"
-          src={mainImage}
-          sizes="(max-width: 768px) 100vw, 66vw"
         />
       </MotionFade>
 
@@ -50,12 +50,12 @@ const ImagesLayout = ({ mainImage, images }: ImagesLayoutProps) => {
           onClick={() => openCarousel(1)}
         >
           <Image
+            src={images[0] || mainImage}
+            alt="Imágen secundaria primera"
+            sizes="33vw"
             fill
-            alt="Interior vista"
             priority
             className="object-cover group-hover:scale-110 custom-transition-all bg-placeholder"
-            src={images[0] || mainImage}
-            sizes="33vw"
           />
         </MotionSlide>
 
@@ -65,12 +65,12 @@ const ImagesLayout = ({ mainImage, images }: ImagesLayoutProps) => {
           onClick={() => openCarousel(2)}
         >
           <Image
+            src={images[1] || mainImage}
+            alt="Imagen secundaria segunda"
+            sizes="33vw"
             fill
-            alt="Interior vista 2"
             priority
             className="object-cover group-hover:scale-110 custom-transition-all bg-placeholder"
-            src={images[1] || mainImage}
-            sizes="33vw"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/50 opacity-100 group-hover:bg-black/30 custom-transition-all">
             <PictureIcon className="fill-soft-white" />
@@ -149,6 +149,7 @@ const ImageCarouselModal = ({ images, initialIndex, onClose }: { images: string[
             <Image
               src={images[index]}
               alt={`Galería ${index}`}
+              sizes="(max-width: 768px) 100vw, 50vw"
               fill
               className="object-contain"
             />
