@@ -168,14 +168,14 @@
   {
     "id": 108,
     "type": "ventas",
-    "name": "Lote en Villa Bosh",
+    "name": "Esquina Martín Fierro y Echague",
     "price": 180000,
     "credit": true,
     "location": {
-      "neighborhood": "Caseros",
+      "neighborhood": "Villa Bosh",
       "city": "Buenos Aires"
     },
-    "fullLocation": "Villa Bosh - Esquina Martín Fierro y Echague, Caseros",
+    "fullLocation": "Esquina Martín Fierro y Echague, Villa Bosh",
     "category": "lote",
     "characteristics": {
       "squareMeters": 0
