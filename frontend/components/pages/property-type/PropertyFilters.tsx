@@ -168,10 +168,10 @@ export default function PropertyFilters(props: PropertyFiltersProps) {
 
   return (
     <>
-      <div className="lg:hidden sticky top-21 z-20">
+      <div className="lg:hidden sticky top-[4.5rem] z-20">
         <Button
           onClick={() => setIsOpen(true)}
-          variant="primary"
+          variant="tertiary"
           className="flex items-center gap-2 justify-center w-full"
           customUppercase
         >

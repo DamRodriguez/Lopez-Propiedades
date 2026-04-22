@@ -7,7 +7,7 @@ export const buttonClass = tv({
     intent: {
       primary: "bg-primary text-soft-white [&_svg]:fill-soft-white [&_svg]:stroke-soft-white hover:bg-primary-light",
       secondary: "bg-secondary-light text-black [&_svg]:fill-black [&_svg]:stroke-black hover:bg-white",
-      tertiary: "bg-secondary text-black [&_svg]:fill-black [&_svg]:stroke-black hover:bg-secondary-light",
+      tertiary: "bg-secondary-dark text-black [&_svg]:fill-black [&_svg]:stroke-black hover:bg-secondary-light",
     },
 
     disabled: {
