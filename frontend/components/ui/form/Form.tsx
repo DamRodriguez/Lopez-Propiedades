@@ -36,6 +36,7 @@ type FormProps<T extends FieldValues> = {
   id?: string;
   errorMessage?: string;
   isLastErrorMessageField?: boolean;
+  labelClassName?: string;
 };
 
 function Form<T extends FieldValues>({
@@ -71,6 +72,7 @@ function createFormInputComponent<
     error,
     errorMessage,
     isLastErrorMessageField,
+    labelClassName,
     ...inputProps
   }: FormFieldProps<T> & P) => (
     <FormField
@@ -79,6 +81,7 @@ function createFormInputComponent<
       error={error}
       errorMessage={errorMessage}
       isLastErrorMessageField={isLastErrorMessageField}
+      labelClassName={labelClassName}
       input={props =>
         <InputComponent {...(props as P)} {...(inputProps as P)} />
       }

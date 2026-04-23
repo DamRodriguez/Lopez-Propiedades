@@ -14,7 +14,7 @@ const CreatePropertyForm = () => {
   const methods = useForm<CreatePropertyType>({
     defaultValues: {
       name: "",
-      price: 0,
+      price: "",
       type: undefined,
       category: undefined,
       description: "",
@@ -25,9 +25,9 @@ const CreatePropertyForm = () => {
         city: "",
       },
       characteristics: {
-        bedrooms: 0,
-        bathrooms: 0,
-        squareMeters: 0,
+        bedrooms: "",
+        bathrooms: "",
+        squareMeters: "",
         garage: false,
       },
       images: [],
@@ -52,16 +52,15 @@ const CreatePropertyForm = () => {
   };
 
   const propertyTypeOptions = [
-    { id: "1", text: "venta" },
-    { id: "2", text: "alquiler" }
+    { id: 1, text: "Venta" },
+    { id: 2, text: "Alquiler" }
   ]
 
   const propertyCategoriesOptions = [
-    { id: "1", text: "casa" },
-    { id: "2", text: "Departamento" },
-    { id: "3", text: "PH" },
-    { id: "4", text: "Lote" },
-
+    { id: 1, text: "Casa" },
+    { id: 2, text: "Departamento" },
+    { id: 3, text: "PH" },
+    { id: 4, text: "Lote" },
   ]
 
   const onSubmit = async (data: CreatePropertyType) => {
@@ -71,20 +70,20 @@ const CreatePropertyForm = () => {
         data.images as unknown as File[]
       );
 
-      // 2. Construir el objeto para la DB (Mapeo manual)
       const finalData = {
         ...data,
+        type: data.type.text.toLowerCase(),
+        category: data.category.text.toLowerCase(),
         price: Number(data.price),
-        mainImage: mainImageUrl, // Reemplazamos File por URL
-        images: secondaryImageUrls, // Reemplazamos File[] por URL[]
+        mainImage: mainImageUrl,
+        images: secondaryImageUrls,
         isHomeFeatured: {
           main: featuredType === 'main',
           side: featuredType === 'side',
         }
       };
-      console.log("Datos que recibe el submit:", data);
+      console.log("Datos que recibe el submit:", finalData);
 
-      // 3. Enviar a Supabase
       await propertiesService.create(finalData as any);
 
       alert("¡Propiedad creada!");
@@ -100,7 +99,7 @@ const CreatePropertyForm = () => {
       <Form
         onSubmit={onSubmit}
         methods={methods}
-        className="max-w-4xl mx-auto p-8 bg-white shadow-s3 rounded-xs space-y-8"
+        className="mx-auto p-8 bg-white shadow-s3 rounded-xs space-y-8"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Form.InputText
@@ -137,20 +136,19 @@ const CreatePropertyForm = () => {
               optionClassName="hover:bg-primary hover:text-soft-white"
             />
           </div>
-
-          <div>
+          <div className="flex flex-col gap-[0.5rem]">
             <Label>
               <p>Ubicacion</p>
             </Label>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <Form.InputText
                 {...inputCommonProps}
-                name={CreatePropertyFieldNames.location[0]}
+                name="location.neighborhood"
                 placeholder="Barrio"
               />
               <Form.InputText
                 {...inputCommonProps}
-                name={CreatePropertyFieldNames.location[1]}
+                name="location.city"
                 placeholder="Ciudad"
               />
               <Form.InputText
@@ -161,30 +159,35 @@ const CreatePropertyForm = () => {
             </div>
           </div>
 
-          <div>
-            <Label>
-              <p>Características</p>
-            </Label>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <Form.InputNumber
-                {...inputCommonProps}
-                name={CreatePropertyFieldNames.characteristics[0]}
-                placeholder="Habitaciones"
-              />
-              <Form.InputNumber
-                {...inputCommonProps}
-                name={CreatePropertyFieldNames.characteristics[1]}
-                placeholder="Baños"
-              />
-              <Form.InputNumber
-                {...inputCommonProps}
-                name={CreatePropertyFieldNames.characteristics[2]}
-                placeholder="m² totales"
-              />
+          <div className="flex flex-col gap-[1.5rem]">
+            <div className="flex flex-col gap-[0.5rem]">
+              <Label>
+                <p>Características</p>
+              </Label>
+              <div className="grid grid-cols-3 gap-4">
+                <Form.InputNumber
+                  {...inputCommonProps}
+                  name="characteristics.bedrooms"
+                  placeholder="Habitaciones"
+                />
+                <Form.InputNumber
+                  {...inputCommonProps}
+                  name="characteristics.bathrooms"
+                  placeholder="Baños"
+                />
+                <Form.InputNumber
+                  {...inputCommonProps}
+                  name="characteristics.squareMeters"
+                  placeholder="m² totales"
+                />
+              </div>
+            </div>
+            <div className="flex items-end">
               <Form.InputCheckBox
                 {...inputCommonProps}
-                name={CreatePropertyFieldNames.characteristics[3]}
+                name="characteristics.garage"
                 label="¿Tiene Garage?"
+                labelClassName="pl-[2rem] xl:pl-[2.5rem]"
               />
             </div>
           </div>
@@ -207,23 +210,25 @@ const CreatePropertyForm = () => {
             label="Descripción"
             name={CreatePropertyFieldNames.description}
             placeholder="Ingrese una descripción"
-            className="min-h-[15rem]"
+            className="min-h-[10rem] xl:min-h-[15rem]"
           />
 
-          <div className="flex gap-8">
+          <div className="flex flex-col justify-center gap-2 xl:gap-8">
             <Form.InputCheckBox
               {...inputCommonProps}
-              name={CreatePropertyFieldNames.isHomeFeatured[0]}
-              label="Destacar Principal (Reemplaza al anterior)"
+              name="isHomeFeatured.main"
+              label="Destacar Principal"
               checked={featuredType === 'main'}
               onChange={() => setFeaturedType(featuredType === 'main' ? 'none' : 'main')}
+              labelClassName="pl-[2rem] xl:pl-[2.5rem]"
             />
             <Form.InputCheckBox
               {...inputCommonProps}
-              name={CreatePropertyFieldNames.isHomeFeatured[0]}
-              label="Destacar Lateral (Máx 4)"
+              name="isHomeFeatured.side"
+              label="Destacar Lateral"
               checked={featuredType === 'side'}
               onChange={() => setFeaturedType(featuredType === 'side' ? 'none' : 'side')}
+              labelClassName="pl-[2rem] xl:pl-[2.5rem]"
             />
           </div>
         </div>

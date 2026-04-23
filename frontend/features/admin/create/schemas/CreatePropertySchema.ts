@@ -1,16 +1,8 @@
 import { z } from "zod";
-import { PropertyData } from "@/types/property";
 
-// Creamos un tipo que mapea las keys de PropertyData a esquemas de Zod
-type ZodShape<T> = {
-  [K in keyof T]: z.ZodType<T[K]>;
-};
-
-// Definimos el Schema forzando que cumpla con la forma de PropertyData
-// Omitimos 'id' y 'createdAt' porque no vienen del formulario
 export const CreatePropertySchema = z.object({
-  name: z.string().min(3, "El nombre es muy corto"),
-  price: z.any(),
+  name: z.string().min(1, "Debe ingresar un nombre"),
+  price: z.string().min(1, "Debe ingresar un precio"),
   type: z.any()
     .refine((val) => val !== undefined && val !== null, {
       message: "Debe seleccionar una opción",
@@ -19,39 +11,37 @@ export const CreatePropertySchema = z.object({
     .refine((val) => val !== undefined && val !== null, {
       message: "Debe seleccionar una opción",
     }),
-  description: z.string(),
-  fullLocation: z.string(),
+  description: z.string().min(1, "Debe ingresar una descripción"),
+  fullLocation: z.string().min(1, "Debe ingresar una dirección"),
   mainImage: z.any()
-    .refine((file) => file instanceof File, "La imagen es obligatoria")
-    .refine((file) => file?.size > 0, "El archivo no puede estar vacío"),
+    .refine((file) => file instanceof File, "Debe subir una imágen")
+    .refine((file) => file?.size > 0, "Imágen no válida"),
   location: z.object({
-    neighborhood: z.string(),
-    city: z.string()
+    neighborhood: z.string().min(1, "Debe ingresar un barrio"),
+    city: z.string().min(1, "Debe ingresar una ciudad")
   }),
   characteristics: z.object({
-    bedrooms: z.number(),
-    bathrooms: z.number(),
-    squareMeters: z.number(),
-    garage: z.boolean()
+    bedrooms: z.string().min(1, "Debe ingresar un valor"),
+    bathrooms: z.string().min(1, "Debe ingresar un valor"),
+    squareMeters: z.string().min(1, "Debe ingresar un valor"),
+    garage: z.boolean().optional()
   }),
   images: z.array(z.any())
-    .min(1, "Debes subir al menos una imagen") // Valida que el array no esté vacío
+    .min(1, "Debe subir una imágen")
     .refine(
       (files) => files.every((file) => file instanceof File),
-      "Todos los elementos deben ser archivos"
+      "Imágen/es no válida/s"
     )
     .refine(
       (files) => files.every((file) => file.size > 0),
-      "Los archivos no pueden estar vacíos"
+      "Imágen/es no válida/s"
     ),
   isHomeFeatured: z.object({
     main: z.boolean(),
     side: z.boolean()
   })
-} satisfies ZodShape<Omit<PropertyData, 'id' | 'createdAt'>>);
+});
 
-// Para los Enums de los campos (útil para react-hook-form)
 export const CreatePropertyFieldNames = CreatePropertySchema.keyof().enum;
 
-// El Type sale directamente del Schema
 export type CreatePropertyType = z.infer<typeof CreatePropertySchema>;

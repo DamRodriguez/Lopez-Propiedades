@@ -3,31 +3,15 @@ import { MotionOpacity } from "@/components/motion/MotionOpacity";
 import MotionSlide from "@/components/motion/MotionSlide";
 import PropertyTypeContent from "@/components/pages/property-type/PropertyTypeContent";
 import RentalsPage from "@/components/pages/property-type/rentals/RentalsPage";
-import rentalsProperties from "@/data/rentalsProperties.json";
-import salesProperties from "@/data/salesProperties.json";
 import { propertiesService } from "@/supabase/services/properties";
-import { PropertyData, PropertyType } from "@/types/property";
+import { PropertyRoute } from "@/types/property";
 
 interface PageProps {
-  params: Promise<{ propertyType: PropertyType }>;
-}
-
-export async function generateStaticParams() {
-  const types: PropertyType[] = ["ventas", "alquileres"];
-  return types.map((type) => ({
-    propertyType: type,
-  }));
+  params: Promise<{ propertyType: PropertyRoute }>;
 }
 
 export default async function PropertyTypePage({ params }: PageProps) {
   const { propertyType } = await params;
-
-  {/*
-  const propertiesData: PropertyData[] =
-    propertyType === "ventas"
-      ? (salesProperties as PropertyData[])
-      : (rentalsProperties as PropertyData[]);  
-  */}
 
   const properties = await propertiesService.getAll();
 

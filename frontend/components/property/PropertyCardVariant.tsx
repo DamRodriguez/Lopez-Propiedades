@@ -10,10 +10,11 @@ type PropertyCardVariantProps = {
 
 const PropertyCardVariant = (props: PropertyCardVariantProps) => {
   const data = props.data;
+  const route = data.type === "venta" ? "ventas" : "alquileres";
 
   return (
     <Link
-      href={routes.propertyDetail(data.type, data.id)}
+      href={routes.propertyDetail(route, data.id)}
       className="flex gap-3 xl:gap-4 group cursor-pointer">
       <div className="w-1/3 aspect-square rounded-xs overflow-hidden shadow-s6">
         <Image
@@ -26,7 +27,7 @@ const PropertyCardVariant = (props: PropertyCardVariantProps) => {
       </div>
       <div className="w-2/3 flex flex-col justify-center">
         <span className="text-[10px] font-bold text-primary-light uppercase mb-1">
-          {data.type === "ventas" ? "venta" : "alquiler"}
+          {data.type === "venta" ? "venta" : "alquiler"}
         </span>
         <p className="font-bold text-black mb-1 line-clamp-1">
           {data.name}
@@ -36,7 +37,7 @@ const PropertyCardVariant = (props: PropertyCardVariantProps) => {
         </p>
         <p className="text-lg font-extrabold text-black">
           {formatMoney(data.price)}{" "}
-          {data.type === "alquileres" && (
+          {data.type === "alquiler" && (
             <span
               className="text-xs">
               / mes

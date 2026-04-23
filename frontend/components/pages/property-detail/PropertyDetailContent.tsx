@@ -33,7 +33,7 @@ const PropertyDetailContent = ({ property }: PropertyDetailContentProps) => {
           <div className="mb-8 xl:mb-10">
             <MotionOpacity className="flex flex-wrap items-center gap-3 xl:gap-4 mb-4 xl:mb-6">
               <span className="bg-primary text-soft-white text-xs xl:text-sm font-black tracking-widest px-3 xl:px-6 py-1.5 xl:py-2 rounded-xs uppercase shadow-s2">
-                {property.type === "ventas" ? "venta" : "alquiler"}
+                {property.type === "venta" ? "venta" : "alquiler"}
               </span>
               <span className="bg-secondary text-black text-xs xl:text-sm font-black tracking-widest px-3 xl:px-6 py-1.5 xl:py-2 rounded-xs uppercase shadow-s2">
                 {property.category}

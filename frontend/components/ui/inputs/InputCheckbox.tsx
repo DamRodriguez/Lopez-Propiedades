@@ -1,5 +1,7 @@
 import type { RefCallBack } from "react-hook-form";
 import Input from "@/components/ui/inputs/input/Input";
+import Label from "./Label";
+import clsx from "clsx";
 
 export type InputCheckboxProps = {
   name?: string;
@@ -29,7 +31,7 @@ export const InputCheckbox = ({
   className,
 }: InputCheckboxProps) => {
   return (
-    <div className="flex items-center gap-2">
+    <div className="relative">
       <Input
         id={id}
         type="checkbox"
@@ -41,13 +43,8 @@ export const InputCheckbox = ({
         onBlur={onBlur}
         onFocus={onFocus}
         error={error}
-        className={className || "w-5 h-5 cursor-pointer accent-black"}
+        className={clsx("cursor-pointer accent-primary !w-[1.5rem] xl:!w-[2rem] !shadow-none absolute bottom-0 left-0", className)}
       />
-      {label && (
-        <label htmlFor={id} className="cursor-pointer font-medium text-black">
-          {label}
-        </label>
-      )}
     </div>
   );
 };

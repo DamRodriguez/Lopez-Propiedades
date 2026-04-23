@@ -8,11 +8,11 @@ type LabelProps = {
   hasValue?: boolean;
 };
 
-const Label = ({ htmlFor, children, hasValue }: LabelProps) => {
+const Label = ({ htmlFor, children, hasValue, className }: LabelProps) => {
   return (
     <label
       htmlFor={htmlFor}
-      className={clsx("text-base leading-[1.3125rem] group-focus-within:text-black theme-transition-all w-fit", {
+      className={clsx("text-base leading-[1.5rem] group-focus-within:text-black custom-transition-all w-fit", className, {
         "text-black": hasValue,
         "text-black/60": !hasValue,
       })}

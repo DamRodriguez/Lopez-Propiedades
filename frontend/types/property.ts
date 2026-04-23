@@ -1,4 +1,5 @@
 export type PropertyType = "venta" | "alquiler";
+export type PropertyRoute = "ventas" | "alquileres";
 
 export interface PropertyCharacteristics {
   bedrooms: number;

@@ -17,10 +17,11 @@ type PropertyCardProps = {
 
 const PropertyCard = (props: PropertyCardProps) => {
   const data = props.data;
+  const route = data.type === "venta" ? "ventas" : "alquileres";
 
   return (
     <Link
-      href={routes.propertyDetail(data.type, data.id)}
+      href={routes.propertyDetail(route, data.id)}
       className={clsx("flex flex-col gap-3 xl:gap-4 group cursor-pointer rounded-xs", props.containerClassName)}>
       <div className={clsx("relative rounded-xs overflow-hidden w-full h-full shadow-s6", props.imageContainerClassName)}>
         <Image
@@ -32,7 +33,7 @@ const PropertyCard = (props: PropertyCardProps) => {
         {props.showType && (
           <div className="absolute m-2 xl:m-4">
             <span className="bg-primary shadow-s2 text-soft-white text-xs font-bold tracking-widest px-3 py-1 rounded-xs uppercase">
-              {data.type === "ventas" ? "venta" : "alquiler"}
+              {data.type === "venta" ? "venta" : "alquiler"}
             </span>
           </div>
         )}

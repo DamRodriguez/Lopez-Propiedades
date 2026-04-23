@@ -7,7 +7,7 @@ export const propertyMapper = {
       id: db.id,
       type: db.type,
       name: db.name,
-      price: Number(db.price),
+      price: db.price,
       fullLocation: db.full_location,
       category: db.category,
       mainImage: db.main_image,
@@ -28,11 +28,11 @@ export const propertyMapper = {
   // Convierte la interfaz del Front a lo que Supabase espera (Snake Case)
   toDB(front: Omit<PropertyData, 'id' | 'createdAt'>) {
     return {
-      type: (front.type).toLowerCase,
+      type: front.type,
       name: front.name,
       price: front.price,
       full_location: front.fullLocation,
-      category: (front.category).toLocaleLowerCase,
+      category: front.category,
       main_image: front.mainImage,
       images: front.images,
       description: front.description,

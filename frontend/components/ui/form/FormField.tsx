@@ -12,6 +12,7 @@ export type FormFieldProps<T extends FieldValues> = {
   ) => ReactElement;
   errorMessage?: string;
   isLastErrorMessageField?: boolean;
+  labelClassName?: string;
 };
 
 function FormField<T extends FieldValues>({
@@ -21,6 +22,7 @@ function FormField<T extends FieldValues>({
   input,
   errorMessage,
   isLastErrorMessageField,
+  labelClassName
 }: FormFieldProps<T>): ReactElement {
   const { control } = useFormContext();
 
@@ -46,6 +48,7 @@ function FormField<T extends FieldValues>({
                     htmlFor={name}
                     error={error || fieldState.error !== undefined}
                     hasValue={!!field.value}
+                    className={labelClassName}
                   >
                     {label}
                   </Label>
