@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "Lopez Propiedades | Tu hogar, nuestra prioridad",
+    title: "Lopez Propiedades | Tu propiedad, en manos seguras",
     description: "Venta y alquiler de propiedades. Tasaciones profesionales, asesoramiento jurídico y marketing digital",
     url: siteUrl,
     siteName: "Lopez Propiedades",

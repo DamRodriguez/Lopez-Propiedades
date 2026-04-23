@@ -16,13 +16,9 @@ const HistorySection = () => {
         </MotionSlide>
         <MotionOpacity className="space-y-4 xl:space-y-6 leading-relaxed text-base xl:text-lg max-w-2xl">
           <p>
-            Fundada por Gabriel Lopez en 1994, abogado y martillero público en la UBA, con más de 30 años de experiencia en el rubro. MN. 2054.
-          </p>
-          <p>
-            Contamos con respaldo jurídico profesional, ofreciendo un asesoramiento integral y confiable en cada operación.
-          </p>
-          <p>
-            Hoy continuamos su legado con una mirada renovada, cercana e innovadora pero con los mismos valores de siempre: compromiso y confianza.
+            En 1994, Gabriel Lopez abrió esta inmobiliaria con una convicción: que vender o comprar una propiedad no debería ser un proceso lleno de incertidumbre legal. Abogado y martillero público recibido en la UBA (MN. 2054), Gabriel construyó una empresa donde el respaldo jurídico no es un extra - es parte del servicio desde el primer día.
+            <br /><br />
+            Hoy, sus hijos Agustín y Belén continúan ese legado. La misma dedicación de siempre, con una mirada más joven y herramientas más modernas. Seguimos siendo la misma inmobiliaria de barrio que conoce cada calle de Caseros - solo que ahora también usamos Instagram.
           </p>
         </MotionOpacity>
       </div>

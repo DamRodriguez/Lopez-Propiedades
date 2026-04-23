@@ -12,9 +12,10 @@ import Image from "next/image";
 type ActionFullSectionProps = {
   title: string;
   subtitle?: string;
-  backgroundImage: string;
+  backgroundImage?: string;
   whatsAppMessage: string;
   overlayClassName?: string;
+  buttonText: string;
 }
 
 const ActionFullSection = (props: ActionFullSectionProps) => {
@@ -22,20 +23,22 @@ const ActionFullSection = (props: ActionFullSectionProps) => {
     openWhatsApp(formatWpp(config.info.whatsApp), props.whatsAppMessage);
   };
 
+  const defaultImage = "/images/common/full-action.jpg";
+
   return (
-    <SpaceX className="py-[5rem] xl:py-[8rem] bg-primary text-white flex justify-center overflow-hidden relative group top-1">
+    <SpaceX className="py-[5rem] xl:py-[8rem] text-white flex justify-center overflow-hidden relative group top-1">
       <div className="max-w-4xl text-center z-10">
         <Image
-          src={props.backgroundImage}
+          src={props.backgroundImage ?? defaultImage}
           alt={`Imagen de ${props.title}`}
           sizes="100vw"
           fill
           className="object-cover -z-20 group-hover:scale-110 custom-transition-all w-full h-full"
         />
 
-        <div className={clsx("absolute inset-0 bg-gradient-to-t from-black/90 via-primary/40 to-primary-light/30 -z-10", props.overlayClassName)} />
+        <div className={clsx("absolute inset-0 bg-gradient-to-t from-black/90 to-primary/80 -z-10", props.overlayClassName)} />
         <MotionFade className="flex flex-col justify-center items-center">
-          <h3 className="text-3xl xl:text-5xl text-soft-white font-extrabold mb-8">
+          <h3 className="text-3xl xl:text-5xl leading-[2.5rem] xl:leading-[3.5rem] text-soft-white font-extrabold mb-8">
             {props.title}
           </h3>
           {props.subtitle && (
@@ -51,7 +54,7 @@ const ActionFullSection = (props: ActionFullSectionProps) => {
           >
             <WhatsAppIcon />
             <p>
-              Contactar por WhatsApp
+              {props.buttonText}
             </p>
           </Button>
         </MotionFade>

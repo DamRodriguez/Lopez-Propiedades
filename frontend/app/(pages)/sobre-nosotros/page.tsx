@@ -8,17 +8,18 @@ const AboutUsPage = () => {
   return (
     <section className="flex flex-col gap-[5rem] xl:gap-[8rem]">
       <Hero
-        overline="nuestra trayectoria"
+        overline="una empresa familiar con raíces en el GBA Oeste"
         title="Nuestra Historia"
-        backgroundImage="/images/home/hero.png"
+        backgroundImage="/images/about-us/hero.jpg"
       />
       <SpaceX className="flex flex-col gap-[5rem] xl:gap-[8rem]">
         <HistorySection />
         <TeamSection />
       </SpaceX>
       <ActionFullSection
-        title="¿Listo para encontrar tu próximo Hogar?"
-        backgroundImage="/images/home/appraise.png"
+        title="¿Querés hablar con alguien que conoce la zona hace 30 años?"
+        subtitle="Consultá sin cargo. Sin formularios interminables. Solo escribinos y hablamos."
+        buttonText="Hablar con un asesor"
         whatsAppMessage="Hola! Quisiera realizar una consulta. Muchas gracias."
       />
     </section>

@@ -7,6 +7,7 @@ import Image from "next/image";
 type HeroProps = {
   overline: string;
   title: string;
+  subtitle?: string;
   backgroundImage: string;
   underTitleComponent?: React.ReactNode
 }
@@ -27,28 +28,37 @@ const Hero = (props: HeroProps) => {
             className="object-cover bg-placeholder"
             priority
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
       </div>
 
       <div className="relative z-10 flex flex-col justify-center min-h-[100svh] py-20">
         <SpaceX className="w-full text-white">
-          <div className="max-w-[45rem] flex flex-col gap-[1.5rem] xl:gap-[3rem]">
+          <div className="max-w-[60rem] flex flex-col gap-[1.5rem] xl:gap-[2.5rem]">
             <div className="flex flex-col gap-[0.5rem] xl:gap-[1rem]">
               <MotionFade
                 order={1}
-                className="text-xs xl:text-sm text-soft-white/90 bg-secondary-light/5 shadow-s3 backdrop-blur-[0.5rem] px-1 rounded-xs w-fit text-shadow-sm font-extrabold uppercase tracking-widest"
+                className="text-xs xl:text-sm text-soft-white/90 text-shadow-sm font-extrabold uppercase tracking-widest max-w-[18rem] sm:max-w-full"
               >
-                {props.overline}
+                <span>
+                  {props.overline}
+                </span>
               </MotionFade>
               <MotionSlide
                 direction="down"
                 order={0}
               >
-                <h1 className="text-5xl xl:text-7xl text-soft-white font-extrabold text-shadow-sm leading-[3.2rem] xl:leading-[4.5rem]">
+                <h1 className="text-4xl xl:text-6xl leading-[2.6rem] xl:leading-[4.5rem] text-soft-white font-extrabold text-shadow-sm">
                   {props.title}
                 </h1>
               </MotionSlide>
+              {props.subtitle && (
+                <MotionFade order={1} className="mt-[0.5rem] max-w-[50rem]">
+                  <p className="text-base xl:text-lg text-soft-white text-shadow-sm">
+                    {props.subtitle}
+                  </p>
+                </MotionFade>
+              )}
             </div>
             <MotionFade
               order={1}

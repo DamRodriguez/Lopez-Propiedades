@@ -58,7 +58,7 @@
     "characteristics": {
       "bedrooms": 1,
       "bathrooms": 1,
-      "squareMeters": 0,
+      "squareMeters": 38,
       "garage": false
     },
     "description": "Muy buena opción de 2 ambientes en el 6to piso. A media cuadra de la estación del tren sarmiento, locales comerciales a la bajada del edificio. Gran ubicación.",
@@ -130,13 +130,13 @@
     "characteristics": {
       "bedrooms": 4,
       "bathrooms": 3,
-      "squareMeters": 0,
+      "squareMeters": 278,
       "garage": true
     },
     "isHomeFeatured": {
       "main": true
     },
-    "description": "Gran opción, casa amplia de 5 ambientes en country Banco Provincia. Garage con entrada para mas de 4 autos, cuenta con pileta, galería con parrilla, quincho con lavadero, baño y cuarto de servicio. En el interior de la casa cuenta con amplio living, cocina comedor, 1 baño en cada planta, 1 dormitorio en planta baja, 3 en planta superior. Uno de los dormitorios es en suit. Excelente estado",
+    "description": "Gran opción, casa amplia de 5 ambientes en country Banco Provincia. Garage con entrada para mas de 4 autos, cuenta con pileta, galería con parrilla, quincho con lavadero, baño y cuarto de servicio.\nEn el interior de la casa cuenta con amplio living, cocina comedor, 1 baño en cada planta, 1 dormitorio en planta baja, 3 en planta superior.\nUno de los dormitorios es en suit. Excelente estado.",
     "mainImage": "/images/properties/sales/106/main.jpg",
     "images": ["/images/properties/sales/106/1.jpg", "/images/properties/sales/106/2.jpg", "/images/properties/sales/106/3.jpg", "/images/properties/sales/106/4.jpg", "/images/properties/sales/106/5.jpg", "/images/properties/sales/106/6.jpg", "/images/properties/sales/106/7.jpg"]
   },
@@ -155,13 +155,13 @@
     "characteristics": {
       "bedrooms": 2,
       "bathrooms": 1,
-      "squareMeters": 0,
+      "squareMeters": 110,
       "garage": false
     },
     "isHomeFeatured": {
       "side": true
     },
-    "description": "Amplia y luminosa casa en el sector V del country Banco Provincia. Cuenta con 2 dormitorios, living luminoso, cocina separada y un espacio verde hasta para constuir una pileta. Recomendada.",
+    "description": "Amplia y luminosa casa en el sector V del country Banco Provincia.\nCuenta con 2 dormitorios, living luminoso, cocina separada y un espacio verde hasta para constuir una pileta. Recomendada.",
     "mainImage": "/images/properties/sales/107/main.jpg",
     "images": ["/images/properties/sales/107/1.jpg", "/images/properties/sales/107/2.jpg", "/images/properties/sales/107/3.jpg", "/images/properties/sales/107/4.jpg", "/images/properties/sales/107/5.jpg", "/images/properties/sales/107/6.jpg", "/images/properties/sales/107/7.jpg", "/images/properties/sales/107/8.jpg"]
   },
@@ -178,7 +178,7 @@
     "fullLocation": "Esquina Martín Fierro y Echague, Villa Bosh",
     "category": "lote",
     "characteristics": {
-      "squareMeters": 0
+      "squareMeters": 210
     },
     "description": "Ideal para inversionistas, toda la ochava en venta.\nEn su interior cuenta con 5 departamentos y un local:\n- 2 departamentos de 3 ambientes.\n- 2 departamentos de 2 ambientes.\n- 1 monoambiente.\n- 1 local.\n\nSe vende todo junto.",
     "mainImage": "/images/properties/sales/108/main.jpg",
@@ -198,10 +198,10 @@
     "characteristics": {
       "bedrooms": 2,
       "bathrooms": 1,
-      "squareMeters": 0,
+      "squareMeters": 120,
       "garage": false
     },
-    "description": "Es un ph fondo. Lote a reciclar, no al 100%. Gran oportunidad para inversor. Cuenta con 2 dormitorios, cocina comedor, baño completo, patio delantero y trasero.",
+    "description": "Es un ph fondo. Lote a reciclar, no al 100%. Gran oportunidad para inversor.\nCuenta con 2 dormitorios, cocina comedor, baño completo, patio delantero y trasero.",
     "mainImage": "/images/properties/sales/109/main.jpg",
     "images": ["/images/properties/sales/109/1.jpg", "/images/properties/sales/109/2.jpg", "/images/properties/sales/109/3.jpg", "/images/properties/sales/109/4.jpg", "/images/properties/sales/109/5.jpg", "/images/properties/sales/109/6.jpg", "/images/properties/sales/109/7.jpg", "/images/properties/sales/109/8.jpg", "/images/properties/sales/109/9.jpg"]
   },
@@ -219,10 +219,10 @@
     "characteristics": {
       "bedrooms": 2,
       "bathrooms": 1,
-      "squareMeters": 0,
+      "squareMeters": 64,
       "garage": false
     },
-    "description": "Buena oportunidad, ph de 3 ambientes ubicado en Caseros, calle catrilo. Al ingresar cuenta con living comedor, 2 dormitorios, baño, lavadero y un espacio para utilizar como quincho o estar! Recomendado para aquellos que buscan una propiedad y no cuentan con un monto superior a los 55.000 USD.",
+    "description": "Buena oportunidad, ph de 3 ambientes ubicado en Caseros, calle catrilo.\nAl ingresar cuenta con living comedor, 2 dormitorios, baño, lavadero y un espacio para utilizar como quincho o estar.\nRecomendado para aquellos que buscan una propiedad y no cuentan con un monto superior a los 55.000 USD.",
     "mainImage": "/images/properties/sales/110/main.jpg",
     "images": ["/images/properties/sales/110/1.jpg", "/images/properties/sales/110/2.jpg", "/images/properties/sales/110/3.jpg", "/images/properties/sales/110/4.jpg", "/images/properties/sales/110/5.jpg", "/images/properties/sales/110/6.jpg"]
   },
@@ -244,7 +244,7 @@
       "squareMeters": 212,
       "garage": true
     },
-    "description": "Casa de 2 plantas en excelente estado. En planta baja cuenta con amplio living, dormitorio con placard, baño, cocina y garage. En planta alta cuenta con 2 departamentos de 2 ambientes unidos por un patio pulmón. Ambos cuentan con cocina comedor, baño y dormitorio.",
+    "description": "Casa de 2 plantas en excelente estado. En planta baja cuenta con amplio living, dormitorio con placard, baño, cocina y garage.\nEn planta alta cuenta con 2 departamentos de 2 ambientes unidos por un patio pulmón. Ambos cuentan con cocina comedor, baño y dormitorio.",
     "mainImage": "/images/properties/sales/111/main.jpg",
     "images": ["/images/properties/sales/111/1.jpg", "/images/properties/sales/111/2.jpg", "/images/properties/sales/111/3.jpg", "/images/properties/sales/111/4.jpg", "/images/properties/sales/111/5.jpg", "/images/properties/sales/111/6.jpg", "/images/properties/sales/111/7.jpg", "/images/properties/sales/111/8.jpg", "/images/properties/sales/111/9.jpg", "/images/properties/sales/111/10.jpg", "/images/properties/sales/111/11.jpg", "/images/properties/sales/111/12.jpg"]
   },
@@ -291,7 +291,7 @@
     "isHomeFeatured": {
       "side": true
     },
-    "description": "Gran y amplia casa. En planta baja cuenta con garage, baño y lavadero funcional. Subiendo por escaleras se ingresa al hogar, cocina comedor, living, balcon frente, 3 dormitorios. baños, y lavadero. En tercer piso cuenta con quincho cerrado con parrilla y terraza al aire libre. Se encuentra en muy buenas condiciones.",
+    "description": "Gran y amplia casa. En planta baja cuenta con garage, baño y lavadero funcional.\nSubiendo por escaleras se ingresa al hogar, cocina comedor, living, balcon frente, 3 dormitorios. baños, y lavadero.\nEn tercer piso cuenta con quincho cerrado con parrilla y terraza al aire libre. Se encuentra en muy buenas condiciones.",
     "mainImage": "/images/properties/sales/113/main.jpg",
     "images": ["/images/properties/sales/113/1.jpg", "/images/properties/sales/113/2.jpg", "/images/properties/sales/113/3.jpg", "/images/properties/sales/113/4.jpg", "/images/properties/sales/113/5.jpg", "/images/properties/sales/113/6.jpg", "/images/properties/sales/113/7.jpg", "/images/properties/sales/113/8.jpg", "/images/properties/sales/113/9.jpg", "/images/properties/sales/113/10.jpg", "/images/properties/sales/113/11.jpg", "/images/properties/sales/113/12.jpg", "/images/properties/sales/113/13.jpg", "/images/properties/sales/113/14.jpg"]
   }

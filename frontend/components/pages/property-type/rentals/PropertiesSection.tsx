@@ -38,9 +38,9 @@ const PropertiesSection = () => {
         </ul>
       </MotionSlide>
 
-      <MotionSlide direction="right" className="lg:col-span-5 rounded-xs overflow-hidden h-full shadow-s3">
+      <MotionSlide direction="right" className="lg:col-span-5 rounded-xs overflow-hidden h-full shadow-s3 aspect-square">
         <Image
-          src="https://picsum.photos/seed/v1/800/600"
+          src="/images/rentals/house1.jpg"
           alt="Imágen de alquiler primera"
           width={400}
           height={400}
@@ -48,9 +48,9 @@ const PropertiesSection = () => {
         />
       </MotionSlide>
 
-      <MotionSlide direction="left" className="lg:col-span-4 rounded-xs overflow-hidden h-full">
+      <MotionSlide direction="left" className="lg:col-span-4 rounded-xs overflow-hidden h-full shadow-s3 aspect-square">
         <Image
-          src="https://picsum.photos/seed/v1/800/600"
+          src="/images/rentals/house2.jpg"
           alt="Imágen de alquiler segunda"
           width={400}
           height={400}

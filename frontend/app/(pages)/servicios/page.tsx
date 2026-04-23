@@ -16,39 +16,38 @@ const ServicesPage = () => {
             Excelencia Inmobiliaria
           </MotionOpacity>
           <MotionSlide order={0}>
-            <h1 className="text-5xl xl:text-7xl text-black font-extrabold leading-[3.2rem] xl:leading-[4.5rem] mb-4">
-              Nuestros Servicios
+            <h1 className="text-4xl xl:text-6xl leading-[2.6rem] xl:leading-[4.5rem] text-black font-extrabold mb-4">
+              Todo lo que necesitás para
               <br />
               <span className="text-primary-light/70">
-                Soluciones a medida
+                operar con seguridad
               </span>
             </h1>
           </MotionSlide>
           <MotionOpacity order={1}>
-            <p className="text-lg lg:text-xl max-w-2xl leading-relaxed text-black/80">
-              Brindamos un servicio inmobiliario integral, combinando experiencia en el mercado con estrategias de comercialización para lograr resultados concretos.
+            <p className="text-base lg:text-lg max-w-2xl leading-relaxed text-black/80">
+              Desde la tasación hasta la escritura, manejamos todo internamente. Sin derivar a terceros, sin costos ocultos, sin demoras. Una sola empresa que conoce tu caso de principio a fin
             </p>
           </MotionOpacity>
         </div>
 
         <MotionOpacity order={1} className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           <MotionSlide className="lg:col-span-8 group relative overflow-hidden rounded-xs group">
-            <div className="absolute inset-0 bg-gradient-to-t from-black to-primary/50 z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-primary/80 z-10"></div>
             <Image
-              src="https://picsum.photos/seed/v6/800/600"
+              src="/images/services/sales.png"
               alt="Imágen de venta de propiedades"
               sizes="(max-width: 768px) 100vw, 50vw"
               fill
               priority
-              className="group-hover:scale-110 custom-transition-all"
+              className="group-hover:scale-110 custom-transition-all object-cover"
             />
             <div className="relative z-20 h-[25rem] flex flex-col justify-end p-8 lg:p-10">
               <h2 className="text-xl xl:text-3xl font-bold text-soft-white mb-4">
                 Venta de propiedades
               </h2>
               <p className="text-soft-white/90 max-w-lg text-sm xl:text-base leading-relaxed">
-                Nos encargamos de todo el proceso de venta: Desde la Tasación inicial hasta el cierre de la operación. Diseñamos estrategias personalizadas para cada propiedad.
-                Revisión de documentación y lo necesario para solucionar cualquier inconveniente jurídico que aparezca en  el inmueble.
+                Nos encargamos de todo: tasación, fotografía profesional, publicación en portales, negociación y cierre. Antes del primer contacto con compradores, nuestro equipo jurídico revisa la documentación completa - para que no aparezcan sorpresas cuando menos te lo esperás.
               </p>
             </div>
           </MotionSlide>
@@ -58,27 +57,20 @@ const ServicesPage = () => {
               Alquileres
             </h2>
             <p className="text-black/90 text-sm xl:text-base leading-relaxed">
-              Gestionamos alquileres de forma eficiente y segura. Nos ocupamos de la publicación, evaluación de inquilinos, contratos y seguimiento, brindando tranquilidad tanto a propietarios como a inquilinos.
+              <span className="font-semibold">Para propietarios:</span> buscamos al inquilino correcto, redactamos el contrato y hacemos el seguimiento mensual. Tu propiedad, en orden y sin dolores de cabeza.
+              <br /><br />
+              <span className="font-semibold">Para inquilinos:</span> te encontramos una propiedad que se ajuste a lo que buscás y te acompañamos en cada trámite. Sin letra chica ni cláusulas raras.
             </p>
           </MotionSlide>
 
-          <MotionSlide className="lg:col-span-6 bg-gradient-to-r from-black/95 to-primary/80 rounded-xs flex flex-col lg:flex-row gap-8 items-start group">
+          <MotionSlide className="lg:col-span-6 bg-primary rounded-xs flex flex-col lg:flex-row gap-8 items-start group">
             <div className="p-8 lg:p-10">
               <h2 className="text-xl xl:text-3xl font-bold text-soft-white mb-4">
                 Asesoramiento Jurídico
               </h2>
               <p className="text-soft-white/90 max-w-lg text-sm xl:text-base leading-relaxed">
-                Acompañamos a cada cliente en la toma de decisiones, ya sea para comprar, vender o invertir.
+                Contás con abogados propios especializados en derecho inmobiliario, civil y laboral. Revisamos contratos, resolvemos conflictos y prevenimos problemas antes de que ocurran. <span className="font-semibold">Sin honorarios separados: el asesoramiento jurídico está incluido en la operación.</span>
               </p>
-            </div>
-            <div className="w-full hidden 2xl:flex lg:w-1/3 h-full rounded-xs overflow-hidden grayscale opacity-70">
-              <Image
-                src="https://picsum.photos/seed/v6/800/600"
-                alt="Imágen de asesoramiento jurídico"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                fill
-                className="w-full h-full object-cover group-hover:scale-110 custom-transition-all"
-              />
             </div>
           </MotionSlide>
 
@@ -87,14 +79,14 @@ const ServicesPage = () => {
               Tasaciones Profesionales
             </h2>
             <p className="text-black/90 text-sm xl:text-base leading-relaxed">
-              Realizamos Tasaciones precisas basadas en análisis de mercado, ubicación y características del inmueble. Asegurando valores reales.
+              Tasación profesional en menos de 24 horas, realizada por un martillero público matriculado. No solo te decimos cuánto vale - te explicamos cómo posicionarla para atraer más compradores y mejores ofertas.
             </p>
           </MotionSlide>
 
           <MotionSlide className="lg:col-span-4 relative group overflow-hidden shadow-s3 p-8 lg:p-10 rounded-xs flex flex-col justify-center">
-            <div className="absolute inset-0 bg-gradient-to-t from-black to-primary/50 z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-primary/80 z-10"></div>
             <Image
-              src="https://picsum.photos/seed/v6/800/600"
+              src="/images/services/marketing.png"
               alt="Imágen de marketing digital"
               sizes="(max-width: 768px) 100vw, 50vw"
               fill
@@ -133,7 +125,7 @@ const ServicesPage = () => {
       <ActionFullSection
         title="¿Por qué elegirnos?"
         subtitle="Porque combinamos experiencia inmobiliaria con respaldo juridico, cuidando tu propiedad y tus operaciones desde el primer contacto hasta el cierre. Contamos con 30 años de experiencia. Trabajamos de manera clara, profesional y personalizada, acompañandote en cada desicion."
-        backgroundImage="/images/home/appraise.png"
+        buttonText="Consultar sin cargo"
         whatsAppMessage="Hola! Quisiera consultar por sus servicios. Muchas gracias."
       />
     </section>

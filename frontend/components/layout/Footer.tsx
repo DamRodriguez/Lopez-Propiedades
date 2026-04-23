@@ -65,7 +65,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-gradient-to-b from-primary to-black/95 w-full shadow-s7">
+    <footer className="bg-primary w-full shadow-s7">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-12 px-6 md:px-12 w-full max-w-7xl mx-auto">
         <MotionFade className="flex items-center">
           <span className="text-lg font-semibold text-soft-white">
@@ -142,7 +142,7 @@ const Footer = () => {
           </div>
         </MotionSlide>
       </div>
-      <div className="border-t border-soft-gray/30 py-6">
+      <div className="border-t border-soft-gray/15 py-6 bg-black/15">
         <div className="container mx-auto flex flex-col items-center justify-evenly gap-4 px-4 md:flex-row text-xs xl:text-sm text-soft-white">
           <MotionSlide>
             <p className="text-center">
