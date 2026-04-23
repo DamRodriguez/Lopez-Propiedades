@@ -1,3 +1,4 @@
+import config from "@/config/config";
 import { ContactSchema } from "@/features/contact/schemas/ContactSchema";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
@@ -23,7 +24,7 @@ export async function POST(request: Request) {
 
     const data = await resend.emails.send({
       from: "Web Inmobiliaria <onboarding@resend.dev>",
-      to: ["damrod1999@gmail.com"],
+      to: [config.info.email],
       subject: `${consultaTipo} - ${fullName}`,
       replyTo: email,
       html: `
