@@ -58,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="es" className="scroll-smooth" data-scroll-behavior="smooth">
       <body className={clsx("antialiased min-h-svh flex flex-col bg-soft-white/60", inter.variable)}>
         <ToastContainer />
         <ProgressBarProvider>

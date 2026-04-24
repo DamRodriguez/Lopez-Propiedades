@@ -1,4 +1,5 @@
 import { routes } from "@/constants/routes";
+import Image from "next/image";
 import Link from "next/link";
 
 type LeftItemProps = {
@@ -17,9 +18,15 @@ const LeftItem = (props: LeftItemProps) => {
       }}
       className="text-black text-lg xl:text-xl font-sans flex items-center gap-[0.2rem] xl:gap-[0.5rem]"
     >
-      <span className="font-semibold theme-transition-all">
-        Lopez Propiedades
-      </span>
+      <div className="flex items-center justify-center relative xl:w-[5.5rem] w-[4.5rem] aspect-square">
+        <Image
+          src="/images/logo/logo-ajustado.jpg"
+          alt="Logo de Lopez Inmobiliaria"
+          fill
+          className="object-contain"
+          sizes="(max-width: 1280px) 4.5rem, 5.5rem"
+        />
+      </div>
     </Link>
   );
 };

@@ -34,7 +34,7 @@ const Hero = (props: HeroProps) => {
       </div>
 
       <div className="relative z-10 flex flex-col justify-center min-h-[100svh] py-20">
-        <SpaceX className="w-full text-white">
+        <SpaceX className="w-full text-white pt-[2rem] xl:pt-[3rem]">
           <div className="max-w-[60rem] flex flex-col gap-[1.5rem] xl:gap-[2.5rem]">
             <div className="flex flex-col gap-[0.5rem] xl:gap-[1rem]">
               <MotionFade

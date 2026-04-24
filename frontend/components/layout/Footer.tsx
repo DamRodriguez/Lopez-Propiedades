@@ -7,6 +7,7 @@ import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { InstagramIcon, WhatsAppIcon } from "../icons/social";
 import MotionFade from "../motion/MotionFade";
 import MotionSlide from "../motion/MotionSlide";
+import Image from "next/image";
 
 const Footer = () => {
   const { handleSmoothScroll } = useSmoothScroll();
@@ -65,12 +66,15 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-primary w-full shadow-s7">
+    <footer className="bg-primary/90 w-full shadow-s7">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-12 px-6 md:px-12 w-full max-w-7xl mx-auto">
-        <MotionFade className="flex items-center">
-          <span className="text-lg font-semibold text-soft-white">
-            Lopez Propiedades
-          </span>
+        <MotionFade className="flex items-end justify-start relative w-[15rem] h-[5rem]">
+          <Image
+            src="/images/logo/logo-firma.png"
+            alt="Imágen del logo de Lopez Propiedades"
+            fill
+            className="object-contain"
+          />
         </MotionFade>
         <div className="grid grid-cols-2 gap-8">
           <MotionSlide direction="down" className="flex flex-col gap-4">
@@ -142,7 +146,7 @@ const Footer = () => {
           </div>
         </MotionSlide>
       </div>
-      <div className="border-t border-soft-gray/15 py-6 bg-black/15">
+      <div className="border-t border-soft-gray/10 py-6 bg-black/5">
         <div className="container mx-auto flex flex-col items-center justify-evenly gap-4 px-4 md:flex-row text-xs xl:text-sm text-soft-white">
           <MotionSlide>
             <p className="text-center">
@@ -163,10 +167,9 @@ const Footer = () => {
               </Link>
             </p>
           </MotionSlide>
-
         </div>
       </div>
-    </footer >
+    </footer>
   );
 };
 

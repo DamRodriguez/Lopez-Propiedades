@@ -32,9 +32,9 @@ const ContactPage = () => {
           <ContactSection />
         </MotionOpacity>
       </SpaceX>
-      <MotionOpacity>
+      <MotionSlide direction="down">
         <ContactMap />
-      </MotionOpacity>
+      </MotionSlide>
     </section>
   );
 };
