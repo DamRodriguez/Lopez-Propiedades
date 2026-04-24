@@ -35,7 +35,7 @@ const AppraiseProperty = () => {
               </span>
             </h3>
             <p className="text-base xl:text-lg text-soft-white/90 max-w-xl leading-relaxed">
-              Tasación profesional en menos de 24 horas, realizada por un martillero público matriculado. Solo el valor real de tu inmueble en el mercado actual - sin letra chica, sin presión de venta
+              Tasación profesional en menos de 24 horas, realizada por un martillero público matriculado. Solo el valor real de tu inmueble en el mercado actual - sin letra chica, sin presión de venta.
             </p>
           </div>
 

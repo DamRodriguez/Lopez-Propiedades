@@ -10,7 +10,7 @@ const HomePage = () => {
       <Hero
         overline="30 años en el GBA Oeste ∙ Inmobiliaria + Estudio Jurídico"
         title="Vendé, comprá o alquilá con respaldo jurídico"
-        subtitle="Somos la única inmobiliaria del GBA Oeste con estudio jurídico y notarial propio. Más de 30 años cuidando tu inversión, sin intermediarios y sin sorpresas"
+        subtitle="Somos la única inmobiliaria del GBA Oeste con estudio jurídico y notarial propio. Más de 30 años cuidando tu inversión, sin intermediarios y sin sorpresas."
         backgroundImage="/images/home/hero.jpg"
         underTitleComponent={<SearchBar />}
       />

@@ -18,7 +18,7 @@ const RentalsPage = () => {
       <PropertiesSection />
       <ActionFullSection
         title="Comenzá tu experiencia de Alquiler"
-        subtitle="Ya seas un propietario que busca gestión profesional o un inquilino en busca de un hogar excepcional, nuestro equipo está listo para asesorarte en tu próximo paso"
+        subtitle="Ya seas un propietario que busca gestión profesional o un inquilino en busca de un hogar excepcional, nuestro equipo está listo para asesorarte en tu próximo paso."
         buttonText="Consultar por alquileres"
         whatsAppMessage="Hola! Quisiera consultar por un alquiler. Muchas gracias."
       />

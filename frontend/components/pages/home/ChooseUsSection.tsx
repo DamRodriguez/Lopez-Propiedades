@@ -10,17 +10,17 @@ const ChooseUsSection = () => {
     {
       icon: <MedalIcon />,
       title: "Experiencia",
-      description: "30 años operando en el GBA Oeste. Conocemos cada barrio, cada precio, cada trámite. Fundados en 1994 por Gabriel Lopez, abogado y martillero público (UBA, MN. 2054)"
+      description: "30 años operando en el GBA Oeste. Conocemos cada barrio, cada precio, cada trámite. Fundados en 1994 por Gabriel Lopez, abogado y martillero público (UBA, MN. 2054)."
     },
     {
       icon: <UserPinIcon />,
       title: "Atención Personal",
-      description: "Sin asistentes rotantes ni operadores. Hablás siempre con la misma persona, que conoce tu caso desde el primer contacto hasta la escritura"
+      description: "Sin asistentes rotantes ni operadores. Hablás siempre con la misma persona, que conoce tu caso desde el primer contacto hasta la escritura."
     },
     {
       icon: <MarketingIcon />,
       title: "Marketing Digital",
-      description: "Tu propiedad, donde están los compradores: Zonaprop, Argenprop, MercadoLibre, Instagram y Google. Con fotografía profesional incluida y estrategia de presentación pensada para generar más consultas"
+      description: "Tu propiedad, donde están los compradores: Zonaprop, Argenprop, MercadoLibre, Instagram y Google. Con fotografía profesional incluida y estrategia de presentación pensada para generar más consultas."
     }
   ]
 
@@ -51,7 +51,7 @@ const ChooseUsSection = () => {
           />
           <MotionFade>
             <p className="text-soft-white/90 text-base xl:text-lg max-w-3xl mx-auto font-medium">
-              En Lopez Propiedades no tercerizamos el aspecto legal: lo hacemos nosotros. Somos inmobiliaria y estudio jurídico notarial bajo el mismo techo. Eso te ahorra tiempo, dinero y la angustia de las sorpresas de último momento
+              En Lopez Propiedades no tercerizamos el aspecto legal: lo hacemos nosotros. Somos inmobiliaria y estudio jurídico notarial bajo el mismo techo. Eso te ahorra tiempo, dinero y la angustia de las sorpresas de último momento.
             </p>
           </MotionFade>
         </div>

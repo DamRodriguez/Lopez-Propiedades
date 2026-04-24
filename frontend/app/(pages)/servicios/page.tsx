@@ -26,7 +26,7 @@ const ServicesPage = () => {
           </MotionSlide>
           <MotionOpacity order={1}>
             <p className="text-base lg:text-lg max-w-2xl leading-relaxed text-black/80">
-              Desde la tasación hasta la escritura, manejamos todo internamente. Sin derivar a terceros, sin costos ocultos, sin demoras. Una sola empresa que conoce tu caso de principio a fin
+              Desde la tasación hasta la escritura, manejamos todo internamente. Sin derivar a terceros, sin costos ocultos, sin demoras. Una sola empresa que conoce tu caso de principio a fin.
             </p>
           </MotionOpacity>
         </div>
