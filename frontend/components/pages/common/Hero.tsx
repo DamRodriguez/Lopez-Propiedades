@@ -25,6 +25,7 @@ const Hero = (props: HeroProps) => {
             alt={`Imagen de ${props.title}`}
             sizes="100vw"
             fill
+            quality={80}
             className="object-cover bg-placeholder"
             priority
           />

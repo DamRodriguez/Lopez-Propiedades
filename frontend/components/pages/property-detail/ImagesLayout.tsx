@@ -39,6 +39,7 @@ const ImagesLayout = ({ mainImage, images }: ImagesLayoutProps) => {
           sizes="(max-width: 768px) 100vw, 66vw"
           fill
           priority
+          quality={80}
           className="object-cover group-hover:scale-110 custom-transition-all bg-placeholder"
         />
       </MotionFade>
@@ -55,6 +56,7 @@ const ImagesLayout = ({ mainImage, images }: ImagesLayoutProps) => {
             sizes="33vw"
             fill
             priority
+            quality={80}
             className="object-cover group-hover:scale-110 custom-transition-all bg-placeholder"
           />
         </MotionSlide>
@@ -70,6 +72,7 @@ const ImagesLayout = ({ mainImage, images }: ImagesLayoutProps) => {
             sizes="33vw"
             fill
             priority
+            quality={80}
             className="object-cover group-hover:scale-110 custom-transition-all bg-placeholder"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/50 opacity-100 group-hover:bg-black/30 custom-transition-all">
@@ -149,8 +152,10 @@ const ImageCarouselModal = ({ images, initialIndex, onClose }: { images: string[
             <Image
               src={images[index]}
               alt={`Galería ${index}`}
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 1200px"
               fill
+              priority
+              quality={80}
               className="object-contain"
             />
           </motion.div>
