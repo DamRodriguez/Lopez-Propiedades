@@ -25,13 +25,10 @@ const ChooseUsSection = () => {
   ]
 
   return (
-    <SpaceX className="relative group text-center flex flex-col gap-10 xl:gap-16 bg-gradient-to-r from-primary-light to-primary py-[5rem] xl:py-[8rem] overflow-hidden">
+    <SpaceX className="relative group text-center flex flex-col gap-10 xl:gap-16 bg-gradient-to-l xl:bg-gradient-to-r from-primary-light to-primary py-[5rem] xl:py-[8rem] overflow-hidden">
 
       <div
-        className="absolute inset-0 z-0"
-        style={{
-          clipPath: "polygon(50% 0, 100% 0, 100% 100%, 45% 100%)"
-        }}
+        className="absolute inset-0 z-0 xl:[clip-path:polygon(60%_0,100%_0,100%_100%,40%_100%)] [clip-path:polygon(80%_0,100%_0,100%_100%,20%_100%)]"
       >
         <Image
           src="/images/home/choose-us.jpg"
