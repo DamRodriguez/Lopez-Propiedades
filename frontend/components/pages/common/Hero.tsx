@@ -29,7 +29,7 @@ const Hero = (props: HeroProps) => {
             className="object-cover bg-placeholder"
             priority
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-black/60" />
         </div>
       </div>
 
