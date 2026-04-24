@@ -23,6 +23,8 @@ const LeftItem = (props: LeftItemProps) => {
           src="/images/logo/logo-ajustado.jpg"
           alt="Logo de Lopez Inmobiliaria"
           fill
+          priority
+          quality={80}
           className="object-contain"
           sizes="(max-width: 1280px) 4.5rem, 5.5rem"
         />

@@ -68,11 +68,12 @@ const Footer = () => {
   return (
     <footer className="bg-primary/90 w-full shadow-s7">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-12 px-6 md:px-12 w-full max-w-7xl mx-auto">
-        <MotionFade className="flex items-end justify-start relative w-[15rem] h-[5rem]">
+        <MotionFade className="flex items-end justify-start relative w-[13rem] h-[4rem] xl:w-[16rem] xl:h-[7rem]">
           <Image
             src="/images/logo/logo-firma.png"
             alt="Imágen del logo de Lopez Propiedades"
             fill
+            sizes="(max-width: 1280px) 13rem, 16rem"
             className="object-contain"
           />
         </MotionFade>
